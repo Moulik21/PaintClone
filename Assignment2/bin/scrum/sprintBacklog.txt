@@ -14,6 +14,28 @@ ISSUE    : The first click should specify the center of the circle, with
            a drag for the radius. This is not the case in the current
            implementation.
 --------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 8
+NAME     : Draw Square
+OWNER    : Keenan
+PRIORITY : High
+ESTIMATE : 1 Hour
+AS A     : user
+I WANT   : To click on one corner of a square, drag, and release to 
+		   specify two corners of a square to be drawn in the current style.
+SO THAT  : I can add square to my canvas
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 3
+NAME     : Draw Rectangle
+OWNER    : Keenan
+PRIORITY : High
+ESTIMATE : 1
+AS A     : user
+I WANT   : To click on one corner of a rectangle, drag, and release to 
+		   specify two corners of a rectangle to be drawn in the current style.
+SO THAT  : I can add rectangles to my canvas
+--------------------------------------------------------------------------
 
 
 

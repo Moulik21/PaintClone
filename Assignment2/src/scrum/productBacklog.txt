@@ -5,18 +5,6 @@
 # 2 Implementation of selected color into the drawing stream.
 
 High > Medium > Low priority.
-
---------------------------------------------------------------------------
-TYPE     : USER STORY 1
-NAME     : Draw Circle
-OWNER    : 
-PRIORITY : High
-ESTIMATE : 
-AS A     : user
-I WANT   : To click the center of the circle, drag, and release to specify
-           a circle to be drawn in the current style.
-SO THAT  : I can add circles to my canvas
---------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : USER STORY 2
 NAME     : Draw Circle Feedback
@@ -31,17 +19,6 @@ I WANT   : As a user is specifying a Circle, during the drag, a 'current'
            the current dragged mouse position.
 SO THAT  : I can see the circle I am about to build on release of the mouse
            button.
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-TYPE     : USER STORY 3
-NAME     : Draw Rectangle
-OWNER    : 
-PRIORITY : High
-ESTIMATE : 
-AS A     : user
-I WANT   : To click on one corner of a rectangle, drag, and release to 
-		   specify two corners of a rectangle to be drawn in the current style.
-SO THAT  : I can add rectangles to my canvas
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : USER STORY 4
@@ -127,17 +104,6 @@ I WANT   : To be able to select the current line thickness, to be applied
 SO THAT  : 
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY 8
-NAME     : Draw Square
-OWNER    : 
-PRIORITY : High
-ESTIMATE : 
-AS A     : user
-I WANT   : To click on one corner of a square, drag, and release to 
-		   specify two corners of a square to be drawn in the current style.
-SO THAT  : I can add square to my canvas
---------------------------------------------------------------------------
---------------------------------------------------------------------------
 TYPE     : USER STORY 4
 NAME     : Draw Square Feedback
 OWNER    : 
@@ -211,6 +177,39 @@ ESTIMATE : 1 hour
 ISSUE    : The first click should specify the center of the circle, with
            a drag for the radius. This is not the case in the current
            implementation.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 3
+NAME     : Draw Rectangle
+OWNER    : Keenan
+PRIORITY : High
+ESTIMATE : 1
+AS A     : user
+I WANT   : To click on one corner of a rectangle, drag, and release to 
+		   specify two corners of a rectangle to be drawn in the current style.
+SO THAT  : I can add rectangles to my canvas
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 8
+NAME     : Draw Square
+OWNER    : Keenan
+PRIORITY : High
+ESTIMATE : 1 Hour
+AS A     : user
+I WANT   : To click on one corner of a square, drag, and release to 
+		   specify two corners of a square to be drawn in the current style.
+SO THAT  : I can add square to my canvas
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 1
+NAME     : Draw Circle
+OWNER    : ALREADY COMPLETED
+PRIORITY :
+ESTIMATE : 
+AS A     : user
+I WANT   : To click the center of the circle, drag, and release to specify
+           a circle to be drawn in the current style.
+SO THAT  : I can add circles to my canvas
 --------------------------------------------------------------------------
 # OMITTED USER STORIES/BUGS BELOW   ###########################################
 
