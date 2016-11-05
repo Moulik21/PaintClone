@@ -9,8 +9,8 @@ Name:Keenan Kua
 Email:keenan.kua@mail.utoronto.ca
 
 Member 3:
-Name:
-Email:
+Name: Moulik Gaglani	
+Email:moulik.gaglani@mail.utoronto.ca
 
 Member 4:
 Name:
