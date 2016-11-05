@@ -6,32 +6,7 @@
 
 High > Medium > Low priority.
 --------------------------------------------------------------------------
-TYPE     : USER STORY 2
-NAME     : Draw Circle Feedback
-OWNER    : 
-PRIORITY : Moderate
-ESTIMATE : 
-AS A     : user
-I WANT   : As a user is specifying a Circle, during the drag, a 'current'
-           circle should be on display. As the user drags, the 'current'
-           circle changes in real time so that a circle is drawn with
-           centre at users initial circle click, with radius out to
-           the current dragged mouse position.
-SO THAT  : I can see the circle I am about to build on release of the mouse
-           button.
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-TYPE     : USER STORY 4
-NAME     : Draw Rectangle Feedback
-OWNER    : 
-PRIORITY : Moderate
-ESTIMATE : 
-AS A     : user
-I WANT   : Similarly to Draw Circle Feedback, display the rectangle in mid construction.
-SO THAT  : I can see the rectangle I am about to build on release of the mouse button.
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-TYPE     : USER STORY 5
+TYPE     : USER STORY 7
 NAME     : Color selector
 OWNER    : 
 PRIORITY : Moderate
@@ -55,7 +30,7 @@ I WANT   : To be able to select the current drawing color, to be applied
 SO THAT  : 
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY 6
+TYPE     : USER STORY 8
 NAME     : Fill style selector
 OWNER    : 
 PRIORITY : Low
@@ -79,7 +54,7 @@ I WANT   : To be able to select the current drawing style (filled or outline), t
 SO THAT  : 
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY 7
+TYPE     : USER STORY 9
 NAME     : Line thickness selector
 OWNER    : 
 PRIORITY : Low
@@ -102,16 +77,6 @@ I WANT   : To be able to select the current line thickness, to be applied
            	results in two thinly outlined circles and a thinly outlined 
            	rectangle as well as two thickly outlined rectangles and a thick squiggle
 SO THAT  : 
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-TYPE     : USER STORY 4
-NAME     : Draw Square Feedback
-OWNER    : 
-PRIORITY : Moderate
-ESTIMATE : 
-AS A     : user
-I WANT   : Similarly to Draw Circle Feedback, display the square in mid construction.
-SO THAT  : I can see the square I am about to build on release of the mouse button.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : BUG 1
@@ -179,7 +144,18 @@ ISSUE    : The first click should specify the center of the circle, with
            implementation.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY 3
+TYPE     : USER STORY 1
+NAME     : Draw Circle
+OWNER    : ALREADY COMPLETED
+PRIORITY :
+ESTIMATE : 
+AS A     : user
+I WANT   : To click the center of the circle, drag, and release to specify
+           a circle to be drawn in the current style.
+SO THAT  : I can add circles to my canvas
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 2
 NAME     : Draw Rectangle
 OWNER    : Keenan
 PRIORITY : High
@@ -190,7 +166,7 @@ I WANT   : To click on one corner of a rectangle, drag, and release to
 SO THAT  : I can add rectangles to my canvas
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY 8
+TYPE     : USER STORY 3
 NAME     : Draw Square
 OWNER    : Keenan
 PRIORITY : High
@@ -201,15 +177,39 @@ I WANT   : To click on one corner of a square, drag, and release to
 SO THAT  : I can add square to my canvas
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY 1
-NAME     : Draw Circle
-OWNER    : ALREADY COMPLETED
-PRIORITY :
-ESTIMATE : 
+TYPE     : USER STORY 4
+NAME     : Draw Circle Feedback
+OWNER    : Daniel/Moulik
+PRIORITY : Moderate
+ESTIMATE : 2 hours
 AS A     : user
-I WANT   : To click the center of the circle, drag, and release to specify
-           a circle to be drawn in the current style.
-SO THAT  : I can add circles to my canvas
+I WANT   : As a user is specifying a Circle, during the drag, a 'current'
+           circle should be on display. As the user drags, the 'current'
+           circle changes in real time so that a circle is drawn with
+           centre at users initial circle click, with radius out to
+           the current dragged mouse position.
+SO THAT  : I can see the circle I am about to build on release of the mouse
+           button.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 5
+NAME     : Draw Square Feedback
+OWNER    : Daniel/Moulik
+PRIORITY : Moderate
+ESTIMATE : 2 hours
+AS A     : user
+I WANT   : Similarly to Draw Circle Feedback, display the square in mid construction.
+SO THAT  : I can see the square I am about to build on release of the mouse button.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 6
+NAME     : Draw Rectangle Feedback
+OWNER    : Daniel/Moulik
+PRIORITY : Moderate
+ESTIMATE : 2 hours
+AS A     : user
+I WANT   : Similarly to Draw Circle Feedback, display the rectangle in mid construction.
+SO THAT  : I can see the rectangle I am about to build on release of the mouse button.
 --------------------------------------------------------------------------
 # OMITTED USER STORIES/BUGS BELOW   ###########################################
 
