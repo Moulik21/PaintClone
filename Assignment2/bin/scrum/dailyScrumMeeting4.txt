@@ -1,19 +1,19 @@
 # Fill in, commit and push each day.
-# Group Member: FILL THIS IN
+# Group Member: Daniel
 Nov 2, 2016
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday :N/A
+	Today     :No assignment
+	Obstacles :None
 	
 Nov 3, 2016
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday :N/A
+	Today     :no assignment
+	Obstacles :None
 
 Nov 4, 2016
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday :Looked through starter code.
+	Today     :Discuss starter code with group. Work together to understand main concepts and ideas.
+	Obstacles :I will need to familiarize myself with using git.
 
 Nov 5, 2016
 	Yesterday :

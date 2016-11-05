@@ -1,19 +1,19 @@
 # Fill in, commit and push each day.
-# Group Member: FILL THIS IN
+# Group Member: Keenan
 Nov 2, 2016
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday : None
+	Today     : No assignment
+	Obstacles : None
 	
 Nov 3, 2016
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday : None
+	Today     : Look over assignment outline/code
+	Obstacles : None
 
 Nov 4, 2016
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday : Looked over assignment outline and code
+	Today     : Work on shape drawing functionality. Discuss with teammates on how to proceed with the project. Learn how to use git branches
+	Obstacles : Working with git branches, which is a new concept to me
 
 Nov 5, 2016
 	Yesterday :
