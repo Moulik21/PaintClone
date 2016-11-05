@@ -1,19 +1,19 @@
 # Fill in, commit and push each day.
 # Group Member: FILL THIS IN
 Nov 2, 2016
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday :Nothing.
+	Today     :No Assignment.
+	Obstacles :None
 	
 Nov 3, 2016
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday :Nothing.
+	Today     :No Assignment
+	Obstacles :None
 
 Nov 4, 2016
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday :Nothing.
+	Today     :Pulled files from the master repo. Talked and planned with the team.
+	Obstacles :None
 
 Nov 5, 2016
 	Yesterday :

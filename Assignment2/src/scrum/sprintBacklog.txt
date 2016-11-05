@@ -2,8 +2,18 @@
 # to the appropriate Sprint below, after the 
 # Sprint Planning Meeting.
 
-# Sprint 1 November 3, 2016
+# Sprint 1 November 4, 2016
 # Sprint 1 Backlog UserStories go below
+--------------------------------------------------------------------------
+TYPE     : BUG 6
+NAME     : Circle drawing is broken
+OWNER    : Keenan
+PRIORITY : High
+ESTIMATE : 1 hour
+ISSUE    : The first click should specify the center of the circle, with
+           a drag for the radius. This is not the case in the current
+           implementation.
+--------------------------------------------------------------------------
 
 
 

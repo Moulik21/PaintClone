@@ -4,11 +4,13 @@
 # 1 Color chooser UI (which could be a USER STORY)
 # 2 Implementation of selected color into the drawing stream.
 
+High > Medium > Low priority.
+
 --------------------------------------------------------------------------
 TYPE     : USER STORY 1
 NAME     : Draw Circle
 OWNER    : 
-PRIORITY :
+PRIORITY : High
 ESTIMATE : 
 AS A     : user
 I WANT   : To click the center of the circle, drag, and release to specify
@@ -19,7 +21,7 @@ SO THAT  : I can add circles to my canvas
 TYPE     : USER STORY 2
 NAME     : Draw Circle Feedback
 OWNER    : 
-PRIORITY :
+PRIORITY : Moderate
 ESTIMATE : 
 AS A     : user
 I WANT   : As a user is specifying a Circle, during the drag, a 'current'
@@ -34,7 +36,7 @@ SO THAT  : I can see the circle I am about to build on release of the mouse
 TYPE     : USER STORY 3
 NAME     : Draw Rectangle
 OWNER    : 
-PRIORITY :
+PRIORITY : High
 ESTIMATE : 
 AS A     : user
 I WANT   : To click on one corner of a rectangle, drag, and release to 
@@ -45,7 +47,7 @@ SO THAT  : I can add rectangles to my canvas
 TYPE     : USER STORY 4
 NAME     : Draw Rectangle Feedback
 OWNER    : 
-PRIORITY :
+PRIORITY : Moderate
 ESTIMATE : 
 AS A     : user
 I WANT   : Similarly to Draw Circle Feedback, display the rectangle in mid construction.
@@ -55,7 +57,7 @@ SO THAT  : I can see the rectangle I am about to build on release of the mouse b
 TYPE     : USER STORY 5
 NAME     : Color selector
 OWNER    : 
-PRIORITY :
+PRIORITY : Moderate
 ESTIMATE : 
 AS A     : user
 I WANT   : To be able to select the current drawing color, to be applied
@@ -79,7 +81,7 @@ SO THAT  :
 TYPE     : USER STORY 6
 NAME     : Fill style selector
 OWNER    : 
-PRIORITY :
+PRIORITY : Low
 ESTIMATE : 
 AS A     : user
 I WANT   : To be able to select the current drawing style (filled or outline), to be applied
@@ -103,7 +105,7 @@ SO THAT  :
 TYPE     : USER STORY 7
 NAME     : Line thickness selector
 OWNER    : 
-PRIORITY :
+PRIORITY : Low
 ESTIMATE : 
 AS A     : user
 I WANT   : To be able to select the current line thickness, to be applied
@@ -125,10 +127,31 @@ I WANT   : To be able to select the current line thickness, to be applied
 SO THAT  : 
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
+TYPE     : USER STORY 8
+NAME     : Draw Square
+OWNER    : 
+PRIORITY : High
+ESTIMATE : 
+AS A     : user
+I WANT   : To click on one corner of a square, drag, and release to 
+		   specify two corners of a square to be drawn in the current style.
+SO THAT  : I can add square to my canvas
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 4
+NAME     : Draw Square Feedback
+OWNER    : 
+PRIORITY : Moderate
+ESTIMATE : 
+AS A     : user
+I WANT   : Similarly to Draw Circle Feedback, display the square in mid construction.
+SO THAT  : I can see the square I am about to build on release of the mouse button.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
 TYPE     : BUG 1
 NAME     : Icons instead of text for drawing mode selection
 OWNER    : 
-PRIORITY :
+PRIORITY : Low
 ESTIMATE : 
 ISSUE    : Would be nice to have icons instead of "Circle", "Rectangle", ...
 --------------------------------------------------------------------------
@@ -136,7 +159,7 @@ ISSUE    : Would be nice to have icons instead of "Circle", "Rectangle", ...
 TYPE     : BUG 2
 NAME     : Drawing selection mode not indicated
 OWNER    : 
-PRIORITY :
+PRIORITY : Moderate
 ESTIMATE : 
 ISSUE    : Currently ,you can't tell which mode "Circle", "Rectangle", ...
            is currently selected. Is JButton correct, is there a way
@@ -146,7 +169,7 @@ ISSUE    : Currently ,you can't tell which mode "Circle", "Rectangle", ...
 TYPE     : BUG 3
 NAME     : Architecture behind choosing selection mode is poor
 OWNER    : 
-PRIORITY :
+PRIORITY : High
 ESTIMATE : 
 ISSUE    : Code is not modular and is difficult to expand. Need a better
            architecture behind selecting a drawing mode, and handling
@@ -158,7 +181,7 @@ ISSUE    : Code is not modular and is difficult to expand. Need a better
 TYPE     : BUG 4
 NAME     : Architecture behind Model is poor
 OWNER    : 
-PRIORITY :
+PRIORITY : High
 ESTIMATE : 
 ISSUE    : Having a list of different types of drawable things in the
            model is cumbersome. In fact, it is currently incorrect, with
@@ -171,24 +194,23 @@ ISSUE    : Having a list of different types of drawable things in the
 TYPE     : BUG 5
 NAME     : Squiggle is broken
 OWNER    : 
-PRIORITY :
+PRIORITY : High
 ESTIMATE : 
 ISSUE    : Squiggles are connected to each other by a straight line. Each drag
 		   of the mouse should be a separate squiggle. Possibly
            the issue is with the representation of the squiggles in the Model.
 --------------------------------------------------------------------------
+
+# COMPLETED USER STORIES/BUGS BELOW ###########################################
 --------------------------------------------------------------------------
 TYPE     : BUG 6
 NAME     : Circle drawing is broken
-OWNER    : 
-PRIORITY :
-ESTIMATE : 
+OWNER    : Keenan
+PRIORITY : High
+ESTIMATE : 1 hour
 ISSUE    : The first click should specify the center of the circle, with
            a drag for the radius. This is not the case in the current
            implementation.
 --------------------------------------------------------------------------
-
-# COMPLETED USER STORIES/BUGS BELOW ###########################################
-
 # OMITTED USER STORIES/BUGS BELOW   ###########################################
 
