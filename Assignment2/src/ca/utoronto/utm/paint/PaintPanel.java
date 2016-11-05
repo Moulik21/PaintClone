@@ -71,6 +71,8 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 			int width = r.getWidth();
 			int height = r.getHeight();
 			int x,y;
+			
+			//Cases for where the top left coordinates of the rectangle will start based on if the user is trying to drag to the right or left and up or down
 			if (r.getOrigin().getX() < r.getEnd().getX()) {
 				x = r.getOrigin().getX();
 			}
@@ -88,20 +90,22 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 		
 		// Draw Squares
 		ArrayList<Square> square = this.model.getSquares();
-		for(Square r: this.model.getSquares()){
-			int side = r.getSide();
+		for(Square s: this.model.getSquares()){
+			int side = s.getSide();
 			int x,y;
-			if (r.getOrigin().getX() < r.getEnd().getX()) {
-				x = r.getOrigin().getX();
+			
+			//Cases for where the top left coordinates of the square will start based on if the user is trying to drag to the right or left and up or down
+			if (s.getOrigin().getX() < s.getEnd().getX()) {
+				x = s.getOrigin().getX();
 			}
 			else {
-				x = r.getEnd().getX();
+				x = s.getOrigin().getX() - s.getSide();
 			}
-			if (r.getOrigin().getY() < r.getEnd().getY()) {
-				y = r.getOrigin().getY();
+			if (s.getOrigin().getY() < s.getEnd().getY()) {
+				y = s.getOrigin().getY();
 			}
 			else {
-				y = r.getEnd().getY();
+				y = s.getOrigin().getY() - s.getSide();
 			}
 			g2d.drawRect(x, y, side, side);
 		}
@@ -154,11 +158,11 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 			
 			int xDifference, yDifference; 
 			//essentially width & height of the square the user wanted to create
-			xDifference = Math.abs(this.square.getEnd().getX() - this.square.getOrigin().getX());
-			yDifference = Math.abs(this.square.getEnd().getY() - this.square.getOrigin().getY());
+			xDifference = Math.abs(end.getX() - this.square.getOrigin().getX());
+			yDifference = Math.abs(end.getY() - this.square.getOrigin().getY());
 			
 			//the square will be drawn based on the bigger of width & height
-			if(xDifference>yDifference) {
+			if(xDifference<yDifference) {
 				this.square.setSide(xDifference);
 			}
 			else {
