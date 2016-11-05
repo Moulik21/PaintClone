@@ -19,6 +19,8 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 
 	private String mode; // modifies how we interpret input (could be better?)
 	private Circle circle; // the circle we are building
+	private Rectangle rectangle;
+	private Square square;
 	
 	public PaintPanel(PaintModel model, View view){
 		this.setBackground(Color.blue);
@@ -60,12 +62,52 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 		// Draw Circles
 		ArrayList<Circle> circles = this.model.getCircles();
 		for(Circle c: this.model.getCircles()){
-			int x = c.getCentre().getX();
-			int y = c.getCentre().getY();
 			int radius = c.getRadius();
-			g2d.drawOval(x, y, radius, radius);
+			int x = (c.getCentre().getX()-radius);
+			int y = (c.getCentre().getY()-radius);
+			g2d.drawOval(x, y, radius*2, radius*2);
 		}
 		
+		// Draw Rectangles
+		ArrayList<Rectangle> rectangles = this.model.getRectangles();
+		for(Rectangle r: this.model.getRectangles()){
+			int width = r.getWidth();
+			int height = r.getHeight();
+			int x,y;
+			if (r.getOrigin().getX() < r.getEnd().getX()) {
+				x = r.getOrigin().getX();
+			}
+			else {
+				x = r.getEnd().getX();
+			}
+			if (r.getOrigin().getY() < r.getEnd().getY()) {
+				y = r.getOrigin().getY();
+			}
+			else {
+				y = r.getEnd().getY();
+			}
+			g2d.drawRect(x, y, width, height);
+		}
+		
+		// Draw Squares
+		ArrayList<Square> square = this.model.getSquares();
+		for(Square r: this.model.getSquares()){
+			int side = r.getSide();
+			int x,y;
+			if (r.getOrigin().getX() < r.getEnd().getX()) {
+				x = r.getOrigin().getX();
+			}
+			else {
+				x = r.getEnd().getX();
+			}
+			if (r.getOrigin().getY() < r.getEnd().getY()) {
+				y = r.getOrigin().getY();
+			}
+			else {
+				y = r.getEnd().getY();
+			}
+			g2d.drawRect(x, y, side, side);
+		}
 		g2d.dispose();
 	}
 
@@ -119,6 +161,14 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 			Point centre = new Point(e.getX(), e.getY());
 			int radius = 0;
 			this.circle=new Circle(centre, 0);
+		} 
+		else if(this.mode=="Rectangle"){
+			Point origin = new Point(e.getX(), e.getY());
+			this.rectangle =new Rectangle(origin, null, 0, 0);
+		}
+		else if(this.mode=="Square"){
+			Point origin = new Point(e.getX(), e.getY());
+			this.square =new Square(origin, null, 0);
 		}
 	}
 
@@ -126,15 +176,49 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	public void mouseReleased(MouseEvent e) {
 		if(this.mode=="Squiggle"){
 			
-		} else if(this.mode=="Circle"){
+		} 
+		else if(this.mode=="Circle"){
 			if(this.circle!=null){
 				// Problematic notion of radius and centre!!
-				int radius = Math.abs(this.circle.getCentre().getX()-e.getX());
+				int radius = (int) Math.sqrt((Math.abs(Math.pow((double)(this.circle.getCentre().getX()-e.getX()), 2.0)))+Math.abs(Math.pow((double)(this.circle.getCentre().getY()-e.getY()), 2.0)));
 				this.circle.setRadius(radius);
 				this.model.addCircle(this.circle);
 				this.circle=null;
 			}
 		}
+		else if(this.mode=="Rectangle"){
+			if(this.rectangle!=null){
+				Point end = new Point(e.getX(), e.getY());
+				this.rectangle.setEnd(end);
+				this.rectangle.setWidth(Math.abs(end.getX()-this.rectangle.getOrigin().getX()));
+				this.rectangle.setHeight(Math.abs(end.getY()-this.rectangle.getOrigin().getY()));
+				this.model.addRectangle(this.rectangle);
+				this.rectangle=null;
+			}
+		}
+		else if(this.mode=="Square"){
+			if(this.square!=null){
+				Point end = new Point(e.getX(), e.getY());
+				this.square.setEnd(end);
+				
+				int xDifference, yDifference; 
+				//essentially width & height of the square the user wanted to create
+				xDifference = Math.abs(this.square.getEnd().getX() - this.square.getOrigin().getX());
+				yDifference = Math.abs(this.square.getEnd().getY() - this.square.getOrigin().getY());
+				
+				//the square will be drawn based on the bigger of width & height
+				if(xDifference>yDifference) {
+					this.square.setSide(xDifference);
+				}
+				else {
+					this.square.setSide(yDifference);
+				}
+		
+				this.model.addSquare(this.square);
+				this.square=null;
+			}
+		}
+		
 		
 	}
 
