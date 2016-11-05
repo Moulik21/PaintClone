@@ -21,18 +21,17 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	private Circle circle; // the circle we are building
 	private Rectangle rectangle;
 	private Square square;
+	private Point point;
+	
 	
 	public PaintPanel(PaintModel model, View view){
-		this.setBackground(Color.blue);
+		this.setBackground(Color.white);
 		this.setPreferredSize(new Dimension(300,300));
 		this.addMouseListener(this);
 		this.addMouseMotionListener(this);
-		
 		this.mode="Circle"; // bad code here?
-		
 		this.model = model;
 		this.model.addObserver(this);
-		
 		this.view=view;
 	}
 
@@ -47,9 +46,7 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
         Graphics2D g2d = (Graphics2D) g; // lets use the advanced api
 		// setBackground (Color.blue); 
 		// Origin is at the top left of the window 50 over, 75 down
-		g2d.setColor(Color.white);
-        g2d.drawString ("i="+i, 50, 75);
-		i=i+1;
+		g2d.setColor(Color.black);
 
 		// Draw Lines
 		ArrayList<Point> points = this.model.getPoints();
@@ -127,19 +124,50 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	// MouseMotionListener below
 	@Override
 	public void mouseMoved(MouseEvent e) {
-		if(this.mode=="Squiggle"){
-			
-		} else if(this.mode=="Circle"){
+		if (this.mode=="Circle"){
 			
 		}
 	}
+	
 	@Override
 	public void mouseDragged(MouseEvent e) {
 		if(this.mode=="Squiggle"){
 			this.model.addPoint(new Point(e.getX(), e.getY()));
-		} else if(this.mode=="Circle"){
+		} 
+		else if(this.mode=="Circle"){
+				int radius = (int) Math.sqrt((Math.abs(Math.pow((double)(this.circle.getCentre().getX()-e.getX()), 2.0)))+Math.abs(Math.pow((double)(this.circle.getCentre().getY()-e.getY()), 2.0)));
+				this.circle.setRadius(radius);
+				this.repaint();
+		}
+		
+		else if (this.mode=="Rectangle"){
+			
+			Point end = new Point(e.getX(), e.getY());
+			this.rectangle.setEnd(end);
+			this.rectangle.setWidth(Math.abs(end.getX()-this.rectangle.getOrigin().getX()));
+			this.rectangle.setHeight(Math.abs(end.getY()-this.rectangle.getOrigin().getY()));
+			this.repaint();
+		}
+		else if (this.mode == "Square"){
+			Point end = new Point(e.getX(), e.getY());
+			this.square.setEnd(end);
+			
+			int xDifference, yDifference; 
+			//essentially width & height of the square the user wanted to create
+			xDifference = Math.abs(this.square.getEnd().getX() - this.square.getOrigin().getX());
+			yDifference = Math.abs(this.square.getEnd().getY() - this.square.getOrigin().getY());
+			
+			//the square will be drawn based on the bigger of width & height
+			if(xDifference>yDifference) {
+				this.square.setSide(xDifference);
+			}
+			else {
+				this.square.setSide(yDifference);
+			}
+			this.repaint();
 			
 		}
+
 	}
 
 	// MouseListener below
@@ -160,15 +188,20 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 			// Problematic notion of radius and centre!!
 			Point centre = new Point(e.getX(), e.getY());
 			int radius = 0;
+			this.point= centre;
 			this.circle=new Circle(centre, 0);
+			this.model.addCircle(this.circle);
 		} 
 		else if(this.mode=="Rectangle"){
 			Point origin = new Point(e.getX(), e.getY());
-			this.rectangle =new Rectangle(origin, null, 0, 0);
+			this.point= origin;
+			this.rectangle =new Rectangle(origin, origin, 0, 0);
+			this.model.addRectangle(this.rectangle);
 		}
 		else if(this.mode=="Square"){
 			Point origin = new Point(e.getX(), e.getY());
-			this.square =new Square(origin, null, 0);
+			this.square = new Square(origin, origin, 0);
+			this.model.addSquare(this.square);
 		}
 	}
 
@@ -179,42 +212,16 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 		} 
 		else if(this.mode=="Circle"){
 			if(this.circle!=null){
-				// Problematic notion of radius and centre!!
-				int radius = (int) Math.sqrt((Math.abs(Math.pow((double)(this.circle.getCentre().getX()-e.getX()), 2.0)))+Math.abs(Math.pow((double)(this.circle.getCentre().getY()-e.getY()), 2.0)));
-				this.circle.setRadius(radius);
-				this.model.addCircle(this.circle);
 				this.circle=null;
 			}
 		}
 		else if(this.mode=="Rectangle"){
 			if(this.rectangle!=null){
-				Point end = new Point(e.getX(), e.getY());
-				this.rectangle.setEnd(end);
-				this.rectangle.setWidth(Math.abs(end.getX()-this.rectangle.getOrigin().getX()));
-				this.rectangle.setHeight(Math.abs(end.getY()-this.rectangle.getOrigin().getY()));
-				this.model.addRectangle(this.rectangle);
 				this.rectangle=null;
 			}
 		}
 		else if(this.mode=="Square"){
 			if(this.square!=null){
-				Point end = new Point(e.getX(), e.getY());
-				this.square.setEnd(end);
-				
-				int xDifference, yDifference; 
-				//essentially width & height of the square the user wanted to create
-				xDifference = Math.abs(this.square.getEnd().getX() - this.square.getOrigin().getX());
-				yDifference = Math.abs(this.square.getEnd().getY() - this.square.getOrigin().getY());
-				
-				//the square will be drawn based on the bigger of width & height
-				if(xDifference>yDifference) {
-					this.square.setSide(xDifference);
-				}
-				else {
-					this.square.setSide(yDifference);
-				}
-		
-				this.model.addSquare(this.square);
 				this.square=null;
 			}
 		}
