@@ -16,9 +16,9 @@ Nov 4, 2016
 	Obstacles : Working with git branches, which is a new concept to me
 
 Nov 5, 2016
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday : Finished basic draw rectangle and fixed basic draw circle functionality. Added square drawing functionality but then later realized it was not working correctly. 
+	Today     : Fix draw square bugs, finish bug 2, decide what other user stories to work on.
+	Obstacles : Troubleshooting my code that wasn't working as intended.
 
 Nov 6, 2016
 	Yesterday :
