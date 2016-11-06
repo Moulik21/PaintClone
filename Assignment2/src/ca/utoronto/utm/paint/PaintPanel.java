@@ -116,38 +116,34 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 		// Not exactly how MVC works, but similar.
 		this.repaint(); // Schedule a call to paintComponent
 	}
-	
 	/**
 	 *  Controller aspect of this
 	 */
 
 	public void setMode(String current_mode){
 		if (current_mode == "Squiggle"){
-			mode = new createSquiggle();
+			this.mode = new createSquiggle();
 		}
 		else if (current_mode == "Circle"){
-			mode = new createCircle();
+			this.mode = new createCircle();
 		}
 		else if (current_mode == "Rectangle"){
-			mode = new createRectangle();
+			this.mode = new createRectangle();
 		}
 		else if (current_mode == "Square"){
-			mode= new createSquare();
+			this.mode= new createSquare();
 		}
 	}
-	
 	// MouseMotionListener below
 	@Override
 	public void mouseMoved(MouseEvent e) {
 
 	}
-	
 	@Override
 	public void mouseDragged(MouseEvent e) {
 		this.mode.drag(this,e);
 		this.repaint();
 	}
-
 	// MouseListener below
 	@Override
 	public void mouseClicked(MouseEvent e) {
@@ -158,24 +154,19 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 
 		this.mode.press(this,e);
 	}
-
 	@Override
 	public void mouseReleased(MouseEvent e) {
 
 		this.mode.release(this, e);
-		
 	}
-
 	@Override
 	public void mouseEntered(MouseEvent e) {
 
 	}
-
 	@Override
 	public void mouseExited(MouseEvent e) {
 
 	}
-	
 	/*-------------------------------------------------------------------------------*/
 	//Getters and Setters for the modeStrategy
 	
