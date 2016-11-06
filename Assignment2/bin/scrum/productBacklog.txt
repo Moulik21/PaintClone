@@ -101,7 +101,7 @@ TYPE     : BUG 3
 NAME     : Architecture behind choosing selection mode is poor
 OWNER    : Paul
 PRIORITY : High
-ESTIMATE : 4 Hours
+ESTIMATE : 8 Hours
 ISSUE    : Code is not modular and is difficult to expand. Need a better
            architecture behind selecting a drawing mode, and handling
            the drawing events. Consider some design patterns here.
