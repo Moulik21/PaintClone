@@ -161,7 +161,7 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 			xDifference = Math.abs(end.getX() - this.square.getOrigin().getX());
 			yDifference = Math.abs(end.getY() - this.square.getOrigin().getY());
 			
-			//the square will be drawn based on the bigger of width & height
+			//the square will be drawn based on the smaller of width & height
 			if(xDifference<yDifference) {
 				this.square.setSide(xDifference);
 			}
