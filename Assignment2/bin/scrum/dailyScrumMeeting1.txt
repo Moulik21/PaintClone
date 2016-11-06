@@ -16,9 +16,9 @@ Nov 4, 2016
 	Obstacles :None
 
 Nov 5, 2016
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday :Studied on design patterns and how to implement.
+	Today     :Implement a more efficient architecture.
+	Obstacles :Properly implementing the design pattern.
 
 Nov 6, 2016
 	Yesterday :

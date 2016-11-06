@@ -16,9 +16,13 @@ Nov 4, 2016
 	Obstacles :I will need to familiarize myself with using git.
 
 Nov 5, 2016
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday : Went over how to use Git properly with the group.
+	
+	Today     : Worked with Moulik on User Story 3,4,5.
+				Before this implementation, shapes(Rectangle, Circle, Square) were invisible when drawing.
+			    Now the 3 shapes are visible while drawing.
+			    
+	Obstacles : Still need to familiarize myself with Git a little more
 
 Nov 6, 2016
 	Yesterday :
