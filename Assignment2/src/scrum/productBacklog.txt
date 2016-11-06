@@ -87,16 +87,6 @@ ESTIMATE :
 ISSUE    : Would be nice to have icons instead of "Circle", "Rectangle", ...
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : BUG 2
-NAME     : Drawing selection mode not indicated
-OWNER    : 
-PRIORITY : Moderate
-ESTIMATE : 
-ISSUE    : Currently ,you can't tell which mode "Circle", "Rectangle", ...
-           is currently selected. Is JButton correct, is there a way
-           to highlight the currently selected mode?
---------------------------------------------------------------------------
---------------------------------------------------------------------------
 TYPE     : BUG 3
 NAME     : Architecture behind choosing selection mode is poor
 OWNER    : 
@@ -121,18 +111,28 @@ ISSUE    : Having a list of different types of drawable things in the
            Consider some design patterns, or change of responsibility
            here.
 --------------------------------------------------------------------------
+
+# COMPLETED USER STORIES/BUGS BELOW ###########################################
+--------------------------------------------------------------------------
+TYPE     : BUG 2
+NAME     : Drawing selection mode not indicated
+OWNER    : Keenan
+PRIORITY : Moderate
+ESTIMATE : 1 hour
+ISSUE    : Currently ,you can't tell which mode "Circle", "Rectangle", ...
+           is currently selected. Is JButton correct, is there a way
+           to highlight the currently selected mode?
+--------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : BUG 5
 NAME     : Squiggle is broken
-OWNER    : 
+OWNER    : Moulik
 PRIORITY : High
-ESTIMATE : 
+ESTIMATE : 2.5 hours
 ISSUE    : Squiggles are connected to each other by a straight line. Each drag
 		   of the mouse should be a separate squiggle. Possibly
            the issue is with the representation of the squiggles in the Model.
 --------------------------------------------------------------------------
-
-# COMPLETED USER STORIES/BUGS BELOW ###########################################
 --------------------------------------------------------------------------
 TYPE     : BUG 6
 NAME     : Circle drawing is broken
@@ -159,7 +159,7 @@ TYPE     : USER STORY 2
 NAME     : Draw Rectangle
 OWNER    : Keenan
 PRIORITY : High
-ESTIMATE : 1
+ESTIMATE : 1 hour
 AS A     : user
 I WANT   : To click on one corner of a rectangle, drag, and release to 
 		   specify two corners of a rectangle to be drawn in the current style.
