@@ -21,9 +21,9 @@ Nov 5, 2016
 	Obstacles : Troubleshooting my code that wasn't working as intended.
 
 Nov 6, 2016
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday : Finished draw square bugs, finished bug 2, discussed with team members on the plan for the next few days.  
+	Today     : Team decision to take the day off for other courses.
+	Obstacles : None
 	
 Nov 7, 2016
 	Yesterday :
