@@ -9,6 +9,9 @@ public class shapeFactory {
 		if (shapeType == null){
 			return null;
 		}
+		if (shapeType == "Squiggle"){
+			return new Squiggle();
+		}
 		if (shapeType == "Circle"){
 			return new Circle();
 		}

@@ -15,24 +15,38 @@ public interface modeStrategy {
 
 class createSquiggle implements modeStrategy{
 	public void press(PaintPanel panel, MouseEvent e, boolean StyleFlag) {
-		return;
+		Point origin = new Point(e.getX(), e.getY());
+		ArrayList<Point> points = new ArrayList<Point>();			
+		panel.setSquiggle(new Squiggle(points,origin,panel.getColour())) ;
+		panel.getSquiggle().addPoint(origin);
+		panel.getModel().addSquiggle(panel.getSquiggle());
+		
 	}
 
 	public void release(PaintPanel panel, MouseEvent e) {
-		return;
+		if(panel.getSquiggle() !=null){
+			panel.setSquiggle(null);
+		}
 	}
 
 	public void drag(PaintPanel panel, MouseEvent e) {
-		panel.getModel().addPoint(new Point(e.getX(), e.getY()));
+		Point p = new Point(e.getX(),e.getY());
+		panel.getSquiggle().addPoint(p);
 	}
 
 	public void draw(PaintPanel panel, Graphics2D g2d) {
-		ArrayList<Point> points = panel.getModel().getPoints();
-		for(int i=0;i<points.size()-1; i++){
-			Point p1=points.get(i);
-			Point p2=points.get(i+1);
-			g2d.drawLine(p1.getX(), p1.getY(), p2.getX(), p2.getY());
+		ArrayList<Squiggle> squiggles = panel.getModel().getSquiggles();
+		for(Squiggle s: squiggles){
+			ArrayList<Point> points = s.getPoints();
+			for(int i=0;i<points.size()-1; i++){
+				Point p1=points.get(i);
+				Point p2=points.get(i+1);
+				g2d.setColor(s.getShapeColour());
+				g2d.drawLine(p1.getX(), p1.getY(), p2.getX(), p2.getY());
+			}
+			
 		}
+		
 	}
 
 	public String state() {
