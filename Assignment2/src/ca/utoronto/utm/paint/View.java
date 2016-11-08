@@ -43,7 +43,8 @@ public class View extends JFrame implements ActionListener {
 		this.colourChooserPanel = new ColourChooserPanel(this);
 		this.styleSelector = new StyleSelector();
 		
-		this.stylePanel.add(this.colourChooserPanel); this.stylePanel.add(this.styleSelector);
+		this.stylePanel.add(this.colourChooserPanel);
+		this.stylePanel.add(this.styleSelector);
 		c.add(this.stylePanel, BorderLayout.EAST);
 		
 		this.model=model;

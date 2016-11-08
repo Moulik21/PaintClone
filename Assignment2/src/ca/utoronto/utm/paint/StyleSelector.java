@@ -17,7 +17,7 @@ public class StyleSelector extends JPanel implements ActionListener {
 		this.isOutlineMode = true;
 		this.button = new JButton("Style: Outline");
 		this.button.addActionListener(this);
-		this.button.setPreferredSize(new Dimension(110, 50));
+		this.button.setPreferredSize(new Dimension(120, 50));
 		this.add(button);
 	}
 	

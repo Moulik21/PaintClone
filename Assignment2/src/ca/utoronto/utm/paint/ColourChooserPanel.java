@@ -15,9 +15,10 @@ class ColourChooserPanel extends JPanel implements ActionListener {
 	public ColourChooserPanel(View view) {	
 		this.view=view;
 		
-		JButton button = new JButton("Change Colour");
-		this.add(button);
-		button.addActionListener(this);
+		JButton colourButton = new JButton("Change Colour");
+		colourButton.setPreferredSize(new Dimension(120, 50));
+		this.add(colourButton);
+		colourButton.addActionListener(this);
 	}
 	
 	/**
