@@ -1,5 +1,6 @@
 package ca.utoronto.utm.paint;
 
+import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
@@ -43,9 +44,9 @@ class createCircle implements modeStrategy{
 	public void press(PaintPanel panel, MouseEvent e) {
 		Point centre = new Point(e.getX(), e.getY());
 		panel.setPoint(centre);
-		panel.setCircle(new Circle(centre, 0));
+		panel.setCircle(new Circle(centre, 0,panel.getColour()));
 		panel.getModel().addCircle(panel.getCircle());
-		panel.getCircle().setShapeColour(panel.getColour());
+
 	}
 
 	public void release(PaintPanel panel, MouseEvent e) {
@@ -81,9 +82,9 @@ class createRectangle implements modeStrategy{
 	public void press(PaintPanel panel, MouseEvent e) {
 		Point origin = new Point(e.getX(), e.getY());
 		panel.setPoint(origin);
-		panel.setRectangle(new Rectangle(origin, origin, 0, 0));
+		panel.setRectangle(new Rectangle(origin, origin, 0, 0,panel.getColour()));
 		panel.getModel().addRectangle(panel.getRectangle());
-		panel.getRectangle().setShapeColour(panel.getColour());
+
 	}
 
 	public void release(PaintPanel panel, MouseEvent e) {
@@ -120,6 +121,7 @@ class createRectangle implements modeStrategy{
 				y = r.getEnd().getY();
 			}
 			g2d.setColor(r.getShapeColour());
+			System.out.println(r.getShapeColour());
 			g2d.drawRect(x, y, width, height);
 		}
 		
@@ -133,9 +135,9 @@ class createRectangle implements modeStrategy{
 class createSquare implements modeStrategy{
 	public void press(PaintPanel panel, MouseEvent e) {
 		Point origin = new Point(e.getX(), e.getY());
-		panel.setSquare(new Square(origin, origin, 0));
+		panel.setSquare(new Square(origin, origin, 0,panel.getColour()));
 		panel.getModel().addSquare(panel.getSquare());
-		panel.getSquare().setShapeColour(panel.getColour());
+
 	}
 
 	public void release(PaintPanel panel, MouseEvent e) {
@@ -149,7 +151,7 @@ class createSquare implements modeStrategy{
 		panel.getSquare().setEnd(end);
 		
 		int xDifference, yDifference; 
-		//essentially width & height of the square the user wanted to create
+		//essentially width & height of the rectangle the user would have created
 		xDifference = Math.abs(end.getX() - panel.getSquare().getOrigin().getX());
 		yDifference = Math.abs(end.getY() - panel.getSquare().getOrigin().getY());
 

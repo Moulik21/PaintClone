@@ -1,5 +1,7 @@
 package ca.utoronto.utm.paint;
 
+import java.awt.Color;
+
 public class Circle extends Shape {
 	private int radius;
 	
@@ -8,8 +10,8 @@ public class Circle extends Shape {
 		this.radius = 0;
 	}
 	
-	public Circle(Point centre, int radius){
-		super(centre);
+	public Circle(Point centre, int radius, Color newColour){
+		super(centre, newColour);
 		this.radius = radius;
 	}
 
