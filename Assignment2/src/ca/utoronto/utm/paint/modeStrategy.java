@@ -45,6 +45,7 @@ class createCircle implements modeStrategy{
 		panel.setPoint(centre);
 		panel.setCircle(new Circle(centre, 0));
 		panel.getModel().addCircle(panel.getCircle());
+		panel.getCircle().setShapeColour(panel.getColour());
 	}
 
 	public void release(PaintPanel panel, MouseEvent e) {
@@ -65,6 +66,7 @@ class createCircle implements modeStrategy{
 			int radius = c.getRadius();
 			int x = (c.getOrigin().getX()-radius);
 			int y = (c.getOrigin().getY()-radius);
+			g2d.setColor(c.getShapeColour());
 			g2d.drawOval(x, y, radius*2, radius*2);
 		}
 	}
@@ -81,7 +83,7 @@ class createRectangle implements modeStrategy{
 		panel.setPoint(origin);
 		panel.setRectangle(new Rectangle(origin, origin, 0, 0));
 		panel.getModel().addRectangle(panel.getRectangle());
-		
+		panel.getRectangle().setShapeColour(panel.getColour());
 	}
 
 	public void release(PaintPanel panel, MouseEvent e) {
@@ -117,6 +119,7 @@ class createRectangle implements modeStrategy{
 			else {
 				y = r.getEnd().getY();
 			}
+			g2d.setColor(r.getShapeColour());
 			g2d.drawRect(x, y, width, height);
 		}
 		
@@ -132,6 +135,7 @@ class createSquare implements modeStrategy{
 		Point origin = new Point(e.getX(), e.getY());
 		panel.setSquare(new Square(origin, origin, 0));
 		panel.getModel().addSquare(panel.getSquare());
+		panel.getSquare().setShapeColour(panel.getColour());
 	}
 
 	public void release(PaintPanel panel, MouseEvent e) {
@@ -177,6 +181,7 @@ class createSquare implements modeStrategy{
 			else {
 				y = s.getOrigin().getY() - s.getHeight();
 			}
+			g2d.setColor(s.getShapeColour());
 			g2d.drawRect(x, y, side, side);
 		}
 		
