@@ -19,6 +19,8 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	
 	private String state;
 	private modeStrategy mode;
+	private final Color DEFAULTCOLOUR = Color.black; 
+	private Color newColour = DEFAULTCOLOUR;
 	private Circle circle; // the circle we are building
 	private Rectangle rectangle;
 	private Square square;
@@ -84,6 +86,16 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 		}
 		this.state = current_mode;
 	}
+	
+	public void setColour(Color newColour){
+		this.newColour=newColour;
+	}
+	
+	public Color getColour(){
+		return newColour;
+	}
+	
+	
 	// MouseMotionListener below
 	@Override
 	public void mouseMoved(MouseEvent e) {

@@ -19,6 +19,7 @@ public class View extends JFrame implements ActionListener {
 	// The components that make this up
 	private PaintPanel paintPanel;
 	private ShapeChooserPanel shapeChooserPanel;
+	private ColourChooserPanel colourChooserPanel;
 	
 	
 	public View(PaintModel model) {
@@ -33,6 +34,9 @@ public class View extends JFrame implements ActionListener {
 		// c.add(new JButton("East"),BorderLayout.EAST);
 		this.shapeChooserPanel = new ShapeChooserPanel(this);
 		c.add(this.shapeChooserPanel,BorderLayout.WEST);
+		
+		this.colourChooserPanel = new ColourChooserPanel(this);
+		c.add(this.colourChooserPanel,BorderLayout.EAST);
 	
 		this.model=model;
 		

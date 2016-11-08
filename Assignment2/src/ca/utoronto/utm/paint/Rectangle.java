@@ -1,5 +1,7 @@
 package ca.utoronto.utm.paint;
 
+import java.awt.Color;
+
 public class Rectangle extends Shape{
 
 	private Point origin;
@@ -14,8 +16,8 @@ public class Rectangle extends Shape{
 		this.height= 0;
 	}
 	
-	public Rectangle(Point origin, Point end, int width, int height){
-		super(origin);
+	public Rectangle(Point origin, Point end, int width, int height, Color newColour){
+		super(origin, newColour);
 		this.end = end;
 		this.width = width;
 		this.height = height;
