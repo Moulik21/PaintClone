@@ -1,5 +1,8 @@
 package ca.utoronto.utm.paint;
 
+/*
+ * THE CLASS IS CURRENTLY NOT BEING USED!!!!!!!!!!!!!!!!!!!!!!!!!!
+ */
 public class shapeFactory {
 	
 	public Shape getShape(String shapeType){

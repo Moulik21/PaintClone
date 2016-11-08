@@ -21,14 +21,14 @@ Nov 5, 2016
 	Obstacles :Properly implementing the design pattern.
 
 Nov 6, 2016
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday :Completed Branch Bug3
+	Today     :Unable to work due to other courses
+	Obstacles :Merge in a way that it does not conflict for others.
 	
 Nov 7, 2016
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday :Nothing.
+	Today     :Merge the new architecture. Work on userStory 8
+	Obstacles :Understand how to fill using coordinates.
 	
 Nov 8, 2016
 	Yesterday :
