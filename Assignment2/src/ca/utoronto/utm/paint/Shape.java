@@ -5,15 +5,18 @@ import java.awt.Color;
 public class Shape {
 	private Point origin;
 	private final Color colour;
+	private boolean isFilled;
 	
 	public Shape(){
 		this.origin = new Point(0,0);
 		this.colour = Color.BLACK;
+		this.isFilled = false;
 	}
 	
 	public Shape(Point origin, Color colour){
 		this.origin = origin;
 		this.colour = colour;
+		this.isFilled = false;
 	}
 	
 	public Point getOrigin(){
@@ -26,5 +29,13 @@ public class Shape {
 		
 	public Color getShapeColour(){
 		return colour;
+	}
+	
+	public boolean getIsFilled(){
+		return isFilled;
+	}
+	
+	public void changedIsFilled(){
+		this.isFilled = !this.isFilled;
 	}
 }

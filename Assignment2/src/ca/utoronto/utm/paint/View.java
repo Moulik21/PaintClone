@@ -4,6 +4,7 @@ import javax.swing.*;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
+import java.awt.GridLayout;
 import java.awt.event.*;
 /**
  * This is the top level View+Controller, it contains other aspects of the View+Controller.
@@ -20,6 +21,8 @@ public class View extends JFrame implements ActionListener {
 	private PaintPanel paintPanel;
 	private ShapeChooserPanel shapeChooserPanel;
 	private ColourChooserPanel colourChooserPanel;
+	private StyleSelector styleSelector;
+	private JPanel stylePanel;
 	
 	
 	public View(PaintModel model) {
@@ -27,6 +30,8 @@ public class View extends JFrame implements ActionListener {
 		
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setJMenuBar(createMenuBar());
+		this.stylePanel = new JPanel();
+		this.stylePanel.setLayout(new GridLayout(2,1));
 		
 		Container c=this.getContentPane();
 		// c.add(new JButton("North"),BorderLayout.NORTH);
@@ -36,8 +41,11 @@ public class View extends JFrame implements ActionListener {
 		c.add(this.shapeChooserPanel,BorderLayout.WEST);
 		
 		this.colourChooserPanel = new ColourChooserPanel(this);
-		c.add(this.colourChooserPanel,BorderLayout.EAST);
-	
+		this.styleSelector = new StyleSelector();
+		
+		this.stylePanel.add(this.colourChooserPanel); this.stylePanel.add(this.styleSelector);
+		c.add(this.stylePanel, BorderLayout.EAST);
+		
 		this.model=model;
 		
 		this.paintPanel = new PaintPanel(model, this);
@@ -46,6 +54,10 @@ public class View extends JFrame implements ActionListener {
 		this.pack();
 		// this.setSize(200,200);
 		this.setVisible(true);
+	}
+	
+	public StyleSelector getStyleSelector(){
+		return this.styleSelector;
 	}
 
 	public PaintPanel getPaintPanel(){

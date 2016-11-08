@@ -7,14 +7,14 @@ import java.util.ArrayList;
 
 public interface modeStrategy {
 	String state ();
-	void press(PaintPanel panel, MouseEvent e);
+	void press(PaintPanel panel, MouseEvent e, boolean StyleFlag);
 	void release(PaintPanel panel, MouseEvent e);
 	void drag(PaintPanel panel, MouseEvent e);
 	void draw(PaintPanel panel, Graphics2D g2d);
 }
 
 class createSquiggle implements modeStrategy{
-	public void press(PaintPanel panel, MouseEvent e) {
+	public void press(PaintPanel panel, MouseEvent e, boolean StyleFlag) {
 		return;
 	}
 
@@ -41,12 +41,14 @@ class createSquiggle implements modeStrategy{
 }
 
 class createCircle implements modeStrategy{
-	public void press(PaintPanel panel, MouseEvent e) {
+	public void press(PaintPanel panel, MouseEvent e,boolean StyleFlag) {
 		Point centre = new Point(e.getX(), e.getY());
 		panel.setPoint(centre);
 		panel.setCircle(new Circle(centre, 0,panel.getColour()));
 		panel.getModel().addCircle(panel.getCircle());
-
+		if (StyleFlag){
+			panel.getCircle().changedIsFilled();
+		}
 	}
 
 	public void release(PaintPanel panel, MouseEvent e) {
@@ -68,7 +70,12 @@ class createCircle implements modeStrategy{
 			int x = (c.getOrigin().getX()-radius);
 			int y = (c.getOrigin().getY()-radius);
 			g2d.setColor(c.getShapeColour());
-			g2d.drawOval(x, y, radius*2, radius*2);
+			if (c.getIsFilled()){
+				g2d.drawOval(x, y, radius*2, radius*2);
+			}
+			else{
+				g2d.fillOval(x, y, radius*2, radius*2);
+			}
 		}
 	}
 	
@@ -79,11 +86,14 @@ class createCircle implements modeStrategy{
 }
 
 class createRectangle implements modeStrategy{
-	public void press(PaintPanel panel, MouseEvent e) {
+	public void press(PaintPanel panel, MouseEvent e,boolean StyleFlag) {
 		Point origin = new Point(e.getX(), e.getY());
 		panel.setPoint(origin);
 		panel.setRectangle(new Rectangle(origin, origin, 0, 0,panel.getColour()));
 		panel.getModel().addRectangle(panel.getRectangle());
+		if (StyleFlag){
+			panel.getRectangle().changedIsFilled();
+		}
 
 	}
 
@@ -121,7 +131,12 @@ class createRectangle implements modeStrategy{
 				y = r.getEnd().getY();
 			}
 			g2d.setColor(r.getShapeColour());
-			g2d.drawRect(x, y, width, height);
+			if (r.getIsFilled()){
+				g2d.drawRect(x, y, width, height);
+			}
+			else{
+				g2d.fillRect(x, y, width, height);
+			}
 		}
 		
 	}
@@ -132,11 +147,14 @@ class createRectangle implements modeStrategy{
 }
 
 class createSquare implements modeStrategy{
-	public void press(PaintPanel panel, MouseEvent e) {
+	public void press(PaintPanel panel, MouseEvent e,boolean StyleFlag) {
 		Point origin = new Point(e.getX(), e.getY());
 		panel.setSquare(new Square(origin, origin, 0,panel.getColour()));
 		panel.getModel().addSquare(panel.getSquare());
-
+		
+		if (StyleFlag){
+			panel.getSquare().changedIsFilled();
+		}
 	}
 
 	public void release(PaintPanel panel, MouseEvent e) {
@@ -183,7 +201,12 @@ class createSquare implements modeStrategy{
 				y = s.getOrigin().getY() - s.getHeight();
 			}
 			g2d.setColor(s.getShapeColour());
-			g2d.drawRect(x, y, side, side);
+			if (s.getIsFilled()){
+				g2d.drawRect(x, y, side, side);
+			}
+			else{
+				g2d.fillRect(x, y, side, side);
+			}
 		}
 		
 	}	
