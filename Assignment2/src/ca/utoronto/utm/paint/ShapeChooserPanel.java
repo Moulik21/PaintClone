@@ -36,24 +36,3 @@ class ShapeChooserPanel extends JPanel implements ActionListener {
 
 	
 }
-class StyleSelector extends JButton implements ActionListener {
-	private boolean flag;
-	public StyleSelector(){
-		super("Style: Fill");
-		this.addActionListener(this);
-		this.flag = true;
-	}
-	
-	@Override
-	public void actionPerformed(ActionEvent arg0) {
-		if (this.flag){
-			this.setText("Style: Outline");
-			this.flag = false;
-		}
-		else{
-			this.setText("Style: Fill");
-			this.flag = true;
-		}
-	}
-	
-}
