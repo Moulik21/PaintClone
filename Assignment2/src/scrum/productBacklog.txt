@@ -89,9 +89,9 @@ ISSUE    : Would be nice to have icons instead of "Circle", "Rectangle", ...
 --------------------------------------------------------------------------
 TYPE     : BUG 3
 NAME     : Architecture behind choosing selection mode is poor
-OWNER    : 
+OWNER    : Paul
 PRIORITY : High
-ESTIMATE : 
+ESTIMATE : 8 Hours
 ISSUE    : Code is not modular and is difficult to expand. Need a better
            architecture behind selecting a drawing mode, and handling
            the drawing events. Consider some design patterns here.

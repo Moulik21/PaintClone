@@ -1,25 +1,24 @@
 package ca.utoronto.utm.paint;
 
-public class Rectangle {
+public class Rectangle extends Shape{
 
 	private Point origin;
 	private Point end;
 	private int width;
 	private int height;
 	
+	public Rectangle(){
+		super();
+		this.end = new Point(0,0);
+		this.width = 0;
+		this.height= 0;
+	}
+	
 	public Rectangle(Point origin, Point end, int width, int height){
-		this.origin = origin;
+		super(origin);
 		this.end = end;
 		this.width = width;
 		this.height = height;
-	}
-
-	public Point getOrigin() {
-		return origin;
-	}
-
-	public void setOrigin(Point origin) {
-		this.origin = origin;
 	}
 
 	public Point getEnd() {

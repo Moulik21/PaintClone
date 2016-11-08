@@ -25,7 +25,10 @@ Nov 5, 2016
 	Today     : Worked with Daniel on User Story 3,4,5 branch.
 				Before this implementation, shapes(Rectangle, Circle, Square) were invisible when drawing.
 			    Now the 3 shapes are visible while drawing.
+<<<<<<< HEAD
 			    Fixed Bug5.
+=======
+>>>>>>> refs/heads/Bug3
 		
 	Obstacles : Still need to familiarize myself with Git a little more
 

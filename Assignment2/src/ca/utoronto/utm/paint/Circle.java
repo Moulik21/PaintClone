@@ -1,20 +1,16 @@
 package ca.utoronto.utm.paint;
 
-public class Circle {
-	private Point centre;
+public class Circle extends Shape {
 	private int radius;
 	
+	public Circle(){
+		super();
+		this.radius = 0;
+	}
+	
 	public Circle(Point centre, int radius){
-		this.centre = centre;
+		super(centre);
 		this.radius = radius;
-	}
-
-	public Point getCentre() {
-		return centre;
-	}
-
-	public void setCentre(Point centre) {
-		this.centre = centre;
 	}
 
 	public int getRadius() {
