@@ -24,7 +24,9 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	private Circle circle; // the circle we are building
 	private Rectangle rectangle;
 	private Square square;
+	private Squiggle squiggle;
 	private Point point; //<---- Find out what this value actually does
+	
 	
 	private modeStrategy drawLine, drawCircle, drawRectangle, drawSquare;
 	
@@ -131,7 +133,12 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	}
 	/*-------------------------------------------------------------------------------*/
 	//Getters and Setters for the modeStrategy
-	
+	public void setSquiggle(Squiggle squiggle){
+		this.squiggle = squiggle;
+	}
+	public Squiggle getSquiggle(){
+		return this.squiggle;
+	}
 	public void setCircle(Circle circle){
 		this.circle = circle;
 	}
