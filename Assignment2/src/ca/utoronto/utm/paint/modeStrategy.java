@@ -121,7 +121,6 @@ class createRectangle implements modeStrategy{
 				y = r.getEnd().getY();
 			}
 			g2d.setColor(r.getShapeColour());
-			System.out.println(r.getShapeColour());
 			g2d.drawRect(x, y, width, height);
 		}
 		
