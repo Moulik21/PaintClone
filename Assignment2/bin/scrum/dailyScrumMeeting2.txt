@@ -26,9 +26,9 @@ Nov 6, 2016
 	Obstacles : None
 	
 Nov 7, 2016
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday : None
+	Today     : Finish user story 7 (change shape colour)
+	Obstacles : Adapting to change in code architecture by Paul, who implemented the strategy design  pattern.
 	
 Nov 8, 2016
 	Yesterday :
