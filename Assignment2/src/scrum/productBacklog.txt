@@ -41,9 +41,9 @@ ISSUE    : Would be nice to have icons instead of "Circle", "Rectangle", ...
 --------------------------------------------------------------------------
 TYPE     : BUG 4
 NAME     : Architecture behind Model is poor
-OWNER    : 
+OWNER    : Paul
 PRIORITY : High
-ESTIMATE : 
+ESTIMATE : 2 Hours
 ISSUE    : Having a list of different types of drawable things in the
            model is cumbersome. In fact, it is currently incorrect, with
            Squiggle's not drawing properly. Need to re-architect the Model
@@ -52,7 +52,7 @@ ISSUE    : Having a list of different types of drawable things in the
            here.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : BUG 5
+TYPE     : BUG 7
 NAME     : Drawing Order
 OWNER    : Paul
 PRIORITY : High

@@ -32,7 +32,7 @@ Nov 7, 2016
 	
 Nov 8, 2016
 	Yesterday :Completed userStory8.
-	Today     :Fix bug5. Revisit architecture (bug 4).
+	Today     :Fix bug7. Revisit architecture (bug 4).
 	Obstacles :Finding efficient way to restructure some of the code.
 	
 Nov 9, 2016
