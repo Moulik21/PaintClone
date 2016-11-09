@@ -22,31 +22,24 @@ public class View extends JFrame implements ActionListener {
 	private ShapeChooserPanel shapeChooserPanel;
 	private ColourChooserPanel colourChooserPanel;
 	private StyleSelector styleSelector;
-	private JPanel stylePanel;
-	
 	
 	public View(PaintModel model) {
 		super("Paint"); // set the title and do other JFrame init
 		
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setJMenuBar(createMenuBar());
-		
-		this.stylePanel = new JPanel();
-		this.stylePanel.setLayout(new GridLayout(0, 2));
-		
+				
 		Container c=this.getContentPane();
 		
 		this.shapeChooserPanel = new ShapeChooserPanel(this);
 		
-		c.add(this.shapeChooserPanel,BorderLayout.WEST);
-		
 		this.colourChooserPanel = new ColourChooserPanel(this);
-		
 		this.styleSelector = new StyleSelector();
 		
-		this.stylePanel.add(this.colourChooserPanel.getColourButton());
-		this.stylePanel.add(this.styleSelector.getButton());
-		c.add(this.stylePanel, BorderLayout.SOUTH);
+		this.shapeChooserPanel.add(this.colourChooserPanel.getColourButton());
+		this.shapeChooserPanel.add(this.styleSelector.getButton());
+		c.add(this.shapeChooserPanel,BorderLayout.WEST);
+		
 		
 		this.model=model;
 		
