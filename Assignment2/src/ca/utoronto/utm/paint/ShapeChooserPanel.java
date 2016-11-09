@@ -51,7 +51,6 @@ class ShapeChooserPanel extends JPanel implements ActionListener {
 		shapeButtonGroup.add(b);
 		this.add(b);
 		b.addActionListener(this);
-		b.setBorder(null);
 		b.setBackground(Color.WHITE);
 	}
 	}
