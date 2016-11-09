@@ -31,9 +31,9 @@ Nov 7, 2016
 	Obstacles : Adapting to change in code architecture by Paul, who implemented the strategy design  pattern.
 	
 Nov 8, 2016
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday : Finished user story 7
+	Today     : Work on GUI visuals
+	Obstacles : Java swing is not a strong point for me
 	
 Nov 9, 2016
 	Yesterday :
