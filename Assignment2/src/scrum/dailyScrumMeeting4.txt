@@ -25,19 +25,19 @@ Nov 5, 2016
 	Obstacles : Still need to familiarize myself with Git a little more
 
 Nov 6, 2016
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday :Worked on user stories 3,4,5
+	Today     :I will work on bug 1.
+	Obstacles :I will need to research how to replace buttons with images.
 	
 Nov 7, 2016
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday :I created button icons for bug 1.
+	Today     :I researched how to replace buttons with pictures in Java and implemented it.
+	Obstacles :Understanding how to replace buttons with images
 	
 Nov 8, 2016
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday :I replaced the button icons with images.
+	Today     :I worked on a new bug that arose from doing so.
+	Obstacles :By changing the buttons to pictures, we no longer have any identifying text associated with them.
 	
 Nov 9, 2016
 	Yesterday :
