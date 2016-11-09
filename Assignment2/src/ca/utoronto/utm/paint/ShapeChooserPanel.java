@@ -52,6 +52,8 @@ class ShapeChooserPanel extends JPanel implements ActionListener {
 		this.add(b);
 		b.addActionListener(this);
 		b.setBackground(Color.WHITE);
+		b.setPreferredSize(new Dimension(60, 60));
+		b.setBorder(null);
 	}
 	}
 
