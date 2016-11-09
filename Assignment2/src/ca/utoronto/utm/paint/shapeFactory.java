@@ -1,25 +1,38 @@
 package ca.utoronto.utm.paint;
 
+import java.awt.Color;
+
 /*
  * THE CLASS IS CURRENTLY NOT BEING USED!!!!!!!!!!!!!!!!!!!!!!!!!!
  */
 public class shapeFactory {
 	
-	public Shape getShape(String shapeType){
+	public Shape getShape(String shapeType, Point origin, Color color){
 		if (shapeType == null){
 			return null;
 		}
 		if (shapeType == "Squiggle"){
-			return new Squiggle();
+			Squiggle squiggle = new Squiggle(origin, color);
+			squiggle.addPoint(origin);
+			return squiggle;
 		}
 		if (shapeType == "Circle"){
-			return new Circle();
+			Circle circle = new Circle(origin, color);
+			circle.setRadius(0);
+			return circle;
 		}
 		else if (shapeType =="Rectangle"){
-			return new Rectangle();
+			Rectangle rectangle =  new Rectangle(origin, color);
+			rectangle.setEnd(origin);
+			rectangle.setHeight(0);
+			rectangle.setWidth(0);
+			return rectangle;
 		}
 		else if (shapeType =="Square"){
-			return new Square();
+			Square square = new Square(origin, color);
+			square.setEnd(origin);
+			square.setSide(0);
+			return square;
 		}
 		return null;
 	}
