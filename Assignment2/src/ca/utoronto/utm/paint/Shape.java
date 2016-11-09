@@ -1,8 +1,9 @@
 package ca.utoronto.utm.paint;
 
 import java.awt.Color;
+import java.awt.Graphics2D;
 
-public class Shape {
+public abstract class Shape {
 	private Point origin;
 	private final Color colour;
 	private boolean isFilled;
@@ -38,4 +39,6 @@ public class Shape {
 	public void changedIsFilled(){
 		this.isFilled = !this.isFilled;
 	}
+	
+	public abstract void draw(Graphics2D g2d);
 }
