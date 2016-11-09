@@ -11,14 +11,16 @@ import java.awt.event.ActionListener;
 class ColourChooserPanel extends JPanel implements ActionListener {
 	private View view; // So we can talk to our parent or other components of the view
 	private Color colour;
+	private JButton colourButton = new JButton("Change Colour");
 	
 	public ColourChooserPanel(View view) {	
 		this.view=view;
-		
-		JButton colourButton = new JButton("Change Colour");
-		colourButton.setPreferredSize(new Dimension(120, 50));
-		this.add(colourButton);
+		colourButton.setBackground(new Color(250, 250 ,250));
 		colourButton.addActionListener(this);
+	}
+	
+	public JButton getColourButton() {
+		return colourButton;
 	}
 	
 	/**

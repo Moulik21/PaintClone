@@ -19,9 +19,13 @@ class ShapeChooserPanel extends JPanel implements ActionListener {
 		ButtonGroup shapeButtonGroup = new ButtonGroup();
 		for (String label : buttonLabels) {
 			JToggleButton button = new JToggleButton(label);
+			button.setBackground(new Color(250, 250 ,250));
 			this.add(button);
 			shapeButtonGroup.add(button);
 			button.addActionListener(this);
+			if (label.equals("Squiggle")) { //program starts with squiggle as selected
+				button.setSelected(true);
+			}
 		}
 	}
 	
