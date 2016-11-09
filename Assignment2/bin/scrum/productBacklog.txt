@@ -31,6 +31,17 @@ I WANT   : To be able to select the current line thickness, to be applied
 SO THAT  : 
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
+TYPE     : USER STORY 10
+NAME     : Quick Color Select
+OWNER    : Paul
+PRIORITY : Low
+ESTIMATE : 2 Hours
+AS A     : user
+I WANT   : To be able to select comon colors on the fly without going through
+		   the large color selection.
+SO THAT  : It is more convenient.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
 TYPE     : BUG 1
 NAME     : Icons instead of text for drawing mode selection
 OWNER    : Daniel

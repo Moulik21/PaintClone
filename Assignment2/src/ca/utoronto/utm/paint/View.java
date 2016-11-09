@@ -23,6 +23,7 @@ public class View extends JFrame implements ActionListener {
 	private ColourChooserPanel colourChooserPanel;
 	private StyleSelector styleSelector;
 	private JPanel stylePanel;
+	private colorPalette palette;
 	
 	
 	public View(PaintModel model) {
@@ -44,15 +45,23 @@ public class View extends JFrame implements ActionListener {
 		
 		this.styleSelector = new StyleSelector();
 		
+		//Color and Style chooser
 		this.stylePanel.add(this.colourChooserPanel.getColourButton());
 		this.stylePanel.add(this.styleSelector.getButton());
+		
 		c.add(this.stylePanel, BorderLayout.SOUTH);
 		
+		//Model and PaintPanel
 		this.model=model;
 		
 		this.paintPanel = new PaintPanel(model, this);
 		c.add(this.paintPanel, BorderLayout.CENTER);
 		
+		//Colour Palette
+		this.palette = new colorPalette(this.paintPanel);
+		this.palette.addActionListener();
+		c.add(this.palette, BorderLayout.EAST);
+				
 		this.pack();
 		this.setSize(600,500);
 		this.setVisible(true);
