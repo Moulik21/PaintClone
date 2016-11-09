@@ -1,5 +1,6 @@
 package ca.utoronto.utm.paint;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -13,11 +14,10 @@ public class StyleSelector extends JPanel implements ActionListener {
 	private JButton button;
 	
 	public StyleSelector(){
-//		this.setLayout(new GridLayout(1, 1));
 		this.isOutlineMode = true;
-		this.button = new JButton("<html>Current Style: Outline<br>Press To Toggle to Fill Style</html>");
+		this.button = new JButton("<html>Current Style: Outline<br>Press To Toggle Fill Style</html>");
+		button.setBackground(new Color(250, 250 ,250));
 		this.button.addActionListener(this);
-//		this.button.setPreferredSize(new Dimension(120, 50));
 		this.add(button);
 	}
 	
@@ -25,14 +25,18 @@ public class StyleSelector extends JPanel implements ActionListener {
 		return this.isOutlineMode;
 	}
 	
+	public JButton getButton() {
+		return button;
+	}
+	
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		if (this.isOutlineMode){
-			this.button.setText("<html>Current Style: Fill<br>Press To Toggle to Outline Style</html>");
+			this.button.setText("<html>Current Style: Fill<br>Press To Toggle Outline Style</html>");
 			this.isOutlineMode = false;
 		}
 		else{
-			this.button.setText("<html>Current Style: Outline<br>Press To Toggle to Fill Style</html>");
+			this.button.setText("<html>Current Style: Outline<br>Press To Toggle Fill Style</html>");
 			this.isOutlineMode = true;
 		}
 		

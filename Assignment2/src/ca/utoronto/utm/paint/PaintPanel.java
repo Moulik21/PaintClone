@@ -13,14 +13,17 @@ import java.util.Observer;
 // https://docs.oracle.com/javase/tutorial/2d/
 
 class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseListener  {
-	private int i=0;
+
+	private final Color DEFAULTCOLOUR = Color.black; 
+	private final modeStrategy DEFAULTMODE = new createSquiggle();
+	
 	private PaintModel model; // slight departure from MVC, because of the way painting works
 	private View view; // So we can talk to our parent or other components of the view
 	
 	private String state;
-	private modeStrategy mode;
-	private final Color DEFAULTCOLOUR = Color.black; 
+	private modeStrategy mode = DEFAULTMODE;
 	private Color newColour = DEFAULTCOLOUR;
+	
 	private Circle circle; // the circle we are building
 	private Rectangle rectangle;
 	private Square square;

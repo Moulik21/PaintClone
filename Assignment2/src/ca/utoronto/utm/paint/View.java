@@ -30,21 +30,22 @@ public class View extends JFrame implements ActionListener {
 		
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setJMenuBar(createMenuBar());
+		
 		this.stylePanel = new JPanel();
 		this.stylePanel.setLayout(new GridLayout(0, 2));
 		
 		Container c=this.getContentPane();
-		// c.add(new JButton("North"),BorderLayout.NORTH);
-		// c.add(new JButton("South"),BorderLayout.SOUTH);
-		// c.add(new JButton("East"),BorderLayout.EAST);
+		
 		this.shapeChooserPanel = new ShapeChooserPanel(this);
+		
 		c.add(this.shapeChooserPanel,BorderLayout.WEST);
 		
 		this.colourChooserPanel = new ColourChooserPanel(this);
+		
 		this.styleSelector = new StyleSelector();
 		
-		this.stylePanel.add(this.colourChooserPanel);
-		this.stylePanel.add(this.styleSelector);
+		this.stylePanel.add(this.colourChooserPanel.getColourButton());
+		this.stylePanel.add(this.styleSelector.getButton());
 		c.add(this.stylePanel, BorderLayout.SOUTH);
 		
 		this.model=model;
@@ -53,7 +54,7 @@ public class View extends JFrame implements ActionListener {
 		c.add(this.paintPanel, BorderLayout.CENTER);
 		
 		this.pack();
-		// this.setSize(200,200);
+		this.setSize(600,500);
 		this.setVisible(true);
 	}
 	
