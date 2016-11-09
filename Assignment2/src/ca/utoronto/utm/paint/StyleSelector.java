@@ -15,9 +15,9 @@ public class StyleSelector extends JPanel implements ActionListener {
 	public StyleSelector(){
 //		this.setLayout(new GridLayout(1, 1));
 		this.isOutlineMode = true;
-		this.button = new JButton("Style: Outline");
+		this.button = new JButton("Current Style: Outline");
 		this.button.addActionListener(this);
-		this.button.setPreferredSize(new Dimension(120, 50));
+//		this.button.setPreferredSize(new Dimension(120, 50));
 		this.add(button);
 	}
 	
@@ -28,11 +28,11 @@ public class StyleSelector extends JPanel implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		if (this.isOutlineMode){
-			this.button.setText("Style: Fill");
+			this.button.setText("Current Style: Fill");
 			this.isOutlineMode = false;
 		}
 		else{
-			this.button.setText("Style: Outline");
+			this.button.setText("Current Style: Outline");
 			this.isOutlineMode = true;
 		}
 		
