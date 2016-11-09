@@ -18,6 +18,7 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	private View view; // So we can talk to our parent or other components of the view
 	
 	private String state;
+	private shapeFactory factory;
 	private modeStrategy mode;
 	private final Color DEFAULTCOLOUR = Color.black; 
 	private Color newColour = DEFAULTCOLOUR;
@@ -25,10 +26,7 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	private Rectangle rectangle;
 	private Square square;
 	private Squiggle squiggle;
-	private Point point; //<---- Find out what this value actually does
-	
-	
-	private modeStrategy drawLine, drawCircle, drawRectangle, drawSquare;
+	private Point origin_point; //<---- Find out what this value actually does
 	
 	public PaintPanel(PaintModel model, View view){
 		this.setBackground(Color.white);
@@ -38,11 +36,7 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 		this.model = model;
 		this.model.addObserver(this);
 		this.view=view;
-		
-		this.drawLine = new createSquiggle();
-		this.drawCircle = new createCircle();
-		this.drawRectangle = new createRectangle();
-		this.drawSquare = new createSquare();
+		this.factory = new shapeFactory();
 	}
 
 	/**
@@ -57,10 +51,9 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 		// Origin is at the top left of the window 50 over, 75 down
 		g2d.setColor(Color.black);
 
-		this.drawLine.draw(this, g2d);
-		this.drawCircle.draw(this, g2d);
-		this.drawRectangle.draw(this, g2d);
-		this.drawSquare.draw(this, g2d);
+		for (Shape s: this.model.getShape()){
+			s.draw(g2d);
+		}
 		g2d.dispose();
 	}
 
@@ -115,8 +108,8 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	}
 	@Override
 	public void mousePressed(MouseEvent e) {
-
-		this.mode.press(this,e,this.view.getStyleSelector().getFlag());
+		this.origin_point = new Point(e.getX(), e.getY());
+		this.mode.press(this,e,this.view.getStyleSelector().getFlag(), this.factory, this.origin_point);
 	}
 	@Override
 	public void mouseReleased(MouseEvent e) {
@@ -156,9 +149,6 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	}
 	public Square getSquare(){
 		return this.square;
-	}
-	public void setPoint(Point point){
-		this.point = point;
 	}
 	public PaintModel getModel(){
 		return this.model;
