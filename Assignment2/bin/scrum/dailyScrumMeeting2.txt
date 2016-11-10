@@ -36,6 +36,6 @@ Nov 8, 2016
 	Obstacles : Java swing is not a strong point for me
 	
 Nov 9, 2016
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday : Changed button locations and background colours, helped team mates with git issues
+	Today     : Continue work on GUI visuals, bug checking and making a polished finished product
+	Obstacles : Making sure we finished everything that we meant to finish for this sprint
