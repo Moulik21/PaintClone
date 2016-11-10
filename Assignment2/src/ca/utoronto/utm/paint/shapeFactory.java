@@ -2,9 +2,20 @@ package ca.utoronto.utm.paint;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
-
+/**
+ * A modular way to create new shapes 
+ *
+ */
 public class shapeFactory {
 	
+	/**
+	 * Create a new Shape based on what Shape is required to be made
+	 * @param shapeType the type of Shape to be made
+	 * @param origin the starting Point of the shape
+	 * @param color the colour of the shape
+	 * @param newStroke the line thickness of the shape
+	 * @return the Shape required to be made, null otherwise.
+	 */
 	public Shape getShape(String shapeType, Point origin, Color color, BasicStroke newStroke){
 		if (shapeType == null){
 			return null;

@@ -13,11 +13,21 @@ import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
-
+/**
+ * A StyleSelector is a JPanel that contains a JButton that allows the user to choose if
+ * subsequent Shapes will be filled. If the user decides to disable the fill feature, a "X"
+ * will appear on top of the Icon of the button. By default, fill is disabled.
+ *
+ */
 public class StyleSelector extends JPanel implements ActionListener {
+	
+	//Instance Variables
 	private boolean isOutlineMode;
 	private JButton button;
 	
+	/**
+	 * Creates a StyleSelector
+	 */
 	public StyleSelector(){
 		this.isOutlineMode = true;
 		this.button = new JButton();
@@ -35,15 +45,26 @@ public class StyleSelector extends JPanel implements ActionListener {
 		this.add(button);
 	}
 	
+	/**
+	 * 
+	 * @return True if user has disabled fill feature, false otherwise.
+	 */
 	public boolean getFlag(){
 		return this.isOutlineMode;
 	}
 	
+	/**
+	 * 
+	 * @return the JButton that allows the user to enable/disable to fill feature
+	 */
 	public JButton getButton() {
 		return button;
 	}
 	
 	@Override
+	/**
+	 * A "X" appears on top of the button if the fill feature is disabled, disappears otherwise.
+	 */
 	public void actionPerformed(ActionEvent arg0) {
 		if (this.isOutlineMode){
 		 	try {
