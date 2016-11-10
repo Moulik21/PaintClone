@@ -26,10 +26,11 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	private modeStrategy mode = DEFAULTMODE;
 	private Color newColour = DEFAULTCOLOUR;
 	private BasicStroke stroke =  DEFAULTSTROKE;
-	private Circle circle; // the circle we are building
-	private Rectangle rectangle;
-	private Square square;
-	private Squiggle squiggle;
+//	private Circle circle; // the circle we are building
+//	private Rectangle rectangle;
+//	private Square square;
+//	private Squiggle squiggle;
+	private Shape shape;
 	private Point origin_point; //<---- Find out what this value actually does
 	
 	public PaintPanel(PaintModel model, View view){
@@ -129,30 +130,36 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	public Color getColour(){
 		return newColour;
 	}
-	public void setSquiggle(Squiggle squiggle){
-		this.squiggle = squiggle;
+	public void setShape(Shape shape){
+		this.shape = shape;
 	}
-	public Squiggle getSquiggle(){
-		return this.squiggle;
+	public Shape getShape(){
+		return this.shape;
 	}
-	public void setCircle(Circle circle){
-		this.circle = circle;
-	}
-	public Circle getCircle(){
-		return this.circle;
-	}
-	public void setRectangle(Rectangle rectangle){
-		this.rectangle = rectangle;
-	}
-	public Rectangle getRectangle(){
-		return this.rectangle;
-	}
-	public void setSquare (Square square){
-		this.square = square;
-	}
-	public Square getSquare(){
-		return this.square;
-	}
+//	public void setSquiggle(Squiggle squiggle){
+//		this.squiggle = squiggle;
+//	}
+//	public Squiggle getSquiggle(){
+//		return this.squiggle;
+//	}
+//	public void setCircle(Circle circle){
+//		this.circle = circle;
+//	}
+//	public Circle getCircle(){
+//		return this.circle;
+//	}
+//	public void setRectangle(Rectangle rectangle){
+//		this.rectangle = rectangle;
+//	}
+//	public Rectangle getRectangle(){
+//		return this.rectangle;
+//	}
+//	public void setSquare (Square square){
+//		this.square = square;
+//	}
+//	public Square getSquare(){
+//		return this.square;
+//	}
 	public PaintModel getModel(){
 		return this.model;
 	}
