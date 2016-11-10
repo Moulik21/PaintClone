@@ -10,12 +10,6 @@ public abstract class Shape {
 	private boolean isFilled;
 	private BasicStroke stroke;
 	
-	public Shape(){
-		this.origin = new Point(0,0);
-		this.colour = Color.BLACK;
-		this.isFilled = false;
-	}
-	
 	public Shape(Point origin, Color colour, BasicStroke newStroke){
 		this.origin = origin;
 		this.colour = colour;

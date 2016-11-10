@@ -11,13 +11,6 @@ public class Rectangle extends Shape{
 	private int width;
 	private int height;
 	
-	public Rectangle(){
-		super();
-		this.end = new Point(0,0);
-		this.width = 0;
-		this.height= 0;
-	}
-	
 	public Rectangle(Point origin,Color newColour, BasicStroke newStroke){
 		super(origin, newColour, newStroke);
 	}

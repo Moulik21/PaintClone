@@ -14,7 +14,13 @@ public class shapeFactory {
 			squiggle.addPoint(origin);
 			return squiggle;
 		}
-		if (shapeType == "Circle"){
+		else if (shapeType =="Polyline"){
+			PolyLine polyline = new PolyLine(origin, color,newStroke);
+			polyline.addPoint(origin);
+			polyline.addPoint(origin);
+			return polyline;
+		}
+		else if (shapeType == "Circle"){
 			Circle circle = new Circle(origin, color, newStroke);
 			circle.setRadius(0);
 			return circle;

@@ -30,21 +30,22 @@ Nov 5, 2016
 	Obstacles : Still need to familiarize myself with Git a little more
 
 Nov 6, 2016
-	Yesterday :
-	Today     : Nothing 
+	Yesterday : Worked on user stories 4,5,6 with Daniel. Finished Bug5
+	Today     : Team decision to take the day off for other courses.
 	Obstacles :
 	
 Nov 7, 2016
 	Yesterday :
-	Today     :
-	Obstacles :
+	Today     : Started working on UserStory9 with Daniel, forgot to push Scrum notes and Branch.
+	Obstacles : Getting used to the new design pattern which is much more modular and much better.
 	
 Nov 8, 2016
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday : Started working on UserStory9
+	Today     : Completed UserStory9
+	Obstacles : Adapting to change in code architecture
 	
 Nov 9, 2016
 	Yesterday :
-	Today     :
+	Today     : Merged UserStory9 with master. Updated all scrum notes for days that had no notes.
+			    Documenting all methods and classes.
 	Obstacles :

@@ -94,4 +94,4 @@ ESTIMATE : 2.5 hours
 ISSUE    : Squiggles are connected to each other by a straight line. Each drag
 		   of the mouse should be a separate squiggle. Possibly
            the issue is with the representation of the squiggles in the Model.
---------------------------------------------------------------------------
+---------------------------------------------------------------------------

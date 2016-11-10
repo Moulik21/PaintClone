@@ -30,6 +30,7 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	private Rectangle rectangle;
 	private Square square;
 	private Squiggle squiggle;
+	private PolyLine polyline;
 	private Point origin_point; //<---- Find out what this value actually does
 	
 	public PaintPanel(PaintModel model, View view){
@@ -74,6 +75,9 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 		if (current_mode == "Squiggle"){
 			this.mode = new createSquiggle();
 		}
+		else if (current_mode =="Polyline"){
+			this.mode = new createPolyline();
+		}
 		else if (current_mode == "Circle"){
 			this.mode = new createCircle();
 		}
@@ -90,7 +94,9 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	// MouseMotionListener below
 	@Override
 	public void mouseMoved(MouseEvent e) {
-
+	if(this.mode.state() == "Polyline" ){
+		this.mode.move(this,e);
+	}
 	}
 	@Override
 	public void mouseDragged(MouseEvent e) {
@@ -134,6 +140,12 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	}
 	public Squiggle getSquiggle(){
 		return this.squiggle;
+	}
+	public void setPolyline(PolyLine polyline){
+		this.polyline = polyline;
+	}
+	public PolyLine getPolyline(){
+		return this.polyline;
 	}
 	public void setCircle(Circle circle){
 		this.circle = circle;

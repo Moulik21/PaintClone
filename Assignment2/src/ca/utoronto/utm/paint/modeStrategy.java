@@ -5,11 +5,14 @@ import java.awt.Graphics2D;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
+import javax.swing.SwingUtilities;
+
 public interface modeStrategy {
 	String state ();
 	void press(PaintPanel panel, MouseEvent e, boolean StyleFlag, shapeFactory factory, Point origin);
 	void release(PaintPanel panel, MouseEvent e);
 	void drag(PaintPanel panel, MouseEvent e);
+	void move(PaintPanel panel, MouseEvent e);
 }
 
 class createSquiggle implements modeStrategy{
@@ -34,8 +37,65 @@ class createSquiggle implements modeStrategy{
 	public String state() {
 		return "Squiggle";
 	}
+
+	@Override
+	public void move(PaintPanel panel, MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	
 }
 
+class createPolyline implements modeStrategy{
+	
+	
+	public String state() {
+		// TODO Auto-generated method stub
+		return "Polyline";
+	}
+//----------------------------------------------------------------------------------------------------------------
+	public void press(PaintPanel panel, MouseEvent e, boolean StyleFlag, shapeFactory factory, Point origin) {
+
+		if(panel.getPolyline() == null){
+			panel.setPolyline((PolyLine)factory.getShape("Polyline", origin, panel.getColour(),panel.getStroke()));
+			panel.getModel().addShape(panel.getPolyline());
+	
+		}
+		if (StyleFlag){
+			panel.getPolyline().changedIsFilled();
+		}
+		if(SwingUtilities.isLeftMouseButton(e)){
+				panel.getPolyline().addPoint(e.getX(),e.getY());
+		}
+		else if(SwingUtilities.isRightMouseButton(e)){
+			int originX = panel.getPolyline().getX().get(0);
+			int originY = panel.getPolyline().getY().get(0);
+			panel.getPolyline().removePoint();
+			panel.getPolyline().addPoint(originX,originY);
+			panel.setPolyline(null);
+			panel.repaint();
+		}
+	}
+	public void move(PaintPanel panel, MouseEvent e){
+		if(panel.getPolyline()!=null){
+			panel.getPolyline().removePoint();
+			panel.getPolyline().addPoint(e.getX(),e.getY());
+			panel.repaint();
+
+		}
+	}
+	public void release(PaintPanel panel, MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void drag(PaintPanel panel, MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
+//------------------------------------------------------------------------------------------------------------------
 class createCircle implements modeStrategy{
 	public void press(PaintPanel panel, MouseEvent e,boolean StyleFlag, shapeFactory factory, Point origin) {
 		Point centre = new Point(e.getX(), e.getY());
@@ -62,6 +122,12 @@ class createCircle implements modeStrategy{
 
 	public String state() {
 		return "Circle";
+	}
+
+	@Override
+	public void move(PaintPanel panel, MouseEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }
@@ -92,6 +158,12 @@ class createRectangle implements modeStrategy{
 
 	public String state() {
 		return "Rectangle";
+	}
+
+	@Override
+	public void move(PaintPanel panel, MouseEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }
@@ -134,6 +206,12 @@ class createSquare implements modeStrategy{
 	
 	public String state() {
 		return "Square";
+	}
+
+	@Override
+	public void move(PaintPanel panel, MouseEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 }
 
