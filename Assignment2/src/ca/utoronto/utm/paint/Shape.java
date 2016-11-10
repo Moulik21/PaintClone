@@ -20,7 +20,7 @@ public abstract class Shape {
 		this.origin = origin;
 		this.colour = colour;
 		this.isFilled = false;
-		this.stroke = new BasicStroke(1);
+		this.stroke = newStroke;
 	}
 	
 	public Point getOrigin(){

@@ -57,7 +57,7 @@ public class StrokeChooserPanel extends JPanel implements ActionListener {
 		myComboBox = (JComboBox)e.getSource();
 		int index = myComboBox.getSelectedIndex();
 		stroke = strokeList.get(index);
-		//view.getPaintPanel().setStroke(stroke);
+		view.getPaintPanel().setStroke(stroke);
 		
 	}
 	
