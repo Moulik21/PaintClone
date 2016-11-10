@@ -10,7 +10,7 @@ import java.awt.Graphics2D;
  */
 public class Rectangle extends Shape{
 	
-	//Instance Varibles
+	//Instance Variables
 	private Point end;
 	private int width;
 	private int height;
@@ -76,7 +76,7 @@ public class Rectangle extends Shape{
 	@Override
 	/**
 	 * Draw the Rectangle.
-	 * Rectangle has its own implementation of draw as it is different from other Shapes.
+	 * Rectangle has its own implementation of draw as it is drawn differently from other Shapes.
 	 */
 	public void draw(Graphics2D g2d) {
 		int width = this.getWidth();

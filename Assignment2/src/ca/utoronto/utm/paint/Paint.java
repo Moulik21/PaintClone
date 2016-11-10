@@ -17,6 +17,7 @@ public class Paint {
 
 	PaintModel model; // Model
 	View view; // View+Controller
+	
 	/**
 	 * Creates a new Paint application that allows for user interaction
 	 */

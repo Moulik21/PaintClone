@@ -92,7 +92,8 @@ public abstract class Shape {
 	}
 	
 	/**
-	 * Each class that extends Shape will have their own implementation of this method 
+	 * Each class that extends Shape will have their own implementation of this method
+	 * as each Shape is drawn differently.
 	 * @param g2d Graphics2D object
 	 */
 	public abstract void draw(Graphics2D g2d);

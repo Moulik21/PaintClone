@@ -4,7 +4,7 @@ import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics2D;
 /**
- * A Circle is a type of Shape. The property that seperates Circle from other Shapes is the radius. 
+ * A Circle is a type of Shape. In addition to having an origin, colour and stroke, a Circle has a radius. 
  *
  */
 public class Circle extends Shape {
@@ -42,7 +42,7 @@ public class Circle extends Shape {
 	@Override
 	/**
 	 * Draw the Circle.
-	 * Circle has its own implementation of draw as it is different from other Shapes
+	 * Circle has its own implementation of draw as it is drawn differently from other Shapes
 	 * 
 	 */
 	public void draw(Graphics2D g2d) {

@@ -12,7 +12,7 @@ import java.util.Observer;
 // https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html
 // https://docs.oracle.com/javase/tutorial/2d/
 /**
- * The View that allows the user to draw
+ * The secondary View+Controller that allows the user to draw
  *
  */
 class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseListener {

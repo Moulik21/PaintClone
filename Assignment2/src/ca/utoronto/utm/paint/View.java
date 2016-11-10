@@ -76,7 +76,10 @@ public class View extends JFrame implements ActionListener {
 	public ShapeChooserPanel getShapeChooserPanel() {
 		return shapeChooserPanel;
 	}
-
+	/**
+	 * create the top menu bar of the window
+	 * @return
+	 */
 	private JMenuBar createMenuBar() {
 		JMenuBar menuBar = new JMenuBar();
 		JMenu menu;
