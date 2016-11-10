@@ -40,6 +40,6 @@ Nov 8, 2016
 	Obstacles :By changing the buttons to pictures, we no longer have any identifying text associated with them.
 	
 Nov 9, 2016
-	Yesterday :
-	Today     :
+	Yesterday :I fixed the problem associated with buttons and pictures
+	Today     :I worked with moulik to complete the style selector, then helped make finalizing changes to the assignment.
 	Obstacles :
