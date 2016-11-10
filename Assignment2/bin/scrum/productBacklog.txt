@@ -33,7 +33,7 @@ SO THAT  :
 --------------------------------------------------------------------------
 TYPE     : USER STORY 11
 NAME     : Draw Polyline
-OWNER    : Paul
+OWNER    : Paul/Daniel
 PRIORITY : Medium
 ESTIMATE : 2 Hours
 AS A     : user
@@ -43,7 +43,7 @@ SO THAT  : I can add circles to my canvas
 --------------------------------------------------------------------------
 TYPE     : USER STORY 12
 NAME     : Draw Polyline FeedBack
-OWNER    : Paul
+OWNER    : Paul/Daniel
 PRIORITY : Medium
 ESTIMATE : 2 Hours
 AS A     : user
