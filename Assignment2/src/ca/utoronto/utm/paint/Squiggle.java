@@ -7,7 +7,6 @@ import java.awt.Graphics2D;
 public class Squiggle extends Shape {
 	
 	private ArrayList<Point> squiggle = new ArrayList<Point>();
-	
 	public Squiggle( Point origin,Color colour){
 		super(origin,colour);		
 	}

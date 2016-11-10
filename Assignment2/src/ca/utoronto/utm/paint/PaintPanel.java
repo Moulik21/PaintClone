@@ -92,7 +92,9 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	// MouseMotionListener below
 	@Override
 	public void mouseMoved(MouseEvent e) {
-
+	if(this.mode.state() == "Polyline" ){
+		this.mode.move(this,e);
+	}
 	}
 	@Override
 	public void mouseDragged(MouseEvent e) {
