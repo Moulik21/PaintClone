@@ -1,5 +1,6 @@
 package ca.utoronto.utm.paint;
 
+import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics2D;
 
@@ -7,6 +8,7 @@ public abstract class Shape {
 	private Point origin;
 	private final Color colour;
 	private boolean isFilled;
+	private BasicStroke stroke;
 	
 	public Shape(){
 		this.origin = new Point(0,0);
@@ -14,10 +16,11 @@ public abstract class Shape {
 		this.isFilled = false;
 	}
 	
-	public Shape(Point origin, Color colour){
+	public Shape(Point origin, Color colour, BasicStroke newStroke){
 		this.origin = origin;
 		this.colour = colour;
 		this.isFilled = false;
+		this.stroke = new BasicStroke(1);
 	}
 	
 	public Point getOrigin(){
@@ -34,6 +37,10 @@ public abstract class Shape {
 	
 	public boolean getIsFilled(){
 		return isFilled;
+	}
+	
+	public BasicStroke getShapeStroke(){
+		return this.stroke;
 	}
 	
 	public void changedIsFilled(){

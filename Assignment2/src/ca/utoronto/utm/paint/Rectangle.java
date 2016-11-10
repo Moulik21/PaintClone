@@ -1,5 +1,6 @@
 package ca.utoronto.utm.paint;
 
+import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics2D;
 
@@ -17,8 +18,8 @@ public class Rectangle extends Shape{
 		this.height= 0;
 	}
 	
-	public Rectangle(Point origin,Color newColour){
-		super(origin, newColour);
+	public Rectangle(Point origin,Color newColour, BasicStroke newStroke){
+		super(origin, newColour, newStroke);
 	}
 
 	public Point getEnd() {
@@ -65,6 +66,7 @@ public class Rectangle extends Shape{
 			y = this.getEnd().getY();
 		}
 		g2d.setColor(this.getShapeColour());
+		g2d.setStroke(this.getShapeStroke());
 		if (this.getIsFilled()){
 			g2d.drawRect(x, y, width, height);
 		}
