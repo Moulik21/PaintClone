@@ -9,7 +9,7 @@ High > Medium > Low priority.
 TYPE     : USER STORY 9
 NAME     : Line thickness selector
 OWNER    : Moulik / Daniel
-PRIORITY : Low
+PRIORITY : Medium
 ESTIMATE : 2 Hours
 AS A     : user
 I WANT   : To be able to select the current line thickness, to be applied
@@ -29,6 +29,26 @@ I WANT   : To be able to select the current line thickness, to be applied
            	results in two thinly outlined circles and a thinly outlined 
            	rectangle as well as two thickly outlined rectangles and a thick squiggle
 SO THAT  : 
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 11
+NAME     : Draw Polyline
+OWNER    : Paul
+PRIORITY : Medium
+ESTIMATE : 2 Hours
+AS A     : user
+I WANT   : To draw points in a straight manner. Create irregular shapes
+SO THAT  : I can add circles to my canvas
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 12
+NAME     : Draw Polyline FeedBack
+OWNER    : Paul
+PRIORITY : Medium
+ESTIMATE : 2 Hours
+AS A     : user
+I WANT   : see the shape that I am creating.
+SO THAT  : I can create the shape that I want.
 --------------------------------------------------------------------------
 
 # COMPLETED USER STORIES/BUGS BELOW ###########################################

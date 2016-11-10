@@ -36,6 +36,6 @@ Nov 8, 2016
 	Obstacles :Finding efficient way to restructure some of the code.
 	
 Nov 9, 2016
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday :Completed bug7 and implemented factory architecture.
+	Today     :Work on quick color selection and polyline.
+	Obstacles :Understanding drawing in g2d.
