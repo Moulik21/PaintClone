@@ -4,15 +4,15 @@ import java.util.ArrayList;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics2D;
-
+/**
+ * When you click on the mouse and drag, it is like drawing with a pencil. 
+ * When you un-click (let go of the button), it is like lifting your pencil from the paper.
+ * 
+ */
 public class Squiggle extends Shape {
 	
 	private ArrayList<Point> squiggle = new ArrayList<Point>();
-	
-	public Squiggle() {
-		super();
-	}
-	
+
 	public Squiggle( Point origin ,Color colour,BasicStroke newStroke){
 		super(origin,colour,newStroke);		
 	}

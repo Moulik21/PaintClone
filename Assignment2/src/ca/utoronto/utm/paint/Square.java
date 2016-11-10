@@ -9,9 +9,6 @@ public class Square extends Rectangle {
 	private Point end;
 	private int side;
 	
-	public Square(){
-		super();
-	}
 	
 	public Square(Point origin, Color newColour,BasicStroke newStroke){
 		super(origin,newColour,newStroke);

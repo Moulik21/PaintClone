@@ -17,6 +17,7 @@ class ShapeChooserPanel extends JPanel implements ActionListener {
 	public ShapeChooserPanel(View view) {	
 		this.view=view;
 		
+		//Create the buttons
 		String[] buttonLabels = { "Circle", "Rectangle", "Square", "Squiggle", "Polyline" };
 		this.setLayout(new GridLayout(buttonLabels.length+3, 1)); //+2 to allow for colour select button and fill button
 		ButtonGroup shapeButtonGroup = new ButtonGroup();
@@ -31,7 +32,8 @@ class ShapeChooserPanel extends JPanel implements ActionListener {
 	  	JToggleButton b5 = new JToggleButton();
 	  	b5.setToolTipText("Polyline");
 	  	JToggleButton [] buttons = {b1,b2,b3,b4,b5};
-	  
+	  	
+	  	//Sets icons for the buttons
 	 	try {
 	    	BufferedImage img = ImageIO.read(getClass().getResource("circleicon.png"));
 	    	b1.setIcon(new ImageIcon(img));
@@ -45,6 +47,8 @@ class ShapeChooserPanel extends JPanel implements ActionListener {
 	    	b5.setIcon(new ImageIcon(img));
 	 	} catch (IOException ex) {
 	  	}
+	 	//Add actionListener to each button and set the initial Shape
+	 	// that could be drawn to Squiggle
 		for (JToggleButton b : buttons){
 			shapeButtonGroup.add(b);
 			this.add(b);
