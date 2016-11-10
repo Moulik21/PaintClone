@@ -26,10 +26,7 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	private modeStrategy mode = DEFAULTMODE;
 	private Color newColour = DEFAULTCOLOUR;
 	private BasicStroke stroke =  DEFAULTSTROKE;
-	private Circle circle; // the circle we are building
-	private Rectangle rectangle;
-	private Square square;
-	private Squiggle squiggle;
+	private Shape shape;
 	private PolyLine polyline;
 	private Point origin_point; //<---- Find out what this value actually does
 	
@@ -135,40 +132,21 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	public Color getColour(){
 		return newColour;
 	}
-	public void setSquiggle(Squiggle squiggle){
-		this.squiggle = squiggle;
+	public void setShape(Shape shape){
+		this.shape = shape;
 	}
-	public Squiggle getSquiggle(){
-		return this.squiggle;
+	public Shape getShape(){
+		return this.shape;
 	}
-	public void setPolyline(PolyLine polyline){
-		this.polyline = polyline;
-	}
-	public PolyLine getPolyline(){
-		return this.polyline;
-	}
-	public void setCircle(Circle circle){
-		this.circle = circle;
-	}
-	public Circle getCircle(){
-		return this.circle;
-	}
-	public void setRectangle(Rectangle rectangle){
-		this.rectangle = rectangle;
-	}
-	public Rectangle getRectangle(){
-		return this.rectangle;
-	}
-	public void setSquare (Square square){
-		this.square = square;
-	}
-	public Square getSquare(){
-		return this.square;
-	}
+//	public void setPolyline(PolyLine polyline){
+//		this.polyline = polyline;
+//	}
+//	public PolyLine getPolyline(){
+//		return this.polyline;
+//	}
 	public PaintModel getModel(){
 		return this.model;
 	}
-	
 	public void setStroke(BasicStroke newStroke){
 		this.stroke = newStroke;
 	}
