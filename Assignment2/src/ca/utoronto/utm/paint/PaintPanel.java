@@ -14,7 +14,8 @@ import java.util.Observer;
 
 class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseListener  {
 
-	private final Color DEFAULTCOLOUR = Color.black; 
+	private final Color DEFAULTCOLOUR = Color.black;
+	private final BasicStroke DEFAULTSTROKE = new BasicStroke(1);
 	private final modeStrategy DEFAULTMODE = new createSquiggle();
 	
 	private PaintModel model; // slight departure from MVC, because of the way painting works
@@ -24,6 +25,7 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	private shapeFactory factory;
 	private modeStrategy mode = DEFAULTMODE;
 	private Color newColour = DEFAULTCOLOUR;
+	private BasicStroke stroke =  DEFAULTSTROKE;
 	private Circle circle; // the circle we are building
 	private Rectangle rectangle;
 	private Square square;
@@ -153,5 +155,12 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	}
 	public PaintModel getModel(){
 		return this.model;
+	}
+	
+	public void setStroke(BasicStroke newStroke){
+		this.stroke = newStroke;
+	}
+	public BasicStroke getStroke(){
+		return this.stroke;
 	}
 }

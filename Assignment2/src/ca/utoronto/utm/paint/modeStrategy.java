@@ -15,7 +15,7 @@ public interface modeStrategy {
 class createSquiggle implements modeStrategy{
 	public void press(PaintPanel panel, MouseEvent e, boolean StyleFlag, shapeFactory factory, Point origin) {
 
-		panel.setSquiggle((Squiggle)factory.getShape("Squiggle", origin, panel.getColour()));
+		panel.setSquiggle((Squiggle)factory.getShape("Squiggle", origin, panel.getColour(),panel.getStroke()));
 		panel.getModel().addShape(panel.getSquiggle());
 		
 	}
@@ -39,7 +39,7 @@ class createSquiggle implements modeStrategy{
 class createCircle implements modeStrategy{
 	public void press(PaintPanel panel, MouseEvent e,boolean StyleFlag, shapeFactory factory, Point origin) {
 		Point centre = new Point(e.getX(), e.getY());
-		panel.setCircle((Circle)factory.getShape("Circle", centre, panel.getColour()));
+		panel.setCircle((Circle)factory.getShape("Circle", centre, panel.getColour(),panel.getStroke()));
 		panel.getModel().addShape(panel.getCircle());
 
 		if (StyleFlag){
@@ -68,7 +68,7 @@ class createCircle implements modeStrategy{
 
 class createRectangle implements modeStrategy{
 	public void press(PaintPanel panel, MouseEvent e,boolean StyleFlag, shapeFactory factory, Point origin) {
-		panel.setRectangle((Rectangle) factory.getShape("Rectangle", origin, panel.getColour()));
+		panel.setRectangle((Rectangle) factory.getShape("Rectangle", origin, panel.getColour(),panel.getStroke()));
 		panel.getModel().addShape(panel.getRectangle());
 		if (StyleFlag){
 			panel.getRectangle().changedIsFilled();
@@ -98,7 +98,7 @@ class createRectangle implements modeStrategy{
 
 class createSquare implements modeStrategy{
 	public void press(PaintPanel panel, MouseEvent e,boolean StyleFlag, shapeFactory factory, Point origin) {
-		panel.setSquare((Square)factory.getShape("Square", origin, panel.getColour()));
+		panel.setSquare((Square)factory.getShape("Square", origin, panel.getColour(),panel.getStroke()));
 		panel.getModel().addShape(panel.getSquare());
 		
 		
