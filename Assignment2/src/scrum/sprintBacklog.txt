@@ -86,6 +86,31 @@ ISSUE    : Currently ,you can't tell which mode "Circle", "Rectangle", ...
            to highlight the currently selected mode?
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
+TYPE     : BUG 3
+NAME     : Architecture behind choosing selection mode is poor
+OWNER    : Paul
+PRIORITY : High
+ESTIMATE : 8 Hours
+ISSUE    : Code is not modular and is difficult to expand. Need a better
+           architecture behind selecting a drawing mode, and handling
+           the drawing events. Consider some design patterns here.
+           Refactor ShapeChooserPanel and PaintPanel to get rid of the
+           'if' blocks in the PaintPanel mouse event code.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 4
+NAME     : Architecture behind Model is poor
+OWNER    : Paul
+PRIORITY : High
+ESTIMATE : 2 Hours
+ISSUE    : Having a list of different types of drawable things in the
+           model is cumbersome. In fact, it is currently incorrect, with
+           Squiggle's not drawing properly. Need to re-architect the Model
+           so that it is more flexible, and easier to work with.
+           Consider some design patterns, or change of responsibility
+           here.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
 TYPE     : BUG 5
 NAME     : Squiggle is broken
 OWNER    : Moulik
@@ -95,3 +120,176 @@ ISSUE    : Squiggles are connected to each other by a straight line. Each drag
 		   of the mouse should be a separate squiggle. Possibly
            the issue is with the representation of the squiggles in the Model.
 ---------------------------------------------------------------------------
+
+
+#Sprint 2 November 6,2016
+#Sprint 6 UserStories go below
+ --------------------------------------------------------------------------
+TYPE     : BUG 1
+NAME     : Icons instead of text for drawing mode selection
+OWNER    : Daniel
+PRIORITY : Low
+ESTIMATE : 4 hours
+ISSUE    : Would be nice to have icons instead of "Circle", "Rectangle", ...
+--------------------------------------------------------------------------
+
+
+#Sprint 3 November 7,2016
+#Sprint 3 UserStories go below
+--------------------------------------------------------------------------
+TYPE     : BUG 1
+NAME     : Icons instead of text for drawing mode selection
+OWNER    : Daniel
+PRIORITY : Low
+ESTIMATE : 4 hours
+ISSUE    : Would be nice to have icons instead of "Circle", "Rectangle", ...
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 8
+NAME     : Fill style selector
+OWNER    : Paul
+PRIORITY : Low
+ESTIMATE : 2 Hours
+AS A     : user
+I WANT   : To be able to select the current drawing style (filled or outline), to be applied
+           to subsequent shapes. Example: 
+           		selects fill style solid
+           		mode circle
+           		draw a circle
+           		draw a circle
+           		mode rectangle
+           		draw a rectangle
+           		select fill style outline
+           		draw a rectangle
+           		draw a rectangle
+           		select mode squiggle
+           		draw a squiggle
+           	results in two solid circles and a solid rectangle as well as
+           	two outlined rectangles and a squiggle
+SO THAT  : 
+--------------------------------------------------------------------------
+---------------------------------------------------------------------------
+TYPE     : USER STORY 7
+NAME     : Color selector
+OWNER    : Keenan
+PRIORITY : Moderate
+ESTIMATE : 2 Hours
+AS A     : user
+I WANT   : To be able to select the current drawing color, to be applied
+           to subsequent shapes. Example: 
+           		selects color red 
+           		mode circle
+           		draw a circle
+           		draw a circle
+           		mode rectangle
+           		draw a rectangle
+           		select color green
+           		draw a rectangle
+           		draw a rectangle
+           		select mode squiggle
+           		draw a squiggle
+           	results in two red circles and a red rectangle as well as
+           	two green rectangles and a green squiggle
+SO THAT  : 
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 9
+NAME     : Line thickness selector
+OWNER    : Moulik / Daniel
+PRIORITY : Medium
+ESTIMATE : 2 Hours
+AS A     : user
+I WANT   : To be able to select the current line thickness, to be applied
+           to subsequent shapes. Example:
+           		select fill style outline 
+           		selects line thickness 1
+           		mode circle
+           		draw a circle
+           		draw a circle
+           		mode rectangle
+           		draw a rectangle
+           		select line thickness 9
+           		draw a rectangle
+           		draw a rectangle
+           		select mode squiggle
+           		draw a squiggle
+           	results in two thinly outlined circles and a thinly outlined 
+           	rectangle as well as two thickly outlined rectangles and a thick squiggle
+SO THAT  : 
+--------------------------------------------------------------------------
+
+
+#Sprint 4 November 8,2016
+#Sprint 4 UserStories go below
+--------------------------------------------------------------------------
+TYPE     : BUG 4
+NAME     : Architecture behind Model is poor
+OWNER    : Paul
+PRIORITY : High
+ESTIMATE : 2 Hours
+ISSUE    : Having a list of different types of drawable things in the
+           model is cumbersome. In fact, it is currently incorrect, with
+           Squiggle's not drawing properly. Need to re-architect the Model
+           so that it is more flexible, and easier to work with.
+           Consider some design patterns, or change of responsibility
+           here.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 7
+NAME     : Drawing Order
+OWNER    : Paul
+PRIORITY : High
+ESTIMATE : 2 Hour
+ISSUE    : The current code does not consider the order of shapes that were 
+		   drawn. Hence some of the newer shapes are behind older shapes that
+		   were created. 
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 9
+NAME     : Line thickness selector
+OWNER    : Moulik / Daniel
+PRIORITY : Medium
+ESTIMATE : 3 Hours
+AS A     : user
+I WANT   : To be able to select the current line thickness, to be applied
+           to subsequent shapes. Example:
+           		select fill style outline 
+           		selects line thickness 1
+           		mode circle
+           		draw a circle
+           		draw a circle
+           		mode rectangle
+           		draw a rectangle
+           		select line thickness 9
+           		draw a rectangle
+           		draw a rectangle
+           		select mode squiggle
+           		draw a squiggle
+           	results in two thinly outlined circles and a thinly outlined 
+           	rectangle as well as two thickly outlined rectangles and a thick squiggle
+SO THAT  : 
+--------------------------------------------------------------------------
+
+
+#Sprint 5 November 9, 2016
+#Sprint 5 UserStories go below
+--------------------------------------------------------------------------
+TYPE     : USER STORY 11
+NAME     : Draw Polyline
+OWNER    : Paul/Daniel/Moulik
+PRIORITY : Medium
+ESTIMATE : 2 Hours
+AS A     : user
+I WANT   : To draw points in a straight manner. Create irregular shapes
+SO THAT  : I can add circles to my canvas
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 12
+NAME     : Draw Polyline FeedBack
+OWNER    : Paul/Daniel/Moulik
+PRIORITY : Medium
+ESTIMATE : 2 Hours
+AS A     : user
+I WANT   : see the shape that I am creating.
+SO THAT  : I can create the shape that I want.
+--------------------------------------------------------------------------

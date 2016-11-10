@@ -48,4 +48,4 @@ Nov 9, 2016
 	Yesterday :
 	Today     : Merged UserStory9 with master. Updated all scrum notes for days that had no notes.
 			    Documenting all methods and classes.
-	Obstacles :
+	Obstacles : Fixing bugs related to Polyline

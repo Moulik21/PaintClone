@@ -18,29 +18,30 @@ Nov 4, 2016
 Nov 5, 2016
 	Yesterday : Went over how to use Git properly with the group.
 	
-	Today     : Worked with Moulik on User Story 3,4,5.
+	Today     : Worked with Moulik on User Story 4,5,6
 				Before this implementation, shapes(Rectangle, Circle, Square) were invisible when drawing.
 			    Now the 3 shapes are visible while drawing.
 			    
 	Obstacles : Still need to familiarize myself with Git a little more
 
 Nov 6, 2016
-	Yesterday :Worked on user stories 3,4,5
+	Yesterday :Worked on user stories 4,5,6
 	Today     :I will work on bug 1.
 	Obstacles :I will need to research how to replace buttons with images.
 	
 Nov 7, 2016
 	Yesterday :I created button icons for bug 1.
 	Today     :I researched how to replace buttons with pictures in Java and implemented it.
+			   Started on UserStory9 with Moulik.	
 	Obstacles :Understanding how to replace buttons with images
 	
 Nov 8, 2016
-	Yesterday :I replaced the button icons with images.
-	Today     :I worked on a new bug that arose from doing so.
+	Yesterday :I replaced the button icons with images. Started work on UserStory9
+	Today     :I worked on a new bug that arose from doing so. Finished UserStory9
 	Obstacles :By changing the buttons to pictures, we no longer have any identifying text associated with them.
 	
 Nov 9, 2016
 	Yesterday :I fixed the problem associated with buttons and pictures
-	Today     :I worked with moulik to complete the style selector, then helped make finalizing changes to the assignment. I worked with Paul on
-	User stories 11 and 12.
+	Today     :I worked with moulik to complete the style selector, then helped make finalizing changes to the assignment. I worked with Paul and Moulik on
+				User stories 11 and 12.
 	Obstacles :
