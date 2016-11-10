@@ -31,7 +31,6 @@ public class PolyLine extends Squiggle{
 		return this.y;
 	}
 	public void draw(Graphics2D g2d) {
-		
 		for(int i=0;i<x.size()-1; i++){
 			g2d.setColor(this.getShapeColour());
 			g2d.drawLine(x.get(i), y.get(i), x.get(i+1), y.get(i+1));
