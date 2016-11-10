@@ -22,37 +22,37 @@ public class View extends JFrame implements ActionListener {
 	private ShapeChooserPanel shapeChooserPanel;
 	private ColourChooserPanel colourChooserPanel;
 	private StyleSelector styleSelector;
-	private JPanel stylePanel;
-	
+	private colorPalette palette;
 	
 	public View(PaintModel model) {
 		super("Paint"); // set the title and do other JFrame init
 		
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setJMenuBar(createMenuBar());
-		
-		this.stylePanel = new JPanel();
-		this.stylePanel.setLayout(new GridLayout(0, 2));
-		
+				
 		Container c=this.getContentPane();
 		
 		this.shapeChooserPanel = new ShapeChooserPanel(this);
 		
-		c.add(this.shapeChooserPanel,BorderLayout.WEST);
-		
 		this.colourChooserPanel = new ColourChooserPanel(this);
-		
 		this.styleSelector = new StyleSelector();
 		
-		this.stylePanel.add(this.colourChooserPanel.getColourButton());
-		this.stylePanel.add(this.styleSelector.getButton());
-		c.add(this.stylePanel, BorderLayout.SOUTH);
+		this.shapeChooserPanel.add(this.colourChooserPanel.getColourButton());
+		this.shapeChooserPanel.add(this.styleSelector.getButton());
+		c.add(this.shapeChooserPanel,BorderLayout.WEST);
 		
+		
+		//Model and PaintPanel
 		this.model=model;
 		
 		this.paintPanel = new PaintPanel(model, this);
 		c.add(this.paintPanel, BorderLayout.CENTER);
 		
+		//Colour Palette
+		this.palette = new colorPalette(this.paintPanel);
+		this.palette.addActionListener();
+		c.add(this.palette, BorderLayout.EAST);
+				
 		this.pack();
 		this.setSize(600,500);
 		this.setVisible(true);

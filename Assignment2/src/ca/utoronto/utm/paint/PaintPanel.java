@@ -84,14 +84,6 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 		this.state = current_mode;
 	}
 	
-	public void setColour(Color newColour){
-		this.newColour=newColour;
-	}
-	
-	public Color getColour(){
-		return newColour;
-	}
-	
 	
 	// MouseMotionListener below
 	@Override
@@ -127,7 +119,14 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 
 	}
 	/*-------------------------------------------------------------------------------*/
-	//Getters and Setters for the modeStrategy
+	//Getters and Setters
+	public void setColour(Color newColour){
+		this.newColour=newColour;
+	}
+	
+	public Color getColour(){
+		return newColour;
+	}
 	public void setSquiggle(Squiggle squiggle){
 		this.squiggle = squiggle;
 	}
