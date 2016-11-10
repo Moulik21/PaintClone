@@ -10,12 +10,27 @@ import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
-
+/**
+ * A colourPalette is a JPanel that contains 7 buttons which the user the can use 
+ * to change colours when drawing a shape.  
+ *
+ */
 public class colorPalette extends JPanel implements ActionListener{
+	/**
+	 * Each button which be used to changed to a different colour
+	 */
 	private JButton black, cyan, red, blue, green, yellow, magenta;
+	
+	/**
+	 * An ArrayList of the buttons used to change colours
+	 */
 	private ArrayList<JButton> button_lst = new ArrayList<JButton>();
 	private PaintPanel panel;
 	
+	/**
+	 * Creates a new colorPalette
+	 * @param panel A PaintPanel which is where the change of colour will take place
+	 */
 	public colorPalette(PaintPanel panel){
 		this.panel = panel;
 		
@@ -42,13 +57,20 @@ public class colorPalette extends JPanel implements ActionListener{
 		
 	}
 	
+	/**
+	 * Adds an ActionListener to all the buttons in the ArrayList button_lst
+	 */
 	public void addActionListener(){
 		for (JButton b: this.button_lst){
 			b.addActionListener(this);
 		}
 	}
-
+	
 	@Override
+	/**
+	 * This method will be called when one of the button is clicked.
+	 * The colour of the panel will be changed to the colour of the button clicked.
+	 */
 	public void actionPerformed(ActionEvent arg0) {
 		JButton button = (JButton) arg0.getSource();
 		this.panel.setColour(button.getBackground());
