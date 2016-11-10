@@ -41,5 +41,6 @@ Nov 8, 2016
 	
 Nov 9, 2016
 	Yesterday :I fixed the problem associated with buttons and pictures
-	Today     :I worked with moulik to complete the style selector, then helped make finalizing changes to the assignment.
+	Today     :I worked with moulik to complete the style selector, then helped make finalizing changes to the assignment. I worked with Paul on
+	User stories 11 and 12.
 	Obstacles :
