@@ -55,11 +55,14 @@ class createPolyline implements modeStrategy{
 	}
 //----------------------------------------------------------------------------------------------------------------
 	public void press(PaintPanel panel, MouseEvent e, boolean StyleFlag, shapeFactory factory, Point origin) {
-		
+
 		if(panel.getPolyline() == null){
 			panel.setPolyline((PolyLine)factory.getShape("Polyline", origin, panel.getColour()));
 			panel.getModel().addShape(panel.getPolyline());
 	
+		}
+		if (StyleFlag){
+			panel.getPolyline().changedIsFilled();
 		}
 		if(SwingUtilities.isLeftMouseButton(e)){
 				panel.getPolyline().addPoint(e.getX(),e.getY());
