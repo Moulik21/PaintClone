@@ -6,11 +6,6 @@ import java.awt.Graphics2D;
 public class Circle extends Shape {
 	private int radius;
 	
-	public Circle(){
-		super();
-		this.radius = 0;
-	}
-	
 	public Circle(Point centre, Color newColour){
 		super(centre, newColour);
 	}

@@ -8,12 +8,6 @@ public abstract class Shape {
 	private final Color colour;
 	private boolean isFilled;
 	
-	public Shape(){
-		this.origin = new Point(0,0);
-		this.colour = Color.BLACK;
-		this.isFilled = false;
-	}
-	
 	public Shape(Point origin, Color colour){
 		this.origin = origin;
 		this.colour = colour;

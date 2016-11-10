@@ -8,11 +8,7 @@ public class Squiggle extends Shape {
 	
 	private ArrayList<Point> squiggle = new ArrayList<Point>();
 	
-	public Squiggle() {
-		super();
-	}
-	
-	public Squiggle( Point origin ,Color colour){
+	public Squiggle( Point origin,Color colour){
 		super(origin,colour);		
 	}
 
