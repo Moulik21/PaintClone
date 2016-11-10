@@ -1,5 +1,6 @@
 package ca.utoronto.utm.paint;
 
+import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics2D;
 
@@ -11,8 +12,8 @@ public class Circle extends Shape {
 		this.radius = 0;
 	}
 	
-	public Circle(Point centre, Color newColour){
-		super(centre, newColour);
+	public Circle(Point centre, Color newColour, BasicStroke newStroke){
+		super(centre, newColour,newStroke);
 	}
 
 	public int getRadius() {
@@ -29,6 +30,7 @@ public class Circle extends Shape {
 		int x = (this.getOrigin().getX()-radius);
 		int y = (this.getOrigin().getY()-radius);
 		g2d.setColor(this.getShapeColour());
+		g2d.setStroke(this.getShapeStroke());
 		if (this.getIsFilled()){
 			g2d.drawOval(x, y, radius*2, radius*2);
 		}
