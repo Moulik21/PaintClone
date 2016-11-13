@@ -39,3 +39,25 @@ Nov 9, 2016
 	Yesterday : Changed button locations and background colours, helped team mates with git issues
 	Today     : Continue work on GUI visuals, bug checking and making a polished finished product
 	Obstacles : Making sure we finished everything that we meant to finish for this sprint
+
+	
+Sprint 2
+Nov 13, 2016
+	Yesterday:
+	Today	 :
+	Obstacles:
+
+Nov 14, 2016
+	Yesterday:
+	Today	 :
+	Obstacles:
+
+Nov 15, 2016
+	Yesterday:
+	Today	 :
+	Obstacles:
+	
+Nov 16, 2016
+	Yesterday:
+	Today	 :
+	Obstacles:
