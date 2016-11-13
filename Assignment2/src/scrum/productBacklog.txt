@@ -73,40 +73,7 @@ This strategy can be put in place either by having PaintPanel's mouse
 events forwarded through PaintPanel into the current strategy, or by 
 simply switching the PaintPanel's listeners as appropriate.
 
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-TYPE     : BUG 2.5
-NAME     : Move non src files from src directory
-OWNER    : 
-PRIORITY :
-ESTIMATE : 
-ISSUE    : ANoteOnGit.txt members.txt scrum and other non-src files/folders
-should appear in repo_[GROUP]/Assignment2, not in 
-repo_[GROUP]/Assignment2/src causing copies to be sent to
-repo_[GROUP]/Assignment2/bin/ and subsequent issues
-with git pulling and merging.
-RESOLVE  : Move above files and directories, add to index, commit
-and push.
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-TYPE     : BUG 2.6
-NAME     : Git repo has incorrect .gitignore
-OWNER    : 
-PRIORITY :
-ESTIMATE : 
-ISSUE    : Modifications to src files leads to changes to .class files
-in repo_[GROUP]/Assignment2/bin/. These changes lead to, if commited,
-potential conflicts. To fix this, on the master branch, add a .gitignore to 
-repo_[GROUP]/Assignment2/ or repo_[GROUP]/. The contents of .gitignore
-could be, for example,
 
-/bin/
-
-You will need to add the .gitignore to index, commit and push it.
-Unfortunately, this is not the end of the issue though, once git starts
-tracking a file, it continues tracking it. To fix this, delete the .class
-files (and any other files of interest) from the bin directory. Add this
-change to index, commit and push. 
 --------------------------------------------------------------------------
 
 # COMPLETED USER STORIES/BUGS BELOW ###########################################
@@ -371,6 +338,41 @@ paintComponejust nt simply asks the PaintModel to ask command to execute(g2d).
 The simplest way to make this happen is to make each shape implement the 
 DrawingCommand interface which requires execute(g2d) to be implemented.
 Well sort of.
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 2.5
+NAME     : Move non src files from src directory
+OWNER    : Keenan
+PRIORITY : High
+ESTIMATE : 10 minutes
+ISSUE    : ANoteOnGit.txt members.txt scrum and other non-src files/folders
+should appear in repo_[GROUP]/Assignment2, not in 
+repo_[GROUP]/Assignment2/src causing copies to be sent to
+repo_[GROUP]/Assignment2/bin/ and subsequent issues
+with git pulling and merging.
+RESOLVE  : Move above files and directories, add to index, commit
+and push.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 2.6
+NAME     : Git repo has incorrect .gitignore
+OWNER    : Keenan
+PRIORITY : High
+ESTIMATE : 10 minutes
+ISSUE    : Modifications to src files leads to changes to .class files
+in repo_[GROUP]/Assignment2/bin/. These changes lead to, if commited,
+potential conflicts. To fix this, on the master branch, add a .gitignore to 
+repo_[GROUP]/Assignment2/ or repo_[GROUP]/. The contents of .gitignore
+could be, for example,
+
+/bin/
+
+You will need to add the .gitignore to index, commit and push it.
+Unfortunately, this is not the end of the issue though, once git starts
+tracking a file, it continues tracking it. To fix this, delete the .class
+files (and any other files of interest) from the bin directory. Add this
+change to index, commit and push. 
 
 --------------------------------------------------------------------------
 
