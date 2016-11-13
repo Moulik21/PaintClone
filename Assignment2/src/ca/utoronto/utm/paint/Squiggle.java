@@ -9,7 +9,7 @@ import java.awt.Graphics2D;
  * When you un-click (let go of the button), it is like lifting your pencil from the paper.
  * 
  */
-public class Squiggle extends Shape {
+public class Squiggle extends Shape implements DrawingCommand{
 	
 	/**
 	 * A Squiggle has many small lines that are connected by many points.
@@ -46,11 +46,11 @@ public class Squiggle extends Shape {
 
 	@Override
 	/**
-	 * Draw a Squiggle.
+	 * Draw a Squiggle by executing the code below.
 	 * When you click on the mouse and drag, it is like drawing with a pencil.
 	 * When you un-click (let go of the button), it is like lifting your pencil from the paper. 
 	 */
-	public void draw(Graphics2D g2d) {
+	public void execute(Graphics2D g2d) {
 		for(int i=0;i<squiggle.size()-1; i++){
 			Point p1=squiggle.get(i);
 			Point p2=squiggle.get(i+1);

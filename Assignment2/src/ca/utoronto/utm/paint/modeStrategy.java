@@ -30,7 +30,7 @@ class createSquiggle implements modeStrategy{
 	public void press(PaintPanel panel, MouseEvent e, boolean StyleFlag, shapeFactory factory, Point origin) {
 
 		panel.setShape((Squiggle)factory.getShape("Squiggle", origin, panel.getColour(),panel.getStroke()));
-		panel.getModel().addShape(panel.getShape());
+		panel.getModel().addCommand((DrawingCommand)panel.getShape());
 		
 	}
 	/**
@@ -83,7 +83,7 @@ class createPolyline implements modeStrategy{
 		//If no shape exist, create a new one. Avoid null pointer.
 		if(panel.getShape() == null){
 			panel.setShape((PolyLine)factory.getShape("Polyline", origin, panel.getColour(),panel.getStroke()));
-			panel.getModel().addShape(panel.getShape());
+			panel.getModel().addCommand((DrawingCommand)panel.getShape());
 		}
 		PolyLine polyline = (PolyLine)panel.getShape();
 		if (StyleFlag){
@@ -134,7 +134,7 @@ class createCircle implements modeStrategy{
 	public void press(PaintPanel panel, MouseEvent e,boolean StyleFlag, shapeFactory factory, Point origin) {
 		Point centre = new Point(e.getX(), e.getY());
 		panel.setShape((Circle)factory.getShape("Circle", centre, panel.getColour(),panel.getStroke()));
-		panel.getModel().addShape(panel.getShape());
+		panel.getModel().addCommand((DrawingCommand)panel.getShape());
 
 		if (StyleFlag){
 			panel.getShape().changedIsFilled();
@@ -181,7 +181,7 @@ class createRectangle implements modeStrategy{
 	 */
 	public void press(PaintPanel panel, MouseEvent e,boolean StyleFlag, shapeFactory factory, Point origin) {
 		panel.setShape((Rectangle) factory.getShape("Rectangle", origin, panel.getColour(),panel.getStroke()));
-		panel.getModel().addShape(panel.getShape());
+		panel.getModel().addCommand((DrawingCommand)panel.getShape());
 		if (StyleFlag){
 			panel.getShape().changedIsFilled();
 		}
@@ -229,7 +229,7 @@ class createSquare implements modeStrategy{
 	 */
 	public void press(PaintPanel panel, MouseEvent e,boolean StyleFlag, shapeFactory factory, Point origin) {
 		panel.setShape((Square)factory.getShape("Square", origin, panel.getColour(),panel.getStroke()));
-		panel.getModel().addShape(panel.getShape());
+		panel.getModel().addCommand((DrawingCommand)panel.getShape());
 		
 		
 		if (StyleFlag){

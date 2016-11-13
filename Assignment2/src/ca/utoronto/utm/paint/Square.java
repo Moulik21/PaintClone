@@ -8,7 +8,7 @@ import java.awt.Graphics2D;
  *
  *
  */
-public class Square extends Rectangle {
+public class Square extends Rectangle{
 	private int side;
 
 	
@@ -32,10 +32,11 @@ public class Square extends Rectangle {
 	}
 	
 	/**
-	 * Draw the Square.
+	 * Draw the Square by executing the code below.
 	 * Square has its own implementation of draw as it is drawn differently from other Shapes.
 	 */
-	public void draw(Graphics2D g2d){
+	@Override
+	public void execute(Graphics2D g2d){
 		int side = this.getHeight();
 		int x,y;
 		
