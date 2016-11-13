@@ -5,51 +5,6 @@
 # 2 Implementation of selected color into the drawing stream.
 
 High > Medium > Low priority.
---------------------------------------------------------------------------
-TYPE     : USER STORY 9
-NAME     : Line thickness selector
-OWNER    : Moulik / Daniel
-PRIORITY : Medium
-ESTIMATE : 2 Hours
-AS A     : user
-I WANT   : To be able to select the current line thickness, to be applied
-           to subsequent shapes. Example:
-           		select fill style outline 
-           		selects line thickness 1
-           		mode circle
-           		draw a circle
-           		draw a circle
-           		mode rectangle
-           		draw a rectangle
-           		select line thickness 9
-           		draw a rectangle
-           		draw a rectangle
-           		select mode squiggle
-           		draw a squiggle
-           	results in two thinly outlined circles and a thinly outlined 
-           	rectangle as well as two thickly outlined rectangles and a thick squiggle
-SO THAT  : 
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-TYPE     : USER STORY 11
-NAME     : Draw Polyline
-OWNER    : Paul/Daniel
-PRIORITY : Medium
-ESTIMATE : 2 Hours
-AS A     : user
-I WANT   : To draw points in a straight manner. Create irregular shapes
-SO THAT  : I can add circles to my canvas
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-TYPE     : USER STORY 12
-NAME     : Draw Polyline FeedBack
-OWNER    : Paul/Daniel
-PRIORITY : Medium
-ESTIMATE : 2 Hours
-AS A     : user
-I WANT   : see the shape that I am creating.
-SO THAT  : I can create the shape that I want.
---------------------------------------------------------------------------
 
 # COMPLETED USER STORIES/BUGS BELOW ###########################################
 --------------------------------------------------------------------------
@@ -252,6 +207,52 @@ ISSUE    : The current code does not consider the order of shapes that were
 		   drawn. Hence some of the newer shapes are behind older shapes that
 		   were created. 
 --------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 9
+NAME     : Line thickness selector
+OWNER    : Moulik / Daniel
+PRIORITY : Medium
+ESTIMATE : 3 Hours
+AS A     : user
+I WANT   : To be able to select the current line thickness, to be applied
+           to subsequent shapes. Example:
+           		select fill style outline 
+           		selects line thickness 1
+           		mode circle
+           		draw a circle
+           		draw a circle
+           		mode rectangle
+           		draw a rectangle
+           		select line thickness 9
+           		draw a rectangle
+           		draw a rectangle
+           		select mode squiggle
+           		draw a squiggle
+           	results in two thinly outlined circles and a thinly outlined 
+           	rectangle as well as two thickly outlined rectangles and a thick squiggle
+SO THAT  : 
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 11
+NAME     : Draw Polyline
+OWNER    : Paul/Daniel/Moulik
+PRIORITY : Medium
+ESTIMATE : 2 Hours
+AS A     : user
+I WANT   : To draw points in a straight manner. Create irregular shapes
+SO THAT  : I can add circles to my canvas
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 12
+NAME     : Draw Polyline FeedBack
+OWNER    : Paul/Daniel/Moulik
+PRIORITY : Medium
+ESTIMATE : 2 Hours
+AS A     : user
+I WANT   : see the shape that I am creating.
+SO THAT  : I can create the shape that I want.
+--------------------------------------------------------------------------
+
 
 # OMITTED USER STORIES/BUGS BELOW   ###########################################
 

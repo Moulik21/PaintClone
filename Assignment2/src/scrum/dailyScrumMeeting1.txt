@@ -39,3 +39,24 @@ Nov 9, 2016
 	Yesterday :Completed bug7 and implemented factory architecture.
 	Today     :Work on quick color selection and polyline.
 	Obstacles :Understanding drawing in g2d.
+	
+Sprint 2
+Nov 13, 2016
+	Yesterday:
+	Today	 :
+	Obstacles:
+
+Nov 14, 2016
+	Yesterday:
+	Today	 :
+	Obstacles:
+
+Nov 15, 2016
+	Yesterday:
+	Today	 :
+	Obstacles:
+	
+Nov 16, 2016
+	Yesterday:
+	Today	 :
+	Obstacles:
