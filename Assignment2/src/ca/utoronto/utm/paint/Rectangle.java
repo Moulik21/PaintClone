@@ -8,7 +8,7 @@ import java.awt.Graphics2D;
  * A Rectangle is a type of Shape. A Rectangle has an end Point, width and height.
  * 
  */
-public class Rectangle extends Shape{
+public class Rectangle extends Shape implements DrawingCommand{
 	
 	//Instance Variables
 	private Point end;
@@ -76,10 +76,10 @@ public class Rectangle extends Shape{
 
 	@Override
 	/**
-	 * Draw the Rectangle.
+	 * Draw the Rectangle by executing the code below.
 	 * Rectangle has its own implementation of draw as it is drawn differently from other Shapes.
 	 */
-	public void draw(Graphics2D g2d) {
+	public void execute(Graphics2D g2d) {
 		int width = this.getWidth();
 		int height = this.getHeight();
 		int x,y;

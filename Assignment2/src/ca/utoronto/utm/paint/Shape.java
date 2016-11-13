@@ -9,7 +9,7 @@ import java.awt.Graphics2D;
  *  of the method draw(Graphics2D g2d).
  *
  */
-public abstract class Shape {
+public class Shape {
 	
 	/**
 	 * The starting point of the shape.
@@ -91,11 +91,4 @@ public abstract class Shape {
 	public void changedIsFilled(){
 		this.isFilled = !this.isFilled;
 	}
-	
-	/**
-	 * Each class that extends Shape will have their own implementation of this method
-	 * as each Shape is drawn differently.
-	 * @param g2d Graphics2D object
-	 */
-	public abstract void draw(Graphics2D g2d);
 }

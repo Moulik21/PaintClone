@@ -8,26 +8,26 @@ import java.util.Observable;
  */
 public class PaintModel extends Observable {
 	/**
-	 * The Shapes are stored in an ArrayList of Shapes
+	 * The Commands are stored in an ArrayList of DrawingCommands
 	 */
-	private ArrayList<Shape> shapes=new ArrayList<Shape>();
+	private ArrayList<DrawingCommand> commands=new ArrayList<DrawingCommand>();
 	
 	/**
-	 * Adds the Shape to the array list of shapes in PaintModel
+	 * Adds the command to the command array maintained by the model.
 	 * @param s the shape that is to be added
 	 */
-	public void addShape(Shape s){
-		this.shapes.add(s);		
+	public void addCommand(DrawingCommand command){
+		this.commands.add(command);		
 		this.setChanged();
 		this.notifyObservers();
 	}
 	
 	/**
 	 * 
-	 * @return the ArrayList of shapes
+	 * @return the ArrayList of commands
 	 */
-	public ArrayList<Shape> getShape(){
-		return shapes;
+	public ArrayList<DrawingCommand> getCommands(){
+		return commands;
 	}
 
 }

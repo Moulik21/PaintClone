@@ -20,7 +20,7 @@ Pattern to draw shapes as follows:
 The PaintModel should use the command design pattern. 
 That is, each shape knows how to draw itself, so there is a single list of 
 DrawingCommands maintained by the PaintModel and used by the PaintPanel.
-paintComponent simply asks the PaintModel to ask command to execute(g2d).
+paintComponejust nt simply asks the PaintModel to ask command to execute(g2d).
 The simplest way to make this happen is to make each shape implement the 
 DrawingCommand interface which requires execute(g2d) to be implemented.
 Well sort of.
