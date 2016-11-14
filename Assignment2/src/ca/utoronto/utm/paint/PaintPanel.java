@@ -74,7 +74,6 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 			command.execute(g2d);
 			
 			g2d.setColor(this.newColour);
-			System.out.println(this.getColour());
 			g2d.setStroke(this.stroke);
 		}
 		g2d.dispose();
