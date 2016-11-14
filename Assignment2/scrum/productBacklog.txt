@@ -72,6 +72,14 @@ ISSUE    : Drawing one point with squiggle doesn't draw anything
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : UserStory
+NAME     : TextFunction
+OWNER    : Daniel
+PRIORITY : medium
+ESTIMATE : 2 hours
+ISSUE    : Allowing the user to type Text would be nice.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : UserStory
 NAME     : Eraser function
 OWNER    : Daniel
 PRIORITY : medium
