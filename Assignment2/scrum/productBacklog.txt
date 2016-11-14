@@ -14,20 +14,7 @@ High > Medium > Low priority.
 # You should add and implement any additional user stories that 
 # make your program great. Part of your mark will be competitive, 
 # with more, great user stories and better UI recognized by marks.
---------------------------------------------------------------------------
-TYPE     : BUG 2.2
-NAME     : Architecture for handling shape modifiers can be improved 
-OWNER    : 
-PRIORITY :
-ESTIMATE : 
-ISSUE    : The architecture can be improved if we implement the Command Design 
-Pattern to handle changes to the graphics contex such as changing drawing 
-color, stroke width etc. You can accomplished this by wrapping the changes
-to the graphics context in a DrawingCommand. This way these changes can be
-added to the Bug 2.1 DrawingCommand list. That is, these new types of 
-DrawingCommands appear on PaintPanel's list right along side 
-the Shape type DrawingCommands.
---------------------------------------------------------------------------
+
 --------------------------------------------------------------------------
 TYPE     : BUG 2.3
 NAME     : Architecture behind choosing drawing mode is poor
@@ -74,6 +61,22 @@ events forwarded through PaintPanel into the current strategy, or by
 simply switching the PaintPanel's listeners as appropriate.
 
 
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 2.7
+NAME     : Architecture behind choosing drawing mode is poor
+OWNER    : Keenan
+PRIORITY : Low
+ESTIMATE : 30 minutes
+ISSUE    : Drawing one point with squiggle doesn't draw anything
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : UserStory
+NAME     : TextFunction
+OWNER    : Daniel
+PRIORITY : medium
+ESTIMATE : 2 hours
+ISSUE    : Allowing the user to type Text would be nice.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : UserStory
@@ -390,6 +393,20 @@ tracking a file, it continues tracking it. To fix this, delete the .class
 files (and any other files of interest) from the bin directory. Add this
 change to index, commit and push. 
 
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 2.2
+NAME     : Architecture for handling shape modifiers can be improved 
+OWNER    : Paul
+PRIORITY : High
+ESTIMATE : 4 Hours
+ISSUE    : The architecture can be improved if we implement the Command Design 
+Pattern to handle changes to the graphics contex such as changing drawing 
+color, stroke width etc. You can accomplished this by wrapping the changes
+to the graphics context in a DrawingCommand. This way these changes can be
+added to the Bug 2.1 DrawingCommand list. That is, these new types of 
+DrawingCommands appear on PaintPanel's list right along side 
+the Shape type DrawingCommands.
 --------------------------------------------------------------------------
 
 # OMITTED USER STORIES/BUGS BELOW   ###########################################

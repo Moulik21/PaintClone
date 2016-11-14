@@ -73,7 +73,7 @@ public class colorPalette extends JPanel implements ActionListener{
 	 */
 	public void actionPerformed(ActionEvent arg0) {
 		JButton button = (JButton) arg0.getSource();
-		this.panel.setColour(button.getBackground());
+		this.panel.getModel().addCommand(new CommandColor(this.panel, button.getBackground()));
 		
 	}
 	

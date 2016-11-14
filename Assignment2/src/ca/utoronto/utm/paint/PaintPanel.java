@@ -21,17 +21,19 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	private final Color DEFAULTCOLOUR = Color.black;
 	private final BasicStroke DEFAULTSTROKE = new BasicStroke(1);
 	private final modeStrategy DEFAULTMODE = new createSquiggle();
+	private final boolean DEFAULTFILL = true;
 	
 	private PaintModel model; // slight departure from MVC, because of the way painting works
 	private View view; // So we can talk to our parent or other components of the view
 	
-	private String state;
-	private shapeFactory factory;
 	private modeStrategy mode = DEFAULTMODE;
 	private Color newColour = DEFAULTCOLOUR;
 	private BasicStroke stroke = DEFAULTSTROKE;
+	private boolean FillMode = DEFAULTFILL;
+	
+	private String state;
+	private shapeFactory factory;
 	private Shape shape;
-	private PolyLine polyline;
 	private Point origin_point; // <---- Find out what this value actually does
 
 	/**
@@ -51,6 +53,10 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 		this.model.addObserver(this);
 		this.view=view;
 		this.factory = new shapeFactory();
+		
+		this.model.addCommand(new CommandFill(this,DEFAULTFILL));
+		this.model.addCommand(new CommandColor(this, DEFAULTCOLOUR));
+		this.model.addCommand(new CommandStroke(this, DEFAULTSTROKE));
 	}
 
 	/**
@@ -63,10 +69,12 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 		Graphics2D g2d = (Graphics2D) g; // lets use the advanced api
 		// setBackground (Color.blue);
 		// Origin is at the top left of the window 50 over, 75 down
-		g2d.setColor(Color.black);
 
 		for (DrawingCommand command : this.model.getCommands()) {
 			command.execute(g2d);
+			
+			g2d.setColor(this.newColour);
+			g2d.setStroke(this.stroke);
 		}
 		g2d.dispose();
 	}
@@ -127,7 +135,7 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	@Override
 	public void mousePressed(MouseEvent e) {
 		this.origin_point = new Point(e.getX(), e.getY());
-		this.mode.press(this,e,this.view.getStyleSelector().getFlag(), this.factory, this.origin_point);
+		this.mode.press(this,e,this.FillMode, this.factory, this.origin_point);
 	}
 	@Override
 	public void mouseReleased(MouseEvent e) {
@@ -147,7 +155,6 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	public void setColour(Color newColour){
 		this.newColour=newColour;
 	}
-	
 	public Color getColour(){
 		return newColour;
 	}
@@ -157,7 +164,12 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	public Shape getShape(){
 		return this.shape;
 	}
-
+	public void changeFillMode (boolean mode){
+		this.FillMode = mode;
+	}
+	public boolean getFillMode(){
+		return this.FillMode;
+	}
 	public PaintModel getModel(){
 		return this.model;
 	}

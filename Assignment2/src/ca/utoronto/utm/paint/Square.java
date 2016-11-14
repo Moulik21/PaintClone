@@ -1,7 +1,5 @@
 package ca.utoronto.utm.paint;
 
-import java.awt.BasicStroke;
-import java.awt.Color;
 import java.awt.Graphics2D;
 /**
  * A Square is a type of Rectangle, which is a type of Shape. The height and the width of a Square will be same.
@@ -15,11 +13,9 @@ public class Square extends Rectangle{
 	/**
 	 * Creates a new Square with given origin, colour and stroke
 	 * @param origin the Starting Point of the Square
-	 * @param newColour the colour of the Square
-	 * @param newStroke the line thickness when drawing a Square
 	 */
-	public Square(Point origin, Color newColour,BasicStroke newStroke){
-		super(origin,newColour,newStroke);
+	public Square(Point origin){
+		super(origin);
 	}
 	
 	/**
@@ -53,8 +49,6 @@ public class Square extends Rectangle{
 		else {
 			y = this.getOrigin().getY() - this.getHeight();
 		}
-		g2d.setColor(this.getShapeColour());
-		g2d.setStroke(this.getShapeStroke());
 		if (this.getIsFilled()){
 			g2d.drawRect(x, y, side, side);
 		}

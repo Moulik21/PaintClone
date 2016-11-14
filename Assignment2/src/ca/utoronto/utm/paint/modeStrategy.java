@@ -29,7 +29,7 @@ class createSquiggle implements modeStrategy{
 	 */
 	public void press(PaintPanel panel, MouseEvent e, boolean StyleFlag, shapeFactory factory, Point origin) {
 
-		panel.setShape((Squiggle)factory.getShape("Squiggle", origin, panel.getColour(),panel.getStroke()));
+		panel.setShape((Squiggle)factory.getShape("Squiggle", origin));
 		panel.getModel().addCommand((DrawingCommand)panel.getShape());
 		
 	}
@@ -71,7 +71,6 @@ class createPolyline implements modeStrategy{
 	 * Return the strategy that the class is currently is using.
 	 */
 	public String state() {
-		// TODO Auto-generated method stub
 		return "Polyline";
 	}
 	
@@ -82,13 +81,13 @@ class createPolyline implements modeStrategy{
 	public void press(PaintPanel panel, MouseEvent e, boolean StyleFlag, shapeFactory factory, Point origin) {
 		//If no shape exist, create a new one. Avoid null pointer.
 		if(panel.getShape() == null){
-			panel.setShape((PolyLine)factory.getShape("Polyline", origin, panel.getColour(),panel.getStroke()));
+			panel.setShape((PolyLine)factory.getShape("Polyline", origin));
 			panel.getModel().addCommand((DrawingCommand)panel.getShape());
 		}
 		PolyLine polyline = (PolyLine)panel.getShape();
-		if (StyleFlag){
-			panel.getShape().changedIsFilled();
-		}
+//		if (StyleFlag){
+			panel.getShape().setIsFilled(StyleFlag);
+//		}
 		//If left click, only add the point where the user has clicked
 		if(SwingUtilities.isLeftMouseButton(e)){
 				polyline.addPoint(e.getX(),e.getY());
@@ -133,12 +132,9 @@ class createCircle implements modeStrategy{
 	 */
 	public void press(PaintPanel panel, MouseEvent e,boolean StyleFlag, shapeFactory factory, Point origin) {
 		Point centre = new Point(e.getX(), e.getY());
-		panel.setShape((Circle)factory.getShape("Circle", centre, panel.getColour(),panel.getStroke()));
+		panel.setShape((Circle)factory.getShape("Circle", centre));
 		panel.getModel().addCommand((DrawingCommand)panel.getShape());
-
-		if (StyleFlag){
-			panel.getShape().changedIsFilled();
-		}
+		panel.getShape().setIsFilled(StyleFlag);
 	}
 	/**
 	 * Reset the shape variable to create new shapes later.
@@ -180,11 +176,9 @@ class createRectangle implements modeStrategy{
 	 * Create rectangles and add it to shape list on click.
 	 */
 	public void press(PaintPanel panel, MouseEvent e,boolean StyleFlag, shapeFactory factory, Point origin) {
-		panel.setShape((Rectangle) factory.getShape("Rectangle", origin, panel.getColour(),panel.getStroke()));
+		panel.setShape((Rectangle) factory.getShape("Rectangle", origin));
 		panel.getModel().addCommand((DrawingCommand)panel.getShape());
-		if (StyleFlag){
-			panel.getShape().changedIsFilled();
-		}
+		panel.getShape().setIsFilled(StyleFlag);
 
 	}
 	
@@ -228,13 +222,13 @@ class createSquare implements modeStrategy{
 	 * Creates a square and adds it to the shape list on click.
 	 */
 	public void press(PaintPanel panel, MouseEvent e,boolean StyleFlag, shapeFactory factory, Point origin) {
-		panel.setShape((Square)factory.getShape("Square", origin, panel.getColour(),panel.getStroke()));
+		panel.setShape((Square)factory.getShape("Square", origin));
 		panel.getModel().addCommand((DrawingCommand)panel.getShape());
 		
 		
-		if (StyleFlag){
-			panel.getShape().changedIsFilled();
-		}
+//		if (StyleFlag){
+			panel.getShape().setIsFilled(StyleFlag);
+//		}
 	}
 	/**
 	 * Reset the shape variable to create new shapes later.

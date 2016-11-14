@@ -53,9 +53,9 @@ Nov 13, 2016
 	Obstacles: None
 	
 Nov 14, 2016
-	Yesterday: 
-	Today	 : 
-	Obstacles: 
+	Yesterday: Decided on how we would do user stories
+	Today	 : Worked on creating a line function. (And updating GUI as necessary)
+	Obstacles: None
 	
 Nov 15, 2016
 	Yesterday: 
