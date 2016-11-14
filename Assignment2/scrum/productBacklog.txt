@@ -75,6 +75,22 @@ simply switching the PaintPanel's listeners as appropriate.
 
 
 --------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : UserStory
+NAME     : Eraser function
+OWNER    : Daniel
+PRIORITY : medium
+ESTIMATE : 2 hours
+ISSUE    : Adding an eraser function/button would be nice.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : UserStory
+NAME     : Line function
+OWNER    : Daniel
+PRIORITY : medium
+ESTIMATE : 2 hours
+ISSUE    : Adding a line function to draw single lines would be nice.
+--------------------------------------------------------------------------
 
 # COMPLETED USER STORIES/BUGS BELOW ###########################################
 --------------------------------------------------------------------------
