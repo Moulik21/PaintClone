@@ -21,17 +21,19 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	private final Color DEFAULTCOLOUR = Color.black;
 	private final BasicStroke DEFAULTSTROKE = new BasicStroke(1);
 	private final modeStrategy DEFAULTMODE = new createSquiggle();
+	private final boolean DEFAULTFILL = true;
 	
 	private PaintModel model; // slight departure from MVC, because of the way painting works
 	private View view; // So we can talk to our parent or other components of the view
 	
-	private String state;
-	private shapeFactory factory;
 	private modeStrategy mode = DEFAULTMODE;
 	private Color newColour = DEFAULTCOLOUR;
 	private BasicStroke stroke = DEFAULTSTROKE;
+	private boolean FillMode = DEFAULTFILL;
+	
+	private String state;
+	private shapeFactory factory;
 	private Shape shape;
-	private PolyLine polyline;
 	private Point origin_point; // <---- Find out what this value actually does
 
 	/**
@@ -147,7 +149,6 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	public void setColour(Color newColour){
 		this.newColour=newColour;
 	}
-	
 	public Color getColour(){
 		return newColour;
 	}
@@ -157,7 +158,12 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	public Shape getShape(){
 		return this.shape;
 	}
-
+	public void changeFillMode (){
+		this.FillMode = !this.FillMode;
+	}
+	public boolean getFillMode(){
+		return this.FillMode;
+	}
 	public PaintModel getModel(){
 		return this.model;
 	}

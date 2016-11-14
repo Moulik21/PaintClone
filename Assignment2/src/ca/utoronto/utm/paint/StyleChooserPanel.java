@@ -19,7 +19,7 @@ import javax.swing.JPanel;
  * will appear on top of the Icon of the button. By default, fill is disabled.
  *
  */
-public class StyleSelector extends JPanel implements ActionListener {
+public class StyleChooserPanel extends JPanel implements ActionListener {
 	
 	//Instance Variables
 	private boolean isOutlineMode;
@@ -28,7 +28,7 @@ public class StyleSelector extends JPanel implements ActionListener {
 	/**
 	 * Creates a StyleSelector
 	 */
-	public StyleSelector(){
+	public StyleChooserPanel(){
 		this.isOutlineMode = true;
 		this.button = new JButton();
 	 	try {
