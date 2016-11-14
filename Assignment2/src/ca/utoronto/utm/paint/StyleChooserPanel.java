@@ -24,11 +24,12 @@ public class StyleChooserPanel extends JPanel implements ActionListener {
 	//Instance Variables
 	private boolean isOutlineMode;
 	private JButton button;
-	
+	private View view;
 	/**
 	 * Creates a StyleSelector
 	 */
-	public StyleChooserPanel(){
+	public StyleChooserPanel(View view){
+		this.view = view;
 		this.isOutlineMode = true;
 		this.button = new JButton();
 	 	try {
@@ -44,15 +45,6 @@ public class StyleChooserPanel extends JPanel implements ActionListener {
 		button.setBorder(null);
 		this.add(button);
 	}
-	
-	/**
-	 * 
-	 * @return True if user has disabled fill feature, false otherwise.
-	 */
-	public boolean getFlag(){
-		return this.isOutlineMode;
-	}
-	
 	/**
 	 * 
 	 * @return the JButton that allows the user to enable/disable to fill feature
@@ -66,6 +58,7 @@ public class StyleChooserPanel extends JPanel implements ActionListener {
 	 * A "X" appears on top of the button if the fill feature is disabled, disappears otherwise.
 	 */
 	public void actionPerformed(ActionEvent arg0) {
+		PaintPanel panel = this.view.getPaintPanel();
 		if (this.isOutlineMode){
 		 	try {
 		    	BufferedImage img = ImageIO.read(getClass().getResource("filled.png"));
@@ -75,6 +68,9 @@ public class StyleChooserPanel extends JPanel implements ActionListener {
 		 	} catch (IOException ex) {
 		  	}
 			this.isOutlineMode = false;
+		 	panel.getModel().addCommand(new CommandFill(panel, false));
+		 	
+		 	
 		}
 		else{
 		 	try {
@@ -85,6 +81,7 @@ public class StyleChooserPanel extends JPanel implements ActionListener {
 		 	} catch (IOException ex) {
 		  	}
 			this.isOutlineMode = true;
+		 	panel.getModel().addCommand(new CommandFill(panel, true));
 		}
 		
 	}

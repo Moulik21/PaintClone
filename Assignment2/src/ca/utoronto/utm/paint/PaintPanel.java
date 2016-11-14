@@ -53,6 +53,10 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 		this.model.addObserver(this);
 		this.view=view;
 		this.factory = new shapeFactory();
+		
+		this.model.addCommand(new CommandFill(this,DEFAULTFILL));
+		this.model.addCommand(new CommandColor(this, DEFAULTCOLOUR));
+		this.model.addCommand(new CommandStroke(this, DEFAULTSTROKE));
 	}
 
 	/**
@@ -65,10 +69,13 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 		Graphics2D g2d = (Graphics2D) g; // lets use the advanced api
 		// setBackground (Color.blue);
 		// Origin is at the top left of the window 50 over, 75 down
-		g2d.setColor(Color.black);
 
 		for (DrawingCommand command : this.model.getCommands()) {
 			command.execute(g2d);
+			
+			g2d.setColor(this.newColour);
+			System.out.println(this.getColour());
+			g2d.setStroke(this.stroke);
 		}
 		g2d.dispose();
 	}
@@ -129,7 +136,7 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	@Override
 	public void mousePressed(MouseEvent e) {
 		this.origin_point = new Point(e.getX(), e.getY());
-		this.mode.press(this,e,this.view.getStyleSelector().getFlag(), this.factory, this.origin_point);
+		this.mode.press(this,e,this.FillMode, this.factory, this.origin_point);
 	}
 	@Override
 	public void mouseReleased(MouseEvent e) {
@@ -158,8 +165,8 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	public Shape getShape(){
 		return this.shape;
 	}
-	public void changeFillMode (){
-		this.FillMode = !this.FillMode;
+	public void changeFillMode (boolean mode){
+		this.FillMode = mode;
 	}
 	public boolean getFillMode(){
 		return this.FillMode;

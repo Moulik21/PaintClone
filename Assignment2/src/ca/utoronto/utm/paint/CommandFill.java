@@ -16,7 +16,7 @@ public class CommandFill implements DrawingCommand {
 	}
 	@Override
 	public void execute(Graphics2D g2d) {
-		this.panel.changeFillMode();
+		this.panel.changeFillMode(this.Fillmode);
 		
 	}
 

@@ -1,7 +1,5 @@
 package ca.utoronto.utm.paint;
 
-import java.awt.BasicStroke;
-import java.awt.Color;
 /**
  * A modular way to create new shapes 
  *
@@ -16,35 +14,35 @@ public class shapeFactory {
 	 * @param newStroke the line thickness of the shape
 	 * @return the Shape required to be made, null otherwise.
 	 */
-	public Shape getShape(String shapeType, Point origin, Color color, BasicStroke newStroke){
+	public Shape getShape(String shapeType, Point origin){
 		if (shapeType == null){
 			return null;
 		}
 		if (shapeType == "Squiggle"){
-			Squiggle squiggle = new Squiggle(origin, color,newStroke);
+			Squiggle squiggle = new Squiggle(origin);
 			squiggle.addPoint(origin);
 			return squiggle;
 		}
 		else if (shapeType =="Polyline"){
-			PolyLine polyline = new PolyLine(origin, color,newStroke);
+			PolyLine polyline = new PolyLine(origin);
 			polyline.addPoint(origin);
 			polyline.addPoint(origin);
 			return polyline;
 		}
 		else if (shapeType == "Circle"){
-			Circle circle = new Circle(origin, color, newStroke);
+			Circle circle = new Circle(origin);
 			circle.setRadius(0);
 			return circle;
 		}
 		else if (shapeType =="Rectangle"){
-			Rectangle rectangle =  new Rectangle(origin, color,newStroke);
+			Rectangle rectangle =  new Rectangle(origin);
 			rectangle.setEnd(origin);
 			rectangle.setHeight(0);
 			rectangle.setWidth(0);
 			return rectangle;
 		}
 		else if (shapeType =="Square"){
-			Square square = new Square(origin, color,newStroke);
+			Square square = new Square(origin);
 			square.setEnd(origin);
 			square.setSide(0);
 			return square;

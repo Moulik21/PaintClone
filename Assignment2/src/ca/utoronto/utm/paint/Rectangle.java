@@ -1,7 +1,6 @@
 package ca.utoronto.utm.paint;
 
-import java.awt.BasicStroke;
-import java.awt.Color;
+
 import java.awt.Graphics2D;
 
 /**
@@ -19,11 +18,9 @@ public class Rectangle extends Shape implements DrawingCommand{
 	/**
 	 * Creates a new Rectangle with the given origin, colour and stroke
 	 * @param origin the Starting Point of the Rectangle
-	 * @param newColour the colour of the Rectangle
-	 * @param newStroke	the line thickness when drawing a Rectangle
 	 */
-	public Rectangle(Point origin,Color newColour, BasicStroke newStroke){
-		super(origin, newColour, newStroke);
+	public Rectangle(Point origin){
+		super(origin);
 	}
 	
 	/**
@@ -97,8 +94,6 @@ public class Rectangle extends Shape implements DrawingCommand{
 		else {
 			y = this.getEnd().getY();
 		}
-		g2d.setColor(this.getShapeColour());
-		g2d.setStroke(this.getShapeStroke());
 		if (this.getIsFilled()){
 			g2d.drawRect(x, y, width, height);
 		}

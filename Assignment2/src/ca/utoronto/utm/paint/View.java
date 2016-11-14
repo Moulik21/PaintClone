@@ -36,7 +36,7 @@ public class View extends JFrame implements ActionListener {
 		this.shapeChooserPanel = new ShapeChooserPanel(this);
 		
 		this.colourChooserPanel = new ColourChooserPanel(this);
-		this.styleSelector = new StyleChooserPanel();
+		this.styleSelector = new StyleChooserPanel(this);
 		this.strokeChooserPanel = new StrokeChooserPanel(this);
 		
 		this.shapeChooserPanel.add(this.colourChooserPanel.getColourButton());
