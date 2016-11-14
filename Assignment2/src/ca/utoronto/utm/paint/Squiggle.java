@@ -1,8 +1,6 @@
 package ca.utoronto.utm.paint;
 
 import java.util.ArrayList;
-import java.awt.BasicStroke;
-import java.awt.Color;
 import java.awt.Graphics2D;
 /**
  * When you click on the mouse and drag, it is like drawing with a pencil. 
@@ -21,11 +19,9 @@ public class Squiggle extends Shape implements DrawingCommand{
 	/**
 	 * Creates a new Squiggle with the given origin, colour and stroke
 	 * @param origin the Starting Point of the Squiggle 
-	 * @param colour the colour of the Squiggle
-	 * @param newStroke the line thickness when drawing a Squiggle
 	 */
-	public Squiggle( Point origin ,Color colour,BasicStroke newStroke){
-		super(origin,colour,newStroke);		
+	public Squiggle( Point origin){
+		super(origin);		
 	}
 	
 	/**
@@ -54,8 +50,6 @@ public class Squiggle extends Shape implements DrawingCommand{
 		for(int i=0;i<squiggle.size()-1; i++){
 			Point p1=squiggle.get(i);
 			Point p2=squiggle.get(i+1);
-			g2d.setColor(this.getShapeColour());
-			g2d.setStroke(this.getShapeStroke());
 			g2d.drawLine(p1.getX(), p1.getY(), p2.getX(), p2.getY());
 		}
 		

@@ -60,7 +60,9 @@ class ColourChooserPanel extends JPanel implements ActionListener {
 		if(colour==null) { //defaults to black
 			colour=(Color.BLACK);
 		}
-		this.view.getPaintPanel().setColour(colour);
+		PaintPanel panel = this.view.getPaintPanel();
+//		this.view.getPaintPanel().setColour(colour);
+		panel.getModel().addCommand(new CommandColor(panel, colour));
 		System.out.println(e.getActionCommand());
 	}
 
