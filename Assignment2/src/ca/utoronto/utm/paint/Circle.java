@@ -11,7 +11,7 @@ public class Circle extends Shape implements DrawingCommand{
 	/**
 	 * The radius of the circle
 	 */
-	private int radius;
+	private int radius; 
 	
 
 	/**
