@@ -14,6 +14,7 @@ High > Medium > Low priority.
 # You should add and implement any additional user stories that 
 # make your program great. Part of your mark will be competitive, 
 # with more, great user stories and better UI recognized by marks.
+
 --------------------------------------------------------------------------
 TYPE     : BUG 2.3
 NAME     : Architecture behind choosing drawing mode is poor
@@ -60,6 +61,14 @@ events forwarded through PaintPanel into the current strategy, or by
 simply switching the PaintPanel's listeners as appropriate.
 
 
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 2.7
+NAME     : Architecture behind choosing drawing mode is poor
+OWNER    : Keenan
+PRIORITY : Low
+ESTIMATE : 30 minutes
+ISSUE    : Drawing one point with squiggle doesn't draw anything
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : UserStory
