@@ -64,7 +64,7 @@ simply switching the PaintPanel's listeners as appropriate.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : BUG 2.7
-NAME     : Architecture behind choosing drawing mode is poor
+NAME     : Drawing single point with squiggle not working
 OWNER    : Keenan
 PRIORITY : Low
 ESTIMATE : 30 minutes

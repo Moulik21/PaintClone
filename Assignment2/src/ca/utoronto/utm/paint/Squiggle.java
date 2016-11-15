@@ -47,12 +47,20 @@ public class Squiggle extends Shape implements DrawingCommand{
 	 * When you un-click (let go of the button), it is like lifting your pencil from the paper. 
 	 */
 	public void execute(Graphics2D g2d) {
-		for(int i=0;i<squiggle.size()-1; i++){
-			Point p1=squiggle.get(i);
-			Point p2=squiggle.get(i+1);
-			g2d.drawLine(p1.getX(), p1.getY(), p2.getX(), p2.getY());
+		//if user wants to draw a single point
+		if (squiggle.size() == 1) {
+			Point p1=squiggle.get(0);
+			g2d.drawLine(p1.getX(), p1.getY(), p1.getX(), p1.getY());
+			
 		}
-		
+		//if user wants to draw a line using 2 or more points
+		else {
+			for(int i=0;i<squiggle.size()-1; i++){
+				Point p1=squiggle.get(i);
+				Point p2=squiggle.get(i+1);
+				g2d.drawLine(p1.getX(), p1.getY(), p2.getX(), p2.getY());
+			}
+		}
 	}	
 
 }
