@@ -9,7 +9,7 @@ import java.awt.event.*;
 /**
  * This is the top level View+Controller, it contains other aspects of the View+Controller.
  * @author arnold
- *
+ **
  */
 public class View extends JFrame implements ActionListener {
 	
