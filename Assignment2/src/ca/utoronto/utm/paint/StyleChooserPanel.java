@@ -33,7 +33,7 @@ public class StyleChooserPanel extends JPanel implements ActionListener {
 		this.isOutlineMode = true;
 		this.button = new JButton();
 	 	try {
-	    	BufferedImage img = ImageIO.read(getClass().getResource("notfilled.png"));
+	    	BufferedImage img = ImageIO.read(getClass().getResource("/icons/notfilled.png"));
 	    	Image newimg = img.getScaledInstance( 60,60,  java.awt.Image.SCALE_SMOOTH ) ;  
 	    	button.setIcon(new ImageIcon(newimg));
 
@@ -61,7 +61,7 @@ public class StyleChooserPanel extends JPanel implements ActionListener {
 		PaintPanel panel = this.view.getPaintPanel();
 		if (this.isOutlineMode){
 		 	try {
-		    	BufferedImage img = ImageIO.read(getClass().getResource("filled.png"));
+		    	BufferedImage img = ImageIO.read(getClass().getResource("/icons/filled.png"));
 		    	Image newimg = img.getScaledInstance( 60,60,  java.awt.Image.SCALE_SMOOTH ) ;  
 		    	button.setIcon(new ImageIcon(newimg));
 
@@ -74,7 +74,7 @@ public class StyleChooserPanel extends JPanel implements ActionListener {
 		}
 		else{
 		 	try {
-		    	BufferedImage img = ImageIO.read(getClass().getResource("notfilled.png"));
+		    	BufferedImage img = ImageIO.read(getClass().getResource("/icons/notfilled.png"));
 		    	Image newimg = img.getScaledInstance( 60,60,  java.awt.Image.SCALE_SMOOTH ) ;  
 		    	button.setIcon(new ImageIcon(newimg));
 

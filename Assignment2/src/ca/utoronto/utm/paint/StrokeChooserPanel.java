@@ -35,16 +35,16 @@ public class StrokeChooserPanel extends JPanel implements ActionListener {
 		
 		//Create Image Icons from .png files
 		try{
-			BufferedImage img = ImageIO.read(getClass().getResource("dashed.png"));			
+			BufferedImage img = ImageIO.read(getClass().getResource("/icons/dashed.png"));			
 			imgList[0] = new ImageIcon(img);
 			imgList[0].setDescription("Dashed");
-			img = ImageIO.read(getClass().getResource("size1.png"));
+			img = ImageIO.read(getClass().getResource("/icons/size1.png"));
 			imgList[1] = new ImageIcon(img);
 			imgList[1].setDescription("1px");
-			img = ImageIO.read(getClass().getResource("size3.png"));
+			img = ImageIO.read(getClass().getResource("/icons/size3.png"));
 			imgList[2] = new ImageIcon(img);
 			imgList[2].setDescription("3px");
-			img = ImageIO.read(getClass().getResource("size8.png"));
+			img = ImageIO.read(getClass().getResource("/icons/size8.png"));
 			imgList[3] = new ImageIcon(img);
 			imgList[3].setDescription("8px");
 			
