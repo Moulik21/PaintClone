@@ -111,6 +111,12 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 		else if (current_mode == "Square"){
 			this.mode= new createSquare();
 		}
+		else if (current_mode == "StraightLine"){
+			this.mode= new createStraightLine();
+		}
+		else if (current_mode == "Eraser"){
+			this.mode= new createEraser();
+		}
 		this.state = current_mode;
 	}
 	

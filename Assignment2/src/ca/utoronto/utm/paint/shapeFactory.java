@@ -47,6 +47,18 @@ public class shapeFactory {
 			square.setSide(0);
 			return square;
 		}
+		else if (shapeType =="StraightLine"){
+			StraightLine line = new StraightLine(origin);
+			line.setEndPoint(origin);
+			return line
+					;
+		}
+		else if (shapeType == "Eraser"){
+			Eraser eraser = new Eraser(origin);
+			eraser.addPoint(origin);
+			return eraser;
+		}
+		
 		return null;
 	}
 }

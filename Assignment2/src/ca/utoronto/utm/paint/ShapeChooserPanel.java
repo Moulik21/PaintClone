@@ -40,7 +40,11 @@ class ShapeChooserPanel extends JPanel implements ActionListener {
 	  	b4.setToolTipText("Squiggle");
 	  	JToggleButton b5 = new JToggleButton();
 	  	b5.setToolTipText("Polyline");
-	  	JToggleButton [] buttons = {b1,b2,b3,b4,b5};
+	  	JToggleButton b6 = new JToggleButton();
+	  	b6.setToolTipText("StraightLine");
+	  	JToggleButton b7 = new JToggleButton();
+	  	b7.setToolTipText("Eraser");
+	  	JToggleButton [] buttons = {b1,b2,b3,b4,b5,b6,b7};
 	  	
 	  	//Sets icons for the buttons
 	 	try {
@@ -54,6 +58,10 @@ class ShapeChooserPanel extends JPanel implements ActionListener {
 	    	b4.setIcon(new ImageIcon(img));
 	    	img = ImageIO.read(getClass().getResource("polylineicon.png"));
 	    	b5.setIcon(new ImageIcon(img));
+	    	img = ImageIO.read(getClass().getResource("lineicon.png"));
+	    	b6.setIcon(new ImageIcon(img));
+	    	img = ImageIO.read(getClass().getResource("erasericon.png"));
+	    	b7.setIcon(new ImageIcon(img));
 	 	} catch (IOException ex) {
 	  	}
 	 	//Add actionListener to each button and set the initial Shape
@@ -63,7 +71,7 @@ class ShapeChooserPanel extends JPanel implements ActionListener {
 			this.add(b);
 			b.addActionListener(this);
 			b.setBackground(Color.WHITE);
-			b.setPreferredSize(new Dimension(60, 60));
+			b.setPreferredSize(new Dimension(50, 50));
 			b.setBorder(null);
 			if (b.getToolTipText().equals("Squiggle")) {
 				b.setSelected(true);
