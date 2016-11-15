@@ -46,6 +46,29 @@ Nov 8, 2016
 	
 Nov 9, 2016
 	Yesterday :
-	Today     : Merged UserStory9 with master. Updated all scrum notes for days that had no notes.
+	Today     : Merged UserStory9 with master. Helped work on Polyline. Updated all scrum notes for days that had no notes.
 			    Documenting all methods and classes.
 	Obstacles :
+
+#Sprint 2
+Nov 13, 2016
+	Yesterday: Looked over assignment details
+	Today	 : Decide with group how the rest of the assignment will be done
+	Obstacles: None
+
+Nov 14, 2016
+	Yesterday: Nothing
+	Today	 : Worked as a group on 2.4. Decided with group on how to do Bug2.3 tomorrow.
+			   Updated sprintBacklog for the missing days, organized productBackLog, updated dailyScrumMeeting3(mine) ,and
+			   dailyScrumMeeting1 for Paul.
+	Obstacles: Incorporating the old design with the new and improved one.
+
+Nov 15, 2016
+	Yesterday:
+	Today	 :
+	Obstacles:
+	
+Nov 16, 2016
+	Yesterday:
+	Today	 :
+	Obstacles:

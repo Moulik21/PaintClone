@@ -40,16 +40,17 @@ Nov 9, 2016
 	Today     :Work on quick color selection and polyline.
 	Obstacles :Understanding drawing in g2d.
 
-	Sprint 2
+#Sprint 2
+
 Nov 13, 2016
 	Yesterday: Looked over assignment details
 	Today	 : Worked on bug 2.2
 	Obstacles: None
 
 Nov 14, 2016
-	Yesterday:
-	Today	 :
-	Obstacles:
+	Yesterday: Bug 2.1 and 2.2
+	Today	 : Bug 2.1 and 2.2 are now merged with master. Worked as a group on Bug 2.4.
+	Obstacles: Incorporating the old design with the new and improved one.
 
 Nov 15, 2016
 	Yesterday:
