@@ -20,21 +20,21 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	// Instance variables
 	private final Color DEFAULTCOLOUR = Color.black;
 	private final BasicStroke DEFAULTSTROKE = new BasicStroke(1);
-	private final modeStrategy DEFAULTMODE = new createSquiggle();
+	private final ShapeManipulatorStrategy DEFAULTMODE = new SquiggleManipulatorStrategy();
 	private final boolean DEFAULTFILL = true;
 	
 	private PaintModel model; // slight departure from MVC, because of the way painting works
 	private View view; // So we can talk to our parent or other components of the view
 	
-	private modeStrategy mode = DEFAULTMODE;
+	private ShapeManipulatorStrategy mode = DEFAULTMODE;
 	private Color newColour = DEFAULTCOLOUR;
 	private BasicStroke stroke = DEFAULTSTROKE;
 	private boolean FillMode = DEFAULTFILL;
 	
 	private String state;
-	private shapeFactory factory;
+	//private shapeFactory factory;
 	private Shape shape;
-	private Point origin_point; // <---- Find out what this value actually does
+	//private Point origin_point; // <---- Find out what this value actually does
 
 	/**
 	 * Creates a new PaintPanel
@@ -52,7 +52,7 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 		this.model = model;
 		this.model.addObserver(this);
 		this.view=view;
-		this.factory = new shapeFactory();
+		//this.factory = new shapeFactory();
 		
 		this.model.addCommand(new CommandFill(this,DEFAULTFILL));
 		this.model.addCommand(new CommandColor(this, DEFAULTCOLOUR));
@@ -96,20 +96,21 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	 * @param current_mode
 	 */
 	public void setMode(String current_mode) {
+		//TODO
 		if (current_mode == "Squiggle") {
-			this.mode = new createSquiggle();
+			this.mode = new SquiggleManipulatorStrategy();
 		}
 		else if (current_mode =="Polyline"){
-			this.mode = new createPolyline();
+			this.mode = new PolylineManipulatorStrategy();
 		}
 		else if (current_mode == "Circle"){
-			this.mode = new createCircle();
+			this.mode = new CircleManipulatorStrategy();
 		}
 		else if (current_mode == "Rectangle"){
-			this.mode = new createRectangle();
+			this.mode = new RectangleManipulatorStrategy();
 		}
 		else if (current_mode == "Square"){
-			this.mode= new createSquare();
+			this.mode= new SquareManipulatorStrategy();
 		}
 		this.state = current_mode;
 	}
@@ -124,8 +125,7 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	}
 	@Override
 	public void mouseDragged(MouseEvent e) {
-		this.mode.drag(this,e);
-		this.repaint();
+		this.mode.drag(this,e);		
 	}
 	// MouseListener below
 	@Override
@@ -133,9 +133,8 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 
 	}
 	@Override
-	public void mousePressed(MouseEvent e) {
-		this.origin_point = new Point(e.getX(), e.getY());
-		this.mode.press(this,e,this.FillMode, this.factory, this.origin_point);
+	public void mousePressed(MouseEvent e) {		
+		this.mode.press(this,e,this.FillMode);
 	}
 	@Override
 	public void mouseReleased(MouseEvent e) {
@@ -158,7 +157,7 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	public Color getColour(){
 		return newColour;
 	}
-	public void setShape(Shape shape){
+	public void setShape(Shape shape){		
 		this.shape = shape;
 	}
 	public Shape getShape(){
