@@ -49,11 +49,11 @@ Nov 13, 2016
 
 Nov 14, 2016
 	Yesterday: Finished bug 2.5 and 2.6, discussed with group what potential things we want to do this sprint
-	Today	 : Work on sorting our files as per Arnold's feedback from sprint 1
+	Today	 : Work on sorting our files as per Arnold's feedback from sprint 1. Work with group on bigger bugs.
 	Obstacles: Figuring out the best way to sort the files
 
 Nov 15, 2016
-	Yesterday: Added bug 2.7 to product backlog and fixed it.
+	Yesterday: Added bug 2.7 to product backlog and fixed it. Relocated our icon pictures and worked with group on Bugs 2.3 and 2.4.
 	Today	 :
 	Obstacles:
 	
