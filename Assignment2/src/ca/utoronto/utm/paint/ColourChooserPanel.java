@@ -29,8 +29,8 @@ class ColourChooserPanel extends JPanel implements ActionListener {
 		this.view=view;
 		
 	 	try {
-	    	BufferedImage img = ImageIO.read(getClass().getResource("/icons/painticon.jpg"));
-	    	Image newimg = img.getScaledInstance( 52,52,  java.awt.Image.SCALE_SMOOTH ) ;  
+	  	    BufferedImage img = ImageIO.read(getClass().getResource("/icons/painticon.png"));
+	    	Image newimg = img.getScaledInstance( 65,65,  java.awt.Image.SCALE_SMOOTH ) ;  
 	    	colourButton.setIcon(new ImageIcon(newimg));
 
 	 	} catch (IOException ex) {
@@ -61,8 +61,11 @@ class ColourChooserPanel extends JPanel implements ActionListener {
 			colour=(Color.BLACK);
 		}
 		PaintPanel panel = this.view.getPaintPanel();
-//		this.view.getPaintPanel().setColour(colour);
-		panel.getModel().addCommand(new CommandColor(panel, colour));
+		CommandColor newCommandColor = new CommandColor(panel,colour);
+		panel.getModel().addCommand(newCommandColor);
+		
+		//current colour indicator is an observer for the colour commands
+		newCommandColor.addObserver(this.view.getCurrentColourPanel());
 		System.out.println(e.getActionCommand());
 	}
 
