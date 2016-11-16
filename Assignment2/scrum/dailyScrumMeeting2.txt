@@ -53,11 +53,11 @@ Nov 14, 2016
 	Obstacles: Figuring out the best way to sort the files
 
 Nov 15, 2016
-	Yesterday: Added bug 2.7 to product backlog and fixed it. Relocated our icon pictures and worked with group on Bugs 2.3 and 2.4.
-	Today	 :
-	Obstacles:
+	Yesterday: Added bug 2.7 to product backlog and fixed it. Relocated our icon pictures and worked with group on Bugs 2.3 and 2.4 (finished 2.4).
+	Today	 : Fix errors that occured when icon pictures were relocated. Continue to work on bug 2.3 with group.
+	Obstacles: Unfamiliar with path directories in eclipse/java.
 	
 Nov 16, 2016
-	Yesterday:
+	Yesterday: Added bug 2.8 to backlog. Worked with Paul to fix it. Added User Story 16 to backlog and started working on it. Finished bug 2.3 with group.
 	Today	 :
 	Obstacles:
