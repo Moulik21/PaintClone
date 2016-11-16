@@ -44,9 +44,21 @@ folder outside of the src/ source folder causes the program to not be able to ru
 TYPE     : UserStory 13
 NAME     : TextFunction
 OWNER    : Daniel
-PRIORITY : medium
+PRIORITY : Medium
 ESTIMATE : 2 hours
-ISSUE    : Allowing the user to type Text would be nice.
+AS A     : user
+I WANT   : To be able to add text to my drawing.
+SO THAT  : I can easily add text with a neat, uniform font to my drawing.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : UserStory 16
+NAME     : Clear canvas function
+OWNER    : Keenan
+PRIORITY : Medium
+ESTIMATE : 2 hours
+AS A     : user
+I WANT   : To be able to completely clear the canvas at any time.
+SO THAT  : I can restart my drawing whenever I want.
 --------------------------------------------------------------------------
 
 # COMPLETED USER STORIES/BUGS BELOW ###########################################
@@ -411,17 +423,21 @@ SO THAT  : I can create the shape that I want.
 TYPE     : UserStory 14
 NAME     : Eraser function
 OWNER    : Daniel
-PRIORITY : medium
+PRIORITY : Medium
 ESTIMATE : 2 hours
-ISSUE    : Adding an eraser function/button would be nice.
+AS A     : user
+I WANT   : To be able to erase what I have drawn.
+SO THAT  : I can remove parts of my drawing that I want to.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : UserStory 15
 NAME     : Line function
 OWNER    : Daniel
-PRIORITY : medium
+PRIORITY : Medium
 ESTIMATE : 2 hours
-ISSUE    : Adding a line function to draw single lines would be nice.
+AS A     : user
+I WANT   : To be able to draw a single straight line.
+SO THAT  : I don't have to use polyline in order to draw one straight line.
 --------------------------------------------------------------------------
 
 # OMITTED USER STORIES/BUGS BELOW   ###########################################
