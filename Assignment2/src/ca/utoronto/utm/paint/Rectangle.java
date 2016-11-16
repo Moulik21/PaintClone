@@ -82,7 +82,8 @@ public class Rectangle extends Shape implements DrawingCommand{
 		int x,y;
 		
 		//Cases for where the top left coordinates of the rectangle will start based on if the user is trying to drag to the right or left and up or down
-		if (this.getOrigin().getX() < this.getEnd().getX()) {
+		if (this.getOrigin().getX() < this.getEnd().getX()) {	
+
 			x = this.getOrigin().getX();
 		}
 		else {
