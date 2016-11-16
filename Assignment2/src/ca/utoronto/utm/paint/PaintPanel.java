@@ -27,6 +27,7 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	private View view; // So we can talk to our parent or other components of the view
 	
 	private ShapeManipulatorStrategy mode = DEFAULTMODE;
+	private StrategyFactory myStrategyFactory = new StrategyFactory();
 	private Color newColour = DEFAULTCOLOUR;
 	private BasicStroke stroke = DEFAULTSTROKE;
 	private boolean FillMode = DEFAULTFILL;
@@ -89,30 +90,13 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 		this.repaint(); // Schedule a call to paintComponent
 	}
 
-	// Controller aspect of PaintPanel
 	/**
 	 * Sets the current mode to be the shape that is going to be drawn next
 	 * 
-	 * @param current_mode
+	 * @param shapeType
 	 */
-	public void setMode(String current_mode) {
-		//TODO
-		if (current_mode == "Squiggle") {
-			this.mode = new SquiggleManipulatorStrategy();
-		}
-		else if (current_mode =="Polyline"){
-			this.mode = new PolylineManipulatorStrategy();
-		}
-		else if (current_mode == "Circle"){
-			this.mode = new CircleManipulatorStrategy();
-		}
-		else if (current_mode == "Rectangle"){
-			this.mode = new RectangleManipulatorStrategy();
-		}
-		else if (current_mode == "Square"){
-			this.mode= new SquareManipulatorStrategy();
-		}
-		this.state = current_mode;
+	public void setStrategy(String shapeType){
+		mode = myStrategyFactory.getStrategy(shapeType);		
 	}
 	
 	

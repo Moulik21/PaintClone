@@ -76,7 +76,7 @@ class ShapeChooserPanel extends JPanel implements ActionListener {
 	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		this.view.getPaintPanel().setMode(((JToggleButton) e.getSource()).getToolTipText());
+		this.view.getPaintPanel().setStrategy(((JToggleButton) e.getSource()).getToolTipText());
 		System.out.println(((JToggleButton) e.getSource()).getToolTipText());
 	}
 
