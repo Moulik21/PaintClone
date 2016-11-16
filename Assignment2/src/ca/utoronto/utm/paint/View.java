@@ -23,7 +23,9 @@ public class View extends JFrame implements ActionListener {
 	private ColourChooserPanel colourChooserPanel;
 	private StyleChooserPanel styleSelector;
 	private StrokeChooserPanel strokeChooserPanel;
+	private ClearCanvasPanel clearCanvasPanel;
 	private colorPalette palette;
+
 	
 	public View(PaintModel model) {
 		super("Paint"); // set the title and do other JFrame init
@@ -34,16 +36,18 @@ public class View extends JFrame implements ActionListener {
 		Container c=this.getContentPane();
 		
 		this.shapeChooserPanel = new ShapeChooserPanel(this);
-		
 		this.colourChooserPanel = new ColourChooserPanel(this);
 		this.styleSelector = new StyleChooserPanel(this);
 		this.strokeChooserPanel = new StrokeChooserPanel(this);
+		this.clearCanvasPanel = new ClearCanvasPanel(this);
 		
 		this.shapeChooserPanel.add(this.colourChooserPanel.getColourButton());
 		this.shapeChooserPanel.add(this.styleSelector.getButton());
 		this.shapeChooserPanel.add(this.strokeChooserPanel.getStrokeJComboBox());
+		this.shapeChooserPanel.add(this.clearCanvasPanel.getClearCanvasButton());
 		c.add(this.shapeChooserPanel,BorderLayout.WEST);
 		
+
 		
 		//Model and PaintPanel
 		this.model=model;
@@ -56,6 +60,8 @@ public class View extends JFrame implements ActionListener {
 		this.palette.addActionListener();
 		c.add(this.palette, BorderLayout.EAST);
 				
+		
+		
 		this.pack();
 		this.setSize(600,500);
 		this.setVisible(true);
