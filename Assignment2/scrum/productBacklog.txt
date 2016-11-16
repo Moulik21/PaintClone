@@ -51,6 +51,16 @@ AS A     : user
 I WANT   : To be able to completely clear the canvas at any time.
 SO THAT  : I can restart my drawing whenever I want.
 --------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : UserStory 17
+NAME     : Current colour indicator
+OWNER    : Keenan
+PRIORITY : Medium
+ESTIMATE : 2 hours
+AS A     : user
+I WANT   : To be able to see what the currently selected colour is.
+SO THAT  : I easily tell what colour the drawing I am about to draw will be.
+--------------------------------------------------------------------------
 
 # COMPLETED USER STORIES/BUGS BELOW ###########################################
 --------------------------------------------------------------------------
