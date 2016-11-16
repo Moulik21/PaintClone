@@ -32,15 +32,6 @@ display an ImageIcon. The string attached to the button causes the right choice
 of object creation.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : BUG 2.8
-NAME     : Moving img files to separate source folder causes errors
-OWNER    : Keenan
-PRIORITY : High
-ESTIMATE : 1 hour
-ISSUE    : Moving all the image files used in the project to a resource source
-folder outside of the src/ source folder causes the program to not be able to run.
---------------------------------------------------------------------------
---------------------------------------------------------------------------
 TYPE     : UserStory 13
 NAME     : TextFunction
 OWNER    : Daniel
@@ -246,6 +237,15 @@ OWNER    : Keenan
 PRIORITY : Low
 ESTIMATE : 30 minutes
 ISSUE    : Trying to draw one point with squiggle doesn't draw anything
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 2.8
+NAME     : Moving img files to separate source folder causes errors
+OWNER    : Keenan/Paul
+PRIORITY : High
+ESTIMATE : 1 hour
+ISSUE    : Moving all the image files used in the project to a resource source
+folder outside of the src/ source folder causes the program to not be able to run.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : USER STORY 1

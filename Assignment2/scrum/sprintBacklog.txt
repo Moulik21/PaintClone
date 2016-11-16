@@ -449,3 +449,33 @@ PRIORITY : medium
 ESTIMATE : 2 hours
 ISSUE    : Adding a line function to draw single lines would be nice.
 --------------------------------------------------------------------------
+
+
+#Sprint 9 November 14, 2016
+#Sprint 9 UserStories go below
+--------------------------------------------------------------------------
+TYPE     : BUG 2.3
+NAME     : Architecture behind choosing drawing mode is poor
+OWNER    : Paul/Moulik/Keenan
+PRIORITY : High
+ESTIMATE : 3 hours 
+ISSUE    : A better architecture behind selecting a drawing mode can be created 
+by implementing the Factory Design Pattern as follows:
+
+The factory design pattern should be used by the paint buttons. 
+The factory is responsible for creating different ShapeManipulatorStrategy 
+instances (see BUG 2.4). That is, when a button is pressed, the appropriate 
+ShapeManipulatorStrategy is created and installed in the PaintPanel. 
+Note that you can associate text with a button, even if you 
+display an ImageIcon. The string attached to the button causes the right choice 
+of object creation.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 2.8
+NAME     : Moving img files to separate source folder causes errors
+OWNER    : Keenan/Paul
+PRIORITY : High
+ESTIMATE : 1 hour
+ISSUE    : Moving all the image files used in the project to a resource source
+folder outside of the src/ source folder causes the program to not be able to run.
+--------------------------------------------------------------------------
