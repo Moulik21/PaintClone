@@ -32,14 +32,6 @@ display an ImageIcon. The string attached to the button causes the right choice
 of object creation.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : BUG 2.7
-NAME     : Architecture behind choosing drawing mode is poor
-OWNER    : Keenan
-PRIORITY : Low
-ESTIMATE : 30 minutes
-ISSUE    : Drawing one point with squiggle doesn't draw anything
---------------------------------------------------------------------------
---------------------------------------------------------------------------
 TYPE     : BUG 2.8
 NAME     : Moving img files to separate source folder causes errors
 OWNER    : Keenan
@@ -234,6 +226,14 @@ tracking a file, it continues tracking it. To fix this, delete the .class
 files (and any other files of interest) from the bin directory. Add this
 change to index, commit and push. 
 
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 2.7
+NAME     : Drawing a single point with squiggle doesn't draw anything
+OWNER    : Keenan
+PRIORITY : Low
+ESTIMATE : 30 minutes
+ISSUE    : Trying to draw one point with squiggle doesn't draw anything
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : USER STORY 1
