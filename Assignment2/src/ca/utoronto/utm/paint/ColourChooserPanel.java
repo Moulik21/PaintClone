@@ -30,12 +30,12 @@ class ColourChooserPanel extends JPanel implements ActionListener {
 		
 	 	try {
 	    	BufferedImage img = ImageIO.read(getClass().getResource("/icons/painticon.jpg"));
-	    	Image newimg = img.getScaledInstance( 60,60,  java.awt.Image.SCALE_SMOOTH ) ;  
+	    	Image newimg = img.getScaledInstance( 52,52,  java.awt.Image.SCALE_SMOOTH ) ;  
 	    	colourButton.setIcon(new ImageIcon(newimg));
 
 	 	} catch (IOException ex) {
 	  	}
-//		colourButton.setBackground(new Color(250, 250 ,250));
+
 		colourButton.addActionListener(this);
 		colourButton.setBackground(Color.WHITE);
 		colourButton.setPreferredSize(new Dimension(60, 60));

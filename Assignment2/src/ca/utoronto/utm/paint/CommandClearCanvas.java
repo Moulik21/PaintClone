@@ -8,24 +8,22 @@ import java.awt.Graphics2D;
  *
  */
 public class CommandClearCanvas implements DrawingCommand{
-	private PaintPanel panel;
+	
 	private Rectangle coverRectangle;
-	private Color previousColour;
+
+	//the program allows the user to draw off of the panel, which can be seen after expanding the window
+	//MAXSIDE is large enough to make sure that the entire canvas will be cleared on all reasonable window sizes
 	private static final int MAXSIDE = 9999;
 	
-	public CommandClearCanvas(PaintPanel panel){
-		this.panel = panel;
+	public CommandClearCanvas(){
+		
 		this.coverRectangle = new Rectangle(new Point (0,0));
 		this.coverRectangle.setEnd(new Point(MAXSIDE,MAXSIDE));
 		this.coverRectangle.setHeight(MAXSIDE);
 		this.coverRectangle.setWidth(MAXSIDE);
 		this.coverRectangle.setIsFilled(true);
-		this.previousColour = panel.getColour();
-
-		panel.getModel().addCommand(new CommandColor(this.panel,Color.WHITE));
-		panel.getModel().addCommand((DrawingCommand)this.coverRectangle);
-	    panel.getModel().addCommand(new CommandColor(this.panel,this.previousColour));
 	}
+	
 	@Override
 	public void execute(Graphics2D g2d) {
 		int x = this.coverRectangle.getOrigin().getX();
