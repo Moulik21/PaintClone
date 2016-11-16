@@ -2,12 +2,13 @@ package ca.utoronto.utm.paint;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
+import java.util.Observable;
 /**
  * Command for switching color
  * @author Pineapple
  *
  */
-public class CommandColor implements DrawingCommand{
+public class CommandColor extends Observable implements DrawingCommand{
 	private PaintPanel panel;
 	private Color color;
 	
@@ -18,6 +19,10 @@ public class CommandColor implements DrawingCommand{
 	@Override
 	public void execute(Graphics2D g2d) {
 		this.panel.setColour(this.color);
+		
+		//update the current colour indicator
+		this.setChanged();
+		this.notifyObservers();
 		
 	}
 

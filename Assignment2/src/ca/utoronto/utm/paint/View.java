@@ -3,6 +3,7 @@ package ca.utoronto.utm.paint;
 import javax.swing.*;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Container;
 import java.awt.GridLayout;
 import java.awt.event.*;
@@ -23,7 +24,8 @@ public class View extends JFrame implements ActionListener {
 	private ColourChooserPanel colourChooserPanel;
 	private StyleChooserPanel styleSelector;
 	private StrokeChooserPanel strokeChooserPanel;
-	private colorPalette palette;
+	private CurrentColourPanel currentColourPanel;
+	private ColorPalette palette;
 	
 	public View(PaintModel model) {
 		super("Paint"); // set the title and do other JFrame init
@@ -33,31 +35,33 @@ public class View extends JFrame implements ActionListener {
 				
 		Container c=this.getContentPane();
 		
-		this.shapeChooserPanel = new ShapeChooserPanel(this);
-		
-		this.colourChooserPanel = new ColourChooserPanel(this);
-		this.styleSelector = new StyleChooserPanel(this);
-		this.strokeChooserPanel = new StrokeChooserPanel(this);
-		
-		this.shapeChooserPanel.add(this.colourChooserPanel.getColourButton());
-		this.shapeChooserPanel.add(this.styleSelector.getButton());
-		this.shapeChooserPanel.add(this.strokeChooserPanel.getStrokeJComboBox());
-		c.add(this.shapeChooserPanel,BorderLayout.WEST);
-		
-		
 		//Model and PaintPanel
 		this.model=model;
 		
 		this.paintPanel = new PaintPanel(model, this);
 		c.add(this.paintPanel, BorderLayout.CENTER);
 		
-		//Colour Palette
-		this.palette = new colorPalette(this.paintPanel);
+		this.shapeChooserPanel = new ShapeChooserPanel(this);
+		this.colourChooserPanel = new ColourChooserPanel(this);
+		this.styleSelector = new StyleChooserPanel(this);
+		this.strokeChooserPanel = new StrokeChooserPanel(this);
+		this.currentColourPanel = new CurrentColourPanel(this.paintPanel);
+		this.palette = new ColorPalette(this.paintPanel, this);
+		
 		this.palette.addActionListener();
-		c.add(this.palette, BorderLayout.EAST);
 				
+		this.shapeChooserPanel.add(this.styleSelector.getButton());
+		this.shapeChooserPanel.add(this.strokeChooserPanel.getStrokeJComboBox());
+		
+		this.shapeChooserPanel.add(palette.getPanel1());
+		this.shapeChooserPanel.add(palette.getPanel2());
+		this.shapeChooserPanel.add(this.colourChooserPanel.getColourButton());
+		this.shapeChooserPanel.add(currentColourPanel);
+		
+		c.add(this.shapeChooserPanel,BorderLayout.WEST);
+		
 		this.pack();
-		this.setSize(600,500);
+		this.setSize(1000,800);
 		this.setVisible(true);
 	}
 	
@@ -75,6 +79,10 @@ public class View extends JFrame implements ActionListener {
 	
 	public ShapeChooserPanel getShapeChooserPanel() {
 		return shapeChooserPanel;
+	}
+	
+	public CurrentColourPanel getCurrentColourPanel() {
+		return currentColourPanel;
 	}
 	/**
 	 * create the top menu bar of the window
