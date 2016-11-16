@@ -53,11 +53,11 @@ Nov 14, 2016
 	Obstacles: Incorporating the old design with the new and improved one.
 
 Nov 15, 2016
-	Yesterday:
-	Today	 :
-	Obstacles:
+	Yesterday:Finished Bug 2.1, 2.2, and 2.4.
+	Today	 :Merge all of the finished bugs and work on 2.3
+	Obstacles:None.
 	
 Nov 16, 2016
-	Yesterday:
-	Today	 :
-	Obstacles:
+	Yesterday:Finished working on 2.3.
+	Today	 :Go over current code and finish commenting.
+	Obstacles:None
