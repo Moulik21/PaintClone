@@ -39,6 +39,7 @@ class ColourChooserPanel extends JPanel implements ActionListener {
 		colourButton.addActionListener(this);
 		colourButton.setBackground(Color.WHITE);
 		colourButton.setPreferredSize(new Dimension(60, 60));
+		colourButton.setBorder(null);
 		
 	}
 	
