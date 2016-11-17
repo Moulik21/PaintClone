@@ -19,6 +19,7 @@ public class StrategyFactory {
 		case "Rectangle" : return new RectangleManipulatorStrategy();
 		case "Square" : return new SquareManipulatorStrategy();
 		case "Polyline" : return new PolylineManipulatorStrategy();		
+		case "Text": return new TextManipulatorStrategy();
 		}
 		return null;
 	}

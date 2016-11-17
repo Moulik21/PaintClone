@@ -1,5 +1,6 @@
 package ca.utoronto.utm.paint;
 
+import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 
 import javax.swing.SwingUtilities;
@@ -63,6 +64,11 @@ public class PolylineManipulatorStrategy implements ShapeManipulatorStrategy {
 	 */
 	public String state() {
 		return "Polyline";
+	}
+	@Override
+	public void keyPress(PaintPanel paintPanel, KeyEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

@@ -2,6 +2,7 @@ package ca.utoronto.utm.paint;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
+import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
@@ -17,6 +18,7 @@ public interface ShapeManipulatorStrategy {
 	void release(PaintPanel panel, MouseEvent e);
 	void drag(PaintPanel panel, MouseEvent e);
 	void move(PaintPanel panel, MouseEvent e);
+	void keyPress(PaintPanel paintPanel, KeyEvent e);
 
 
 }//end class

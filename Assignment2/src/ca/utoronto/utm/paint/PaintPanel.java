@@ -2,6 +2,8 @@ package ca.utoronto.utm.paint;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
@@ -15,7 +17,7 @@ import java.util.Observer;
  * The secondary View+Controller that allows the user to draw
  *
  */
-class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseListener {
+class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseListener,  KeyListener{
 
 	// Instance variables
 	private final Color DEFAULTCOLOUR = Color.black;
@@ -49,6 +51,9 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 		this.setBackground(Color.white);
 		this.setPreferredSize(new Dimension(300, 300));
 		this.addMouseListener(this);
+		addKeyListener(this);
+        this.setFocusable(true);//////
+        this.requestFocusInWindow();/////
 		this.addMouseMotionListener(this);
 		this.model = model;
 		this.model.addObserver(this);
@@ -58,6 +63,7 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 		this.model.addCommand(new CommandFill(this,DEFAULTFILL));
 		this.model.addCommand(new CommandColor(this, DEFAULTCOLOUR));
 		this.model.addCommand(new CommandStroke(this, DEFAULTSTROKE));
+
 	}
 
 	/**
@@ -133,6 +139,26 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	public void mouseExited(MouseEvent e) {
 
 	}
+	
+//KeyListener below
+	@Override
+	public void keyPressed(KeyEvent arg0) {
+		
+		System.out.println("sdsdsd");
+		this.mode.keyPress(this,arg0);
+		
+	}
+
+	@Override
+	public void keyReleased(KeyEvent arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+
+	}
 	/*-------------------------------------------------------------------------------*/
 	//Getters and Setters
 	public void setColour(Color newColour){
@@ -162,4 +188,6 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	public BasicStroke getStroke(){
 		return this.stroke;
 	}
+
+	
 }

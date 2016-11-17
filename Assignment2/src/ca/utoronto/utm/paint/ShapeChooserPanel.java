@@ -41,7 +41,9 @@ class ShapeChooserPanel extends JPanel implements ActionListener {
 	  	b4.setToolTipText("Squiggle");
 	  	JToggleButton b5 = new JToggleButton();
 	  	b5.setToolTipText("Polyline");
-	  	JToggleButton [] buttons = {b1,b2,b3,b4,b5};
+	  	JToggleButton b6 = new JToggleButton();
+	  	b6.setToolTipText("Text");
+	  	JToggleButton [] buttons = {b1,b2,b3,b4,b5,b6};
 	  	
 	  	//Sets icons for the buttons
 	 	try {
