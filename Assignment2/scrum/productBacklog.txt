@@ -25,26 +25,7 @@ AS A     : user
 I WANT   : To be able to add text to my drawing.
 SO THAT  : I can easily add text with a neat, uniform font to my drawing.
 --------------------------------------------------------------------------
---------------------------------------------------------------------------
-TYPE     : UserStory 18
-NAME     : Undo function
-OWNER    : Moulik
-PRIORITY : Medium
-ESTIMATE : 2 hours
-AS A     : user
-I WANT   : To be able to undo parts of my drawing reverse chronologically.
-SO THAT  : I can easily undo any mistakes to my drawing I have made.
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-TYPE     : UserStory 19
-NAME     : Redo function
-OWNER    : Moulik
-PRIORITY : Medium
-ESTIMATE : 2 hours
-AS A     : user
-I WANT   : To be able to undo the undo's I have done.
-SO THAT  : I can undo undo's that I regret doing.
---------------------------------------------------------------------------
+
 --------------------------------------------------------------------------
 
 # COMPLETED USER STORIES/BUGS BELOW ###########################################
@@ -470,6 +451,27 @@ ESTIMATE : 2 hours
 AS A     : user
 I WANT   : To be able to see what the currently selected colour is.
 SO THAT  : I easily tell what colour the drawing I am about to draw will be.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : UserStory 18
+NAME     : Undo function
+OWNER    : Moulik/Paul
+PRIORITY : Medium
+ESTIMATE : 2 hours
+AS A     : user
+I WANT   : To be able to undo parts of my drawing reverse chronologically.
+SO THAT  : I can easily undo any mistakes to my drawing I have made.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : UserStory 19
+NAME     : Redo function
+OWNER    : Moulik/Paul
+PRIORITY : Medium
+ESTIMATE : 2 hours
+AS A     : user
+I WANT   : To be able to undo the undo's I have done.
+SO THAT  : I can undo undo's that I regret doing.
+--------------------------------------------------------------------------
 
 # OMITTED USER STORIES/BUGS BELOW   ###########################################
 
