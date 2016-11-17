@@ -64,6 +64,7 @@ public class View extends JFrame implements ActionListener {
 		this.pack();
 		this.setSize(1000, 825);
 		this.setVisible(true);
+
 	}
 	
 	public StyleChooserPanel getStyleSelector(){

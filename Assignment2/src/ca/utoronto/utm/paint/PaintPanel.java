@@ -51,10 +51,9 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 		this.setBackground(Color.white);
 		this.setPreferredSize(new Dimension(300, 300));
 		this.addMouseListener(this);
-		addKeyListener(this);
-        this.setFocusable(true);//////
-        this.requestFocusInWindow();/////
 		this.addMouseMotionListener(this);
+		this.addKeyListener(this);
+
 		this.model = model;
 		this.model.addObserver(this);
 		this.view=view;
@@ -109,12 +108,15 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	// MouseMotionListener below
 	@Override
 	public void mouseMoved(MouseEvent e) {
+
 	if(this.mode.state() == "Polyline" ){
 		this.mode.move(this,e);
 	}
+	
 	}
 	@Override
 	public void mouseDragged(MouseEvent e) {
+
 		this.mode.drag(this,e);		
 	}
 	// MouseListener below
@@ -124,11 +126,14 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	}
 	@Override
 	public void mousePressed(MouseEvent e) {		
+
 		this.mode.press(this,e,this.FillMode);
+		if(this.mode.state() == "Text"){
+        this.requestFocusInWindow();
+		}
 	}
 	@Override
 	public void mouseReleased(MouseEvent e) {
-
 		this.mode.release(this, e);
 	}
 	@Override
@@ -143,10 +148,7 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 //KeyListener below
 	@Override
 	public void keyPressed(KeyEvent arg0) {
-		
-		System.out.println("sdsdsd");
-		this.mode.keyPress(this,arg0);
-		
+		this.mode.keyPress(this,arg0);	
 	}
 
 	@Override
@@ -157,7 +159,7 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 
 	@Override
 	public void keyTyped(KeyEvent e) {
-
+		
 	}
 	/*-------------------------------------------------------------------------------*/
 	//Getters and Setters

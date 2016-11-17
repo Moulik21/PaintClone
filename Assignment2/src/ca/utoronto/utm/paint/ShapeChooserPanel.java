@@ -57,6 +57,8 @@ class ShapeChooserPanel extends JPanel implements ActionListener {
 	    	b4.setIcon(new ImageIcon(img));
 	    	img = ImageIO.read(getClass().getResource("/icons/polylineicon.png"));
 	    	b5.setIcon(new ImageIcon(img));
+	    	img = ImageIO.read(getClass().getResource("/icons/texticon.png"));
+	    	b6.setIcon(new ImageIcon(img));
 	 	} catch (IOException ex) {
 	  	}
 	 	//Add actionListener to each button and set the initial Shape
