@@ -435,7 +435,7 @@ SO THAT  : I can create the shape that I want.
 --------------------------------------------------------------------------
 TYPE     : UserStory 14
 NAME     : Eraser function
-OWNER    : Daniel
+OWNER    : Daniel/Keenan
 PRIORITY : Medium
 ESTIMATE : 2 hours
 AS A     : user
@@ -445,7 +445,7 @@ SO THAT  : I can remove parts of my drawing that I want to.
 --------------------------------------------------------------------------
 TYPE     : UserStory 15
 NAME     : Line function
-OWNER    : Daniel
+OWNER    : Daniel/Keenan
 PRIORITY : Medium
 ESTIMATE : 2 hours
 AS A     : user
