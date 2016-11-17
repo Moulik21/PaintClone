@@ -24,7 +24,7 @@ public class CurrentColourPanel extends JPanel implements Observer{
 	public CurrentColourPanel(PaintPanel panel) {
 		this.panel = panel;
 		
-		this.currentColourLabel = new JLabel("Current:");
+		this.currentColourLabel = new JLabel("Colour:");
 		this.currentColourPanel = new JPanel();
 	
 
