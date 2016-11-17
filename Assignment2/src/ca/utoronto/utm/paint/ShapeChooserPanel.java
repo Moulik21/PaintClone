@@ -28,7 +28,7 @@ class ShapeChooserPanel extends JPanel implements ActionListener {
 		
 		//Create the buttons
 		String[] buttonLabels = { "Circle", "Rectangle", "Square", "Squiggle", "Polyline" };
-		//+7 to allow for colour select button ,fill button, line thickness combobox, 2 colour palettes, current colour indicator, and clear canvas button
+		//+10 to allow for colour select button ,fill button, line thickness combobox, 2 colour palettes, current colour indicator, eraser, straight line, text, and clear canvas button
 		this.setLayout(new GridLayout(buttonLabels.length+9, 1));
 		ButtonGroup shapeButtonGroup = new ButtonGroup();
 		JToggleButton b1 = new JToggleButton();
