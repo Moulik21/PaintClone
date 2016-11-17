@@ -64,11 +64,11 @@ Nov 14, 2016
 	Obstacles: Incorporating the old design with the new and improved one.
 
 Nov 15, 2016
-	Yesterday:
-	Today	 :
-	Obstacles:
+	Yesterday: Completed Bug2.4
+	Today	 : Finished bug2.3, discussed with the group on what extra features to add.
+	Obstacles: New feature are difficult to implement.
 	
 Nov 16, 2016
 	Yesterday:
-	Today	 :
-	Obstacles:
+	Today	 : Worked on UserStory18 and 19. Features work however, there many bugs. Have not merged the user stories yet.
+	Obstacles: Bugs associated with undo and redo are tricky to solve.
