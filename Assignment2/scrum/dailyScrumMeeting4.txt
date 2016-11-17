@@ -54,20 +54,16 @@ Nov 13, 2016
 	
 Nov 14, 2016
 	Yesterday: Decided on how we would do user stories
-	Today	 : Worked on creating a line function. (And updating GUI as necessary)
+	Today	 : Worked on creating a line function. (And updating GUI as necessary). 
 	Obstacles: None
 	
 Nov 15, 2016
-	Yesterday: 
-	Today	 : 
-	Obstacles: 
+	Yesterday: worked on creating line function
+	Today	 : Finished eraser function, finished line function, worked on user story 2.3
+	Obstacles: none
 
 Nov 16, 2016
-	Yesterday: 
-	Today	 : 
-	Obstacles: 
-
-Nov 17, 2016
-	Yesterday: 
-	Today	 : 
-	Obstacles: 
+	Yesterday: created eraser function,line function, worked on user story 2.3
+	Today	 : Implemented line function
+	Obstacles: There was an issue with focus and implementing keylListener, the panel wasn't taking focus and thus the key action listener wasnt catching
+	any key presses.
