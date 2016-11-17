@@ -1,5 +1,6 @@
 package ca.utoronto.utm.paint;
 
+import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 
 /**
@@ -46,6 +47,11 @@ public class CircleManipulatorStrategy implements ShapeManipulatorStrategy {
 
 	//Not used for this strategy
 	public void move(PaintPanel panel, MouseEvent e) {}
+	@Override
+	public void keyPress(PaintPanel paintPanel, KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 
 }

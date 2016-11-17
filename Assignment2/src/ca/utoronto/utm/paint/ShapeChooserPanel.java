@@ -29,7 +29,7 @@ class ShapeChooserPanel extends JPanel implements ActionListener {
 		//Create the buttons
 		String[] buttonLabels = { "Circle", "Rectangle", "Square", "Squiggle", "Polyline" };
 		//+10 to allow for colour select button ,fill button, line thickness combobox, 2 colour palettes, current colour indicator, eraser, straight line, text, and clear canvas button
-		this.setLayout(new GridLayout(buttonLabels.length+9, 1));
+		this.setLayout(new GridLayout(buttonLabels.length+10, 1));
 		ButtonGroup shapeButtonGroup = new ButtonGroup();
 		JToggleButton b1 = new JToggleButton();
 	  	b1.setToolTipText("Circle");
@@ -44,8 +44,11 @@ class ShapeChooserPanel extends JPanel implements ActionListener {
 	  	JToggleButton b6 = new JToggleButton();
 	  	b6.setToolTipText("Polyline");
 	  	JToggleButton b7 = new JToggleButton();
-	  	b7.setToolTipText("Eraser");
-	  	JToggleButton [] buttons = {b1,b2,b3,b4,b5,b6,b7};
+	  	b7.setToolTipText("Text");
+	  	JToggleButton b8 = new JToggleButton();
+	  	b8.setToolTipText("Eraser");
+
+	  	JToggleButton [] buttons = {b1,b2,b3,b4,b5,b6,b7,b8};
 	  	
 	  	//Sets icons for the buttons
 	 	try {
@@ -61,8 +64,10 @@ class ShapeChooserPanel extends JPanel implements ActionListener {
 	    	b5.setIcon(new ImageIcon(img));
 	    	img = ImageIO.read(getClass().getResource("/icons/polylineicon.png"));
 	    	b6.setIcon(new ImageIcon(img));
-	    	img = ImageIO.read(getClass().getResource("/icons/erasericon.png"));
+	    	img = ImageIO.read(getClass().getResource("/icons/texticon.png"));
 	    	b7.setIcon(new ImageIcon(img));
+	    	img = ImageIO.read(getClass().getResource("/icons/erasericon.png"));
+	    	b8.setIcon(new ImageIcon(img));
 	 	} catch (IOException ex) {
 	  	}
 	 	//Add actionListener to each button and set the initial Shape

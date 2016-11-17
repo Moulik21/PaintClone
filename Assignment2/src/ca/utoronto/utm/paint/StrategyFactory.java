@@ -21,6 +21,7 @@ public class StrategyFactory {
 		case "Polyline" : return new PolylineManipulatorStrategy();	
 		case "Eraser" : return new EraserManipulatorStrategy();	
 		case "StraightLine" : return new StraightLineManipulatorStrategy();	
+		case "Text": return new TextManipulatorStrategy();
 		}
 		return null;
 	}

@@ -2,6 +2,8 @@ package ca.utoronto.utm.paint;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
@@ -15,7 +17,7 @@ import java.util.Observer;
  * The secondary View+Controller that allows the user to draw
  *
  */
-class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseListener {
+class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseListener,  KeyListener{
 
 	// Instance variables
 	private final Color DEFAULTCOLOUR = Color.black;
@@ -50,6 +52,7 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 		this.setPreferredSize(new Dimension(300, 300));
 		this.addMouseListener(this);
 		this.addMouseMotionListener(this);
+		this.addKeyListener(this);
 		this.model = model;
 		this.model.addObserver(this);
 		this.view=view;
@@ -121,10 +124,12 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	@Override
 	public void mousePressed(MouseEvent e) {		
 		this.mode.press(this,e,this.FillMode);
+		if(this.mode.state() == "Text"){
+        this.requestFocusInWindow();
+		}
 	}
 	@Override
-	public void mouseReleased(MouseEvent e) {
-
+	public void mouseReleased(MouseEvent e) {		
 		this.mode.release(this, e);
 	}
 	@Override
@@ -134,6 +139,23 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	@Override
 	public void mouseExited(MouseEvent e) {
 
+	}
+	
+//KeyListener below
+	@Override
+	public void keyPressed(KeyEvent arg0) {
+		this.mode.keyPress(this,arg0);	
+	}
+
+	@Override
+	public void keyReleased(KeyEvent arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+		
 	}
 	/*-------------------------------------------------------------------------------*/
 	//Getters and Setters
