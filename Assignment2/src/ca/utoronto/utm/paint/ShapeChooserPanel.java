@@ -29,7 +29,7 @@ class ShapeChooserPanel extends JPanel implements ActionListener {
 		//Create the buttons
 		String[] buttonLabels = { "Circle", "Rectangle", "Square", "Squiggle", "Polyline" };
 		//+7 to allow for colour select button ,fill button, line thickness combobox, 2 colour palettes, current colour indicator, and clear canvas button
-		this.setLayout(new GridLayout(buttonLabels.length+7, 1));
+		this.setLayout(new GridLayout(buttonLabels.length+9, 1));
 		ButtonGroup shapeButtonGroup = new ButtonGroup();
 		JToggleButton b1 = new JToggleButton();
 	  	b1.setToolTipText("Circle");
@@ -40,8 +40,12 @@ class ShapeChooserPanel extends JPanel implements ActionListener {
 	  	JToggleButton b4 = new JToggleButton();
 	  	b4.setToolTipText("Squiggle");
 	  	JToggleButton b5 = new JToggleButton();
-	  	b5.setToolTipText("Polyline");
-	  	JToggleButton [] buttons = {b1,b2,b3,b4,b5};
+	  	b5.setToolTipText("StraightLine");
+	  	JToggleButton b6 = new JToggleButton();
+	  	b6.setToolTipText("Polyline");
+	  	JToggleButton b7 = new JToggleButton();
+	  	b7.setToolTipText("Eraser");
+	  	JToggleButton [] buttons = {b1,b2,b3,b4,b5,b6,b7};
 	  	
 	  	//Sets icons for the buttons
 	 	try {
@@ -53,8 +57,12 @@ class ShapeChooserPanel extends JPanel implements ActionListener {
 	   	 	b3.setIcon(new ImageIcon(img));
 	    	img = ImageIO.read(getClass().getResource("/icons/scribbleicon.png"));
 	    	b4.setIcon(new ImageIcon(img));
-	    	img = ImageIO.read(getClass().getResource("/icons/polylineicon.png"));
+	    	img = ImageIO.read(getClass().getResource("/icons/lineicon.png"));
 	    	b5.setIcon(new ImageIcon(img));
+	    	img = ImageIO.read(getClass().getResource("/icons/polylineicon.png"));
+	    	b6.setIcon(new ImageIcon(img));
+	    	img = ImageIO.read(getClass().getResource("/icons/erasericon.png"));
+	    	b7.setIcon(new ImageIcon(img));
 	 	} catch (IOException ex) {
 	  	}
 	 	//Add actionListener to each button and set the initial Shape
@@ -64,7 +72,7 @@ class ShapeChooserPanel extends JPanel implements ActionListener {
 			this.add(b);
 			b.addActionListener(this);
 			b.setBackground(Color.WHITE);
-			b.setPreferredSize(new Dimension(60, 60));
+			b.setPreferredSize(new Dimension(50, 50));
 			b.setBorder(null);
 			if (b.getToolTipText().equals("Squiggle")) {
 				b.setSelected(true);

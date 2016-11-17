@@ -95,17 +95,19 @@ class PaintPanel extends JPanel implements Observer, MouseMotionListener, MouseL
 	 * 
 	 * @param shapeType
 	 */
+
 	public void setStrategy(String shapeType){
 		mode = myStrategyFactory.getStrategy(shapeType);		
+
 	}
 	
 	
 	// MouseMotionListener below
 	@Override
 	public void mouseMoved(MouseEvent e) {
-	if(this.mode.state() == "Polyline" ){
-		this.mode.move(this,e);
-	}
+		if(this.mode.state() == "Polyline" ){
+			this.mode.move(this,e);
+		}
 	}
 	@Override
 	public void mouseDragged(MouseEvent e) {

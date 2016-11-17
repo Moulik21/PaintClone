@@ -62,7 +62,7 @@ public class View extends JFrame implements ActionListener {
 		this.shapeChooserPanel.add(this.clearCanvasPanel.getClearCanvasButton());		
 		c.add(this.shapeChooserPanel,BorderLayout.WEST);
 		this.pack();
-		this.setSize(1000, 825);
+		this.setSize(1000, 875);
 		this.setVisible(true);
 	}
 	
