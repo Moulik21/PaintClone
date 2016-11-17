@@ -1,5 +1,6 @@
 package ca.utoronto.utm.paint;
 
+import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 
 public class StraightLineManipulatorStrategy implements ShapeManipulatorStrategy{
@@ -33,6 +34,10 @@ public class StraightLineManipulatorStrategy implements ShapeManipulatorStrategy
 	
 	public String state() {
 		return "StraightLine";
+	}
+
+	@Override
+	public void keyPress(PaintPanel paintPanel, KeyEvent e) {
 	}
 
 	

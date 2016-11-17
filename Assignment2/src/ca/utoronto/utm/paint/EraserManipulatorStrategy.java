@@ -1,5 +1,6 @@
 package ca.utoronto.utm.paint;
 
+import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 
 public class EraserManipulatorStrategy implements ShapeManipulatorStrategy{
@@ -42,6 +43,9 @@ public class EraserManipulatorStrategy implements ShapeManipulatorStrategy{
 	 */
 	public String state() {
 		return "Eraser";
+	}
+	@Override
+	public void keyPress(PaintPanel paintPanel, KeyEvent e) {
 	}
 }
 
