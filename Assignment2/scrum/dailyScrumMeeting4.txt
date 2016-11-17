@@ -66,4 +66,4 @@ Nov 16, 2016
 	Yesterday: created eraser function,line function, worked on user story 2.3
 	Today	 : Implemented line function
 	Obstacles: There was an issue with focus and implementing keylListener, the panel wasn't taking focus and thus the key action listener wasnt catching
-	any key presses.
+	any key presses. 
