@@ -14,26 +14,10 @@ High > Medium > Low priority.
 # You should add and implement any additional user stories that 
 # make your program great. Part of your mark will be competitive, 
 # with more, great user stories and better UI recognized by marks.
---------------------------------------------------------------------------
-TYPE     : BUG 2.3
-NAME     : Architecture behind choosing drawing mode is poor
-OWNER    : Paul/Moulik/Keenan
-PRIORITY : High
-ESTIMATE : 3 hours 
-ISSUE    : A better architecture behind selecting a drawing mode can be created 
-by implementing the Factory Design Pattern as follows:
 
-The factory design pattern should be used by the paint buttons. 
-The factory is responsible for creating different ShapeManipulatorStrategy 
-instances (see BUG 2.4). That is, when a button is pressed, the appropriate 
-ShapeManipulatorStrategy is created and installed in the PaintPanel. 
-Note that you can associate text with a button, even if you 
-display an ImageIcon. The string attached to the button causes the right choice 
-of object creation.
---------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : UserStory 13
-NAME     : TextFunction
+NAME     : Text function
 OWNER    : Daniel
 PRIORITY : Medium
 ESTIMATE : 2 hours
@@ -42,24 +26,25 @@ I WANT   : To be able to add text to my drawing.
 SO THAT  : I can easily add text with a neat, uniform font to my drawing.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : UserStory 16
-NAME     : Clear canvas function
-OWNER    : Keenan
+TYPE     : UserStory 18
+NAME     : Undo function
+OWNER    : Moulik
 PRIORITY : Medium
 ESTIMATE : 2 hours
 AS A     : user
-I WANT   : To be able to completely clear the canvas at any time.
-SO THAT  : I can restart my drawing whenever I want.
+I WANT   : To be able to undo parts of my drawing reverse chronologically.
+SO THAT  : I can easily undo any mistakes to my drawing I have made.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : UserStory 17
-NAME     : Current colour indicator
-OWNER    : Keenan
+TYPE     : UserStory 19
+NAME     : Redo function
+OWNER    : Moulik
 PRIORITY : Medium
 ESTIMATE : 2 hours
 AS A     : user
-I WANT   : To be able to see what the currently selected colour is.
-SO THAT  : I easily tell what colour the drawing I am about to draw will be.
+I WANT   : To be able to undo the undo's I have done.
+SO THAT  : I can undo undo's that I regret doing.
+--------------------------------------------------------------------------
 --------------------------------------------------------------------------
 
 # COMPLETED USER STORIES/BUGS BELOW ###########################################
@@ -176,6 +161,23 @@ to the graphics context in a DrawingCommand. This way these changes can be
 added to the Bug 2.1 DrawingCommand list. That is, these new types of 
 DrawingCommands appear on PaintPanel's list right along side 
 the Shape type DrawingCommands.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 2.3
+NAME     : Architecture behind choosing drawing mode is poor
+OWNER    : Paul/Moulik/Keenan/Daniel
+PRIORITY : High
+ESTIMATE : 3 hours 
+ISSUE    : A better architecture behind selecting a drawing mode can be created 
+by implementing the Factory Design Pattern as follows:
+
+The factory design pattern should be used by the paint buttons. 
+The factory is responsible for creating different ShapeManipulatorStrategy 
+instances (see BUG 2.4). That is, when a button is pressed, the appropriate 
+ShapeManipulatorStrategy is created and installed in the PaintPanel. 
+Note that you can associate text with a button, even if you 
+display an ImageIcon. The string attached to the button causes the right choice 
+of object creation.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : BUG 2.4
@@ -449,6 +451,25 @@ AS A     : user
 I WANT   : To be able to draw a single straight line.
 SO THAT  : I don't have to use polyline in order to draw one straight line.
 --------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : UserStory 16
+NAME     : Clear canvas function
+OWNER    : Keenan
+PRIORITY : Medium
+ESTIMATE : 2 hours
+AS A     : user
+I WANT   : To be able to completely clear the canvas at any time.
+SO THAT  : I can restart my drawing whenever I want.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : UserStory 17
+NAME     : Current colour indicator
+OWNER    : Keenan
+PRIORITY : Medium
+ESTIMATE : 2 hours
+AS A     : user
+I WANT   : To be able to see what the currently selected colour is.
+SO THAT  : I easily tell what colour the drawing I am about to draw will be.
 
 # OMITTED USER STORIES/BUGS BELOW   ###########################################
 

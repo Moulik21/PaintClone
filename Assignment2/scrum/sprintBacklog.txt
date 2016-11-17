@@ -401,6 +401,14 @@ files (and any other files of interest) from the bin directory. Add this
 change to index, commit and push. 
 
 --------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 2.7
+NAME     : Drawing a single point with squiggle doesn't draw anything
+OWNER    : Keenan
+PRIORITY : Low
+ESTIMATE : 30 minutes
+ISSUE    : Trying to draw one point with squiggle doesn't draw anything
+--------------------------------------------------------------------------
 
 
 #Sprint 8 November 14, 2016
@@ -451,7 +459,7 @@ ISSUE    : Adding a line function to draw single lines would be nice.
 --------------------------------------------------------------------------
 
 
-#Sprint 9 November 14, 2016
+#Sprint 9 November 15, 2016
 #Sprint 9 UserStories go below
 --------------------------------------------------------------------------
 TYPE     : BUG 2.3
@@ -478,4 +486,59 @@ PRIORITY : High
 ESTIMATE : 1 hour
 ISSUE    : Moving all the image files used in the project to a resource source
 folder outside of the src/ source folder causes the program to not be able to run.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : UserStory 16
+NAME     : Clear canvas function
+OWNER    : Keenan
+PRIORITY : Medium
+ESTIMATE : 2 hours
+AS A     : user
+I WANT   : To be able to completely clear the canvas at any time.
+SO THAT  : I can restart my drawing whenever I want.
+--------------------------------------------------------------------------
+
+
+#Sprint 10 November 16, 2016
+#Sprint 10 UserStories go below
+--------------------------------------------------------------------------
+TYPE     : UserStory 13
+NAME     : Text function
+OWNER    : Daniel
+PRIORITY : Medium
+ESTIMATE : 2 hours
+AS A     : user
+I WANT   : To be able to add text to my drawing.
+SO THAT  : I can easily add text with a neat, uniform font to my drawing.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : UserStory 16
+NAME     : Clear canvas function
+OWNER    : Keenan
+PRIORITY : Medium
+ESTIMATE : 2 hours
+AS A     : user
+I WANT   : To be able to completely clear the canvas at any time.
+SO THAT  : I can restart my drawing whenever I want.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : UserStory 17
+NAME     : Current colour indicator
+OWNER    : Keenan
+PRIORITY : Medium
+ESTIMATE : 2 hours
+AS A     : user
+I WANT   : To be able to see what the currently selected colour is.
+SO THAT  : I easily tell what colour the drawing I am about to draw will be.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : UserStory 18
+NAME     : Undo function
+OWNER    : Moulik
+PRIORITY : Medium
+ESTIMATE : 2 hours
+AS A     : user
+I WANT   : To be able to undo parts of my drawing reverse chronologically.
+SO THAT  : I can easily undo any mistakes to my drawing I have made.
+--------------------------------------------------------------------------
 --------------------------------------------------------------------------
