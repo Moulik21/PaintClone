@@ -15,6 +15,10 @@ public class CommandClearCanvas implements DrawingCommand{
 	//MAXSIDE is large enough to make sure that the entire canvas will be cleared on all reasonable window sizes
 	private static final int MAXSIDE = 9999;
 	
+	/**
+	 * Constructor for a clear canvas command
+	 * Creates the large, white, filled rectangle to be drawn on top of the canvas
+	 */
 	public CommandClearCanvas(){
 		
 		this.coverRectangle = new Rectangle(new Point (0,0));
@@ -24,6 +28,9 @@ public class CommandClearCanvas implements DrawingCommand{
 		this.coverRectangle.setIsFilled(true);
 	}
 	
+	/**
+	 * Draw the filled rectangle on the canvas
+	 */
 	@Override
 	public void execute(Graphics2D g2d) {
 		int x = this.coverRectangle.getOrigin().getX();

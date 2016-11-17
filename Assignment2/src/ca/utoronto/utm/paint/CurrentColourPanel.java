@@ -22,6 +22,10 @@ public class CurrentColourPanel extends JPanel implements Observer{
 	private JPanel currentColourPanel;
 	private JPanel currentColourPanel2;
 	
+	/**
+	 * Constructor that creates the components of the current colour panel indicator
+	 * @param panel the panel that will have the current colour panel
+	 */
 	public CurrentColourPanel(PaintPanel panel) {
 		this.panel = panel;
 		
@@ -43,6 +47,9 @@ public class CurrentColourPanel extends JPanel implements Observer{
 		
 	}
 	
+	/**
+	 * Update the current colour panel when the user selects a new colour
+	 */
 	@Override
 	public void update(Observable o, Object arg) {
 		this.currentColourPanel.setBackground(this.panel.getColour());
