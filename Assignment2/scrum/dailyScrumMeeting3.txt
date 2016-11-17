@@ -69,6 +69,6 @@ Nov 15, 2016
 	Obstacles: New feature are difficult to implement.
 	
 Nov 16, 2016
-	Yesterday:
+	Yesterday: Completed and Merged Bug2.3 with master
 	Today	 : Worked on UserStory18 and 19. Features work however, there many bugs. Have not merged the user stories yet.
 	Obstacles: Bugs associated with undo and redo are tricky to solve.
