@@ -15,16 +15,7 @@ High > Medium > Low priority.
 # make your program great. Part of your mark will be competitive, 
 # with more, great user stories and better UI recognized by marks.
 
---------------------------------------------------------------------------
-TYPE     : UserStory 13
-NAME     : Text function
-OWNER    : Daniel
-PRIORITY : Medium
-ESTIMATE : 2 hours
-AS A     : user
-I WANT   : To be able to add text to my drawing.
-SO THAT  : I can easily add text with a neat, uniform font to my drawing.
---------------------------------------------------------------------------
+
 --------------------------------------------------------------------------
 TYPE     : UserStory 18
 NAME     : Undo function
@@ -48,6 +39,16 @@ SO THAT  : I can undo undo's that I regret doing.
 --------------------------------------------------------------------------
 
 # COMPLETED USER STORIES/BUGS BELOW ###########################################
+--------------------------------------------------------------------------
+TYPE     : UserStory 13
+NAME     : Text function
+OWNER    : Daniel
+PRIORITY : Medium
+ESTIMATE : 2 hours
+AS A     : user
+I WANT   : To be able to add text to my drawing.
+SO THAT  : I can easily add text with a neat, uniform font to my drawing.
+--------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : BUG 1
 NAME     : Icons instead of text for drawing mode selection
