@@ -7,12 +7,12 @@ import java.util.Observer;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.SwingConstants;
 
 /**
- * A CurrentColourPanel is a JPanel that contains only a single JButton.
- * When the button is clicked, the user will be able to change the colour of the next
- * shapes from a wide range of colours with the help of JColorChooser 
- *
+ * A CurrentColourPanel is a JPanel that shows the currently selected colour.
+ * This colour defaults to black and changes to whatever the user selects either
+ * in the quick colour palette or in the rgb palette
  */
 public class CurrentColourPanel extends JPanel implements Observer{
 
@@ -20,22 +20,25 @@ public class CurrentColourPanel extends JPanel implements Observer{
 	private Color DEFAULTCOLOUR = Color.BLACK;
 	private JLabel currentColourLabel;
 	private JPanel currentColourPanel;
+	private JPanel currentColourPanel2;
 	
 	public CurrentColourPanel(PaintPanel panel) {
 		this.panel = panel;
 		
-		this.currentColourLabel = new JLabel("Colour:");
+		this.currentColourLabel = new JLabel("Colour:", SwingConstants.CENTER);
 		this.currentColourPanel = new JPanel();
-	
-
+		this.currentColourPanel2 = new JPanel();
+		
 		this.currentColourLabel.setOpaque(true);
 		this.currentColourLabel.setBackground(Color.WHITE);
 		this.currentColourPanel.setBackground(DEFAULTCOLOUR);
+		this.currentColourPanel2.setBackground(DEFAULTCOLOUR);
 		this.currentColourLabel.setBorder(null);
-		this.setLayout(new GridLayout(2,1));
+		this.setLayout(new GridLayout(3,1));
 	
 		this.add(currentColourLabel);
 		this.add(currentColourPanel);		
+		this.add(currentColourPanel2);		
 		
 		
 	}
@@ -43,7 +46,7 @@ public class CurrentColourPanel extends JPanel implements Observer{
 	@Override
 	public void update(Observable o, Object arg) {
 		this.currentColourPanel.setBackground(this.panel.getColour());
-		
+		this.currentColourPanel2.setBackground(this.panel.getColour());
 	}
 
 	
